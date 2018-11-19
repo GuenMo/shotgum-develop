@@ -1,0 +1,1068 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4. 이벤트 필터링 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5_Processing_events.html" />
+    
+    
+    <link rel="prev" href="3_Logging_events.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_shotgun/0_Shotgun.html">
+            
+                <a href="../1_shotgun/0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_shotgun/3_The_Web_GUI.html">
+            
+                <a href="../1_shotgun/3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_shotgun/4_Resources.html">
+            
+                <a href="../1_shotgun/4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_AMI/0_AMI.html">
+            
+                <a href="../3_AMI/0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_AMI/1_Script_Keys_Automation.html">
+            
+                <a href="../3_AMI/1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_AMI/2_Action_Menu_Items.html">
+            
+                <a href="../3_AMI/2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="0_Daemon.html">
+            
+                <a href="0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="1_Daemon_Intro.html">
+            
+                <a href="1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2_Installing_the_daemon.html">
+            
+                <a href="2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3_Logging_events.html">
+            
+                <a href="3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="4_Filtering_for_events.html">
+            
+                <a href="4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="5_Processing_events.html">
+            
+                <a href="5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="6_Validation.html">
+            
+                <a href="6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="7_A_real_example.html">
+            
+                <a href="7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="8_Best_practices.html">
+            
+                <a href="8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="9_Managing_the_event_backlog.html">
+            
+                <a href="9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="10_Example_plugins.html">
+            
+                <a href="10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="11_Documentation.html">
+            
+                <a href="11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolkit/0_Toolkit.html">
+            
+                <a href="../5_toolkit/0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolkit/1_Toolkit_Itro.html">
+            
+                <a href="../5_toolkit/1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolkit/2_Managing_software_versions.html">
+            
+                <a href="../5_toolkit/2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                <a href="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_toolkit/7_Managing_config_versions.html">
+            
+                <a href="../5_toolkit/7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_toolkit/8_Taking_over_the_config.html">
+            
+                <a href="../5_toolkit/8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_toolkit/9_Version_control.html">
+            
+                <a href="../5_toolkit/9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../5_toolkit/10_The_development_environment.html">
+            
+                <a href="../5_toolkit/10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../5_toolkit/14_tk_config_default2.html">
+            
+                <a href="../5_toolkit/14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                <a href="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                <a href="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >4. 이벤트 필터링</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="filering-for-events-&#xC774;&#xBCA4;&#xD2B8;-&#xD544;&#xD130;&#xB9C1;"><a href="https://youtu.be/YPZ1FWvhf7k?t=8m9s" target="_blank">Filering for events (&#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xB9C1;)</a></h1>
+<p>At this point you should understand how to download configure and start the daemon and how to add and test the included log argh stop py plug-in.
+&#xC774; &#xC2DC;&#xC810;&#xC5D0;&#xC11C; &#xB370;&#xBAAC;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD558;&#xACE0; &#xAD6C;&#xC131;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xACFC; &#xD3EC;&#xD568;&#xB41C; <code>logArgs.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xD14C;&#xC2A4;&#xD2B8;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC774;&#xD574;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>What next. our logArgs is not py plug-in here is pretty simple and mostly useless.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C; <code>logArgs.py</code> &#xC544;&#xC8FC; &#xB2E8;&#xC21C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>It runs every time something happens in shotgun and doesn&apos;t really do anything.
+&#xADF8;&#xAC83;&#xC740; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB0A0; &#xB54C;&#xB9C8;&#xB2E4; &#xC791;&#xB3D9;&#xD558;&#xBA70; &#xC2E4;&#xC81C;&#xB85C; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>So how do we make sure a plug-in only runs when something specific happens in shotgun.
+&#xADF8;&#xB7EC;&#xBA74; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xD2B9;&#xBCC4;&#xD55C; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB0A0; &#xB54C;&#xB9CC; &#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC774; &#xC791;&#xB3D9;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xD574;&#xC57C; &#xD560;&#xAE4C;&#xC694;?</p>
+<p>Like if someone creates a new shot or changes in asset status.
+&#xB204;&#xAD70;&#xAC00; &#xC0C8; &#xC0F7;&#xC744; &#xB9CC;&#xB4E4;&#xAC70;&#xB098; &#xC790;&#xC0B0; &#xC0C1;&#xD0DC;&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; &#xACBD;&#xC6B0;&#xC640; &#xAC19;&#xC774; &#xB9D0;&#xC774;&#xC8E0;.</p>
+<p>Well we can accomplish that by modifying the fourth argument here which is the event filter.
+&#xC5EC;&#xAE30;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xC778; &#xB124; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB97C; &#xC218;&#xC815;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>Before I do that why don&apos;t we make a copy of this plug-in and call it demo.py.
+&#xADF8;&#xB807;&#xAC8C; &#xD558;&#xAE30; &#xC804;&#xC5D0; &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC758; &#xBCF5;&#xC0AC;&#xBCF8;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xB370;&#xBAA8; UI&#xB77C;&#xACE0; &#xBD80;&#xB974;&#xB294; &#xAC8C; &#xC5B4;&#xB54C;&#xC694;?</p>
+<p><img src="../../img/shotgun/12/8.png" alt="Local Image"></p>
+<p>Since we won&apos;t just be logging events anymore.
+&#xB354; &#xC774;&#xC0C1; &#xC0AC;&#xAC74; &#xAE30;&#xB85D;&#xB9CC; &#xD558;&#xC9C0; &#xC54A;&#xC744; &#xD14C;&#xB2C8;&#xAE4C;&#xC694;.</p>
+<p>And I&apos;ll grab a new script key from shotgun and drop it into my environment.
+&#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC0C8; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xD658;&#xACBD;&#xC5D0; &#xB193;&#xC744; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/9.png" alt="Local Image"></p>
+<p>The event filter is a dictionary that contains key value pairs where the key is the type of event and the value is an entity&apos;s field or fields.
+&#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xB294; &#xD0A4;&#xC640; &#xAC12;&#xC73C;&#xB85C;&#xB41C; &#xD3EC;&#xD568;&#xB41C; &#xC0AC;&#xC804;&#xC785;&#xB2C8;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xD0A4;&#xB294; &#xC774;&#xBCA4;&#xD2B8;&#xC758; &#xC720;&#xD615;&#xC774;&#xACE0; &#xAC12;&#xC740; &#xC5D4;&#xD130;&#xD2F0;&#xC758; &#xD544;&#xB4DC; &#xB610;&#xB294; &#xD544;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s say we want the daemon to run every time anything happens to an existing asset entity.
+&#xAE30;&#xC874; &#xC5B4;&#xC14B; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xB370;&#xBAAC;&#xC744; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD574; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>I can just type in shotgun asset change here.
+&#xC5EC;&#xAE30; &#xC0F7;&#xAC74;&#xC758; &#xC790;&#xC0B0;&#xBCC0;&#xD654;&#xB97C; &#xD0C0;&#xC774;&#xD551; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-keyword">None</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        <span class="hljs-keyword">None</span>,
+    )
+    reg.logger.setLevel(logging.DEBUG)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    logger.info(<span class="hljs-string">&quot;%s&quot;</span> % str(event))
+</code></pre>
+<p>Done! But how did I know to do that.
+&#xB410;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xB0B4;&#xAC00; &#xADF8;&#xAC78; &#xC5B4;&#xB5BB;&#xAC8C; &#xC54C;&#xC558;&#xC744;&#xAE4C;.</p>
+<p>How did I know change to an asset would be called <code>Shotgun_Asset_Change</code>.
+&#xB0B4;&#xAC00; &#xC5B4;&#xB5BB;&#xAC8C; &#xC5B4;&#xC14B;&#xC5D0; &#xB300;&#xD55C; &#xBCC0;&#xACBD;&#xC744; <code>Shotgun_Asset_Change</code>&#xC774;&#xB77C;&#xACE0; &#xBD80;&#xB97C;&#xC9C0; &#xC54C;&#xC558;&#xC744;&#xAE4C;.</p>
+<p>To answer that question let&apos;s check out the all events page on our shotgun site.
+&#xADF8; &#xC9C8;&#xBB38;&#xC5D0; &#xB2F5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC6B0;&#xB9AC; &#xC0F7;&#xAC74; &#xC0AC;&#xC774;&#xD2B8;&#xC758; &#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>If you haven&apos;t already created an all events page you can do it by creating a new page setting the entity type to event log entry and leaving the project field blank.
+&#xC544;&#xC9C1; &#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC791;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;, &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC73C;&#xB85C; &#xC5D4;&#xD2F0;&#xD2F0; &#xC720;&#xD615;&#xC744; &#xC124;&#xC815;&#xD558;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD544;&#xB4DC;&#xB97C; &#xBE44;&#xC6CC; &#xB450;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/11.png" alt="Local Image"></p>
+<p>Cool! So now we&apos;re looking at a record of everything anyone has done on our shotgun site.
+&#xBA4B;&#xC9C0;&#xB124;&#xC694;. &#xC774;&#xC81C; &#xC6B0;&#xB9AC;&#xB294; &#xB204;&#xAD70;&#xAC00; &#xC0F7;&#xAC74; &#xB0B4;&#xBD80;&#xC5D0; &#xD588;&#xB358; &#xBAA8;&#xB4E0; &#xC77C;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Each tiny change, users or scripts make is recorded here.
+&#xC5EC;&#xAE30;&#xC5D0; &#xC791;&#xC740; &#xBCC0;&#xD654;, &#xC0AC;&#xC6A9;&#xC790; &#xB610;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xAE30;&#xB85D;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>So let&apos;s see what it looks like when I make a change to an asset.
+&#xC774;&#xC81C; &#xC5B4;&#xC14B;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xB418;&#xB294;&#xC9C0; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>I&apos;ll leave this page open and navigate to my projects asset page in another browser tab.
+&#xC774; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC5F4;&#xC5B4; &#xB450;&#xACE0; &#xB2E4;&#xB978; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD0ED;&#xC758; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC5B4;&#xC14B; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC774;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Okay so that small change should show up on the all events page.
+&#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xC791;&#xC740; &#xBCC0;&#xD654;&#xAC00; &#xB098;&#xD0C0;&#xB098;&#xB3C4;&#xB85D; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>And here it is event log entities have a bunch of useful fields.
+&#xC5EC;&#xAE30; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xC720;&#xC6A9;&#xD55C; &#xD544;&#xB4DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>But for now I&apos;ll draw your attention to the event type field.
+&#xD558;&#xC9C0;&#xB9CC; &#xC9C0;&#xAE08;&#xC740; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615; &#xD544;&#xB4DC;&#xC5D0; &#xC8FC;&#xC758;&#xB97C; &#xAE30;&#xC6B8;&#xC774;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/12.png" alt="Local Image"></p>
+<p>As you can see the name of the event type is right here so I can grab it and copy it into our plugin.
+&#xBCF4;&#xC2DC;&#xB2E4;&#xC2DC;&#xD53C;, &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615;&#xC758; &#xC774;&#xB984;&#xC740; &#xBC14;&#xB85C; &#xC5EC;&#xAE30;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xBCF5;&#xC0AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s test this I&apos;ll open the shots page in my project and make a change.
+&#xC774; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC758; &#xC0F7; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC5F4;&#xACE0; &#xBCC0;&#xACBD;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Hopefully we don&apos;t see anything in the terminal.
+&#xD130;&#xBBF8;&#xB110;&#xC5D0; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC5C6;&#xAE30;&#xB97C; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<p>Oops! We do why is that.
+&#xC774;&#xB7F0;! &#xC6B0;&#xB9AC;&#xB294; &#xC65C; &#xADF8;&#xB7F0;&#xC9C0; &#xC54C;&#xACE0; &#xC788;&#xC5B4;.</p>
+<p>Right you can see hrer that our <code>logArgs.py</code> plugin is still active. It reported the change.
+&#xC9C0;&#xAE08; &#xBCF4;&#xC2DC;&#xB294; &#xBC14;&#xC640; &#xAC19;&#xC774; &#xB2F9;&#xC0AC;&#xC758; <code>logArgs.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC5EC;&#xC804;&#xD788; &#xD65C;&#xC131; &#xC0C1;&#xD0DC;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xAC83;&#xC740; &#xBCC0;&#xD654;&#xB97C; &#xBCF4;&#xACE0;&#xD588;&#xB2E4;.</p>
+<p>Let&apos;s disable it by shutting the daemon down creating a disabled folder and moving log R is that pyn.
+&#xB370;&#xBAAC;&#xC744; &#xC885;&#xB8CC;&#xD558;&#xACE0; <code>disabled</code> &#xD3F4;&#xB354;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; <code>logArgs.py</code>&#xC640; <code>logArgs.pyc</code>&#xB97C; &#xC774;&#xB3D9; &#xC2DC;&#xD0B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/13.png" alt="Local Image"></p>
+<p>Now we can start up the daemon with only the <code>demo.py</code> plugin loaded and make another change to the shot entity.
+&#xC774;&#xC81C; <code>demo.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xB9CC; &#xB85C;&#xB4DC;&#xD55C; &#xB370;&#xBAAC;&#xC744; &#xC2E4;&#xD589; &#xC2DC;&#xD0B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC0F7; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xB2E4;&#xC2DC; &#xBCC0;&#xACBD; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Great nothing happens Now but if I make a change to an asset entity.
+&#xC88B;&#xC544;&#xC694;. &#xC544;&#xBB34; &#xC77C;&#xB3C4; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xC544;&#xC694;. &#xD558;&#xC9C0;&#xB9CC; &#xC5B4;&#xC14B; &#xC2E4;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xBA74;</p>
+<p>Bingo!
+&#xBE59;&#xACE0;!</p>
+<p>I&apos;ll quick aside the daemon can get confused if you disable plugins like I just did by putting them into a folder and then taking them out later.
+&#xC81C;&#xAC00; &#xBC29;&#xAE08; &#xD55C; &#xAC83;&#xCC98;&#xB7FC; &#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC744; &#xD3F4;&#xB354;&#xC5D0; &#xB123;&#xC740; &#xB2E4;&#xC74C; &#xB098;&#xC911;&#xC5D0; &#xAEBC;&#xB0B4;&#xBA74; &#xB370;&#xBAAC;&#xC774; &#xD63C;&#xB3D9;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>A quick fix is to delete the event ID file here.
+&#xC5EC;&#xAE30;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; ID &#xD30C;&#xC77C;&#xC744; &#xBE68;&#xB9AC; &#xC0AD;&#xC81C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Of course that will blow away your event queue but that usually doesn&apos;t matter during development.
+&#xBB3C;&#xB860; &#xADF8;&#xAC83;&#xC740; &#xB2F9;&#xC2E0;&#xC758; &#xC774;&#xBCA4;&#xD2B8; &#xD050;&#xB97C; &#xB0A0;&#xB824;&#xBC84;&#xB9B4; &#xAC83;&#xC774;&#xC9C0;&#xB9CC; &#xADF8;&#xAC83;&#xC740; &#xB300;&#xAC1C; &#xAC1C;&#xBC1C; &#xC911;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/14.png" alt="Local Image"></p>
+<p>Let&apos;s get more specific if I only want the plug-in to run when an asset entity&apos;s status field changes I can add the internal code for that field here.
+&#xC5B4;&#xC14B; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xBCC0;&#xACBD;&#xB420; &#xB54C;&#xB9CC; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB3C4;&#xB85D; &#xD558;&#xB824;&#xBA74; &#xC5EC;&#xAE30;&#xC5D0; &#xD574;&#xB2F9; &#xD544;&#xB4DC;&#xC758; &#xB0B4;&#xBD80; &#xCF54;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+I&apos;ll change the logger message to give us a bit more info about what&apos;s happening.
+&#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xACE0; &#xC788;&#xB294;&#xC9C0; &#xC880; &#xB354; &#xC790;&#xC138;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xC8FC;&#xAE30; &#xC704;&#xD574; &#xB85C;&#xAC70; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xBC14;&#xAFB8;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-string">&quot;sg_status_list&quot;</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        <span class="hljs-keyword">None</span>,
+    )
+
+    reg.logger.setLevel(logging.DEBUG)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    logger.info(
+            sg.find_one(
+                <span class="hljs-string">&quot;EventLogEntry&quot;</span>,
+                [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, event[<span class="hljs-string">&quot;id&quot;</span>]]],
+                [<span class="hljs-string">&quot;description&quot;</span>]
+            )[<span class="hljs-string">&quot;description&quot;</span>]
+    )
+</code></pre>
+<p>Don&apos;t worry if you don&apos;t understand this bit yet.
+&#xC544;&#xC9C1; &#xC774; &#xC810;&#xC744; &#xC774;&#xD574;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;.</p>
+<p>Cool! It works.
+&#xC798; &#xC791;&#xB3D9; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/15.png" alt="Local Image"></p>
+<p>And if I need to target multiple fields I can change this to a list.
+&#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xD544;&#xB4DC;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xC774; &#xD544;&#xB4DC;&#xB97C; &#xBAA9;&#xB85D;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python">eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: [<span class="hljs-string">&quot;sg_status_list&quot;</span>, <span class="hljs-string">&quot;description&quot;</span>]
+    }
+</code></pre>
+<p>So now the plug-in will run if the status or description field changes.
+&#xC774;&#xC81C; &#xC0C1;&#xD0DC; &#xB610;&#xB294; &#xC124;&#xBA85; &#xD544;&#xB4DC;&#xAC00; &#xBCC0;&#xACBD;&#xB418;&#xBA74; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>I can also add another entry here for a different event type.
+&#xB2E4;&#xB978; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615;&#xC5D0; &#xB300;&#xD574; &#xC5EC;&#xAE30;&#xC5D0; &#xB2E4;&#xB978; &#xD56D;&#xBAA9;&#xC744; &#xCD94;&#xAC00;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Maybe a shot change with the code field targeted there.
+&#xC544;&#xB9C8;&#xB3C4; &#xAC70;&#xAE30;&#xC11C; &#xCF54;&#xB4DC; &#xD544;&#xB4DC;&#xB97C; &#xBAA9;&#xD45C;&#xB85C; &#xD55C; &#xC0F7; &#xBCC0;&#xD654;&#xAC00; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>Should be enough flexibility in this event filter dictionary to capture the event or events you&apos;re interested in.
+&#xC774; &#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130; &#xC0AC;&#xC804;&#xC5D0;&#xC11C; &#xC6D0;&#xD558;&#xB294; &#xC774;&#xBCA4;&#xD2B8; &#xB610;&#xB294; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xCEA1;&#xCC98;&#xD560; &#xC218; &#xC788;&#xB294; &#xCDA9;&#xBD84;&#xD55C; &#xC720;&#xC5F0;&#xC131;&#xC774; &#xC788;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>And remember if you&apos;re ever wondering how to filter for an event just visit shotgun simulate what a user would do in the GUI to create an event  log entry and then check the all events page for the event type syntax.
+&#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xB300;&#xD574; &#xD544;&#xD130;&#xB9C1;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC5D0; &#xB300;&#xD574; &#xAD81;&#xAE08;&#xD55C; &#xACBD;&#xC6B0;, GUI&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC744; &#xC0DD;&#xC131;&#xD55C; &#xB2E4;&#xC74C; &#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615; &#xAD6C;&#xBB38;&#xC744; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>For the rest of this demo I&apos;m going to focus on asset status field changes so I&apos;ll revert these other bits.
+&#xC774; &#xB370;&#xBAA8;&#xC758; &#xB098;&#xBA38;&#xC9C0; &#xBD80;&#xBD84;&#xC5D0;&#xC11C;&#xB294; &#xC5B4;&#xC14B; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC5D0; &#xCD08;&#xC810;&#xC744; &#xB9DE;&#xCDB0; &#xB2E4;&#xB978; &#xBE44;&#xD2B8;&#xB97C; &#xB418;&#xB3CC;&#xB9AC;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>One last note before we move on.
+&#xB2E4;&#xC74C; &#xB2E8;&#xACC4;&#xB85C; &#xB118;&#xC5B4;&#xAC00;&#xAE30; &#xC804;&#xC5D0; &#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C;.</p>
+<p>You can register more than one register callback function here.
+&#xC5EC;&#xAE30;&#xC5D0;&#xC11C; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xD568;&#xC218;&#xB97C; &#xB450; &#xAC1C; &#xC774;&#xC0C1; &#xB4F1;&#xB85D;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>So for example we could just copy this block change up the event filter and then point to a different function in the file.
+&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC774; &#xBE14;&#xB85D; &#xBCC0;&#xACBD;&#xC744; &#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130; &#xC704;&#xB85C; &#xBCF5;&#xC0AC;&#xD55C; &#xB2E4;&#xC74C; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xAE30;&#xB2A5;&#xC744; &#xAC00;&#xB9AC;&#xD0AC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Why would you do that.
+&#xC65C; &#xADF8;&#xB807;&#xAC8C; &#xD560;&#xAE4C;&#xC694;?</p>
+<p>Well if you&apos;ve got very similar plugins and you want the share code without importing modules you could consolidate them this way.
+&#xBE44;&#xC2B7;&#xD55C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xACE0; &#xBAA8;&#xB4C8;&#xC744; &#xAC00;&#xC838;&#xC624;&#xC9C0; &#xC54A;&#xACE0; &#xACF5;&#xC720; &#xCF54;&#xB4DC;&#xB97C; &#xC6D0;&#xD55C;&#xB2E4;&#xBA74; &#xC774;&#xB7EC;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD1B5;&#xD569;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Sort of like  overloading the function.
+&#xC77C;&#xC885;&#xC758; &#xACFC;&#xBD80;&#xD558; &#xAC19;&#xC740; &#xAC70;&#xC8E0;.</p>
+<p>In practice it doesn&apos;t come up all that often.
+&#xC2E4;&#xC81C;&#xB85C; &#xADF8;&#xB807;&#xAC8C; &#xC790;&#xC8FC; &#xB098;&#xC624;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2C8;&#xB2E4;.</p>
+<p>Don&apos;t be surprised if you only ever use a single register call back call per register callbacks function.
+&#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31;&#xB2F9; &#xD558;&#xB098;&#xC758; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xAE30;&#xB2A5;&#xB9CC; &#xC0AC;&#xC6A9;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xB180;&#xB77C;&#xC9C0; &#xB9C8;&#xC2ED;&#xC2DC;&#xC624;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-string">&quot;sg_status_list&quot;</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        <span class="hljs-keyword">None</span>,
+    )
+
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo2,
+        {<span class="hljs-string">&quot;Shotgun_Shot_Change&quot;</span>: <span class="hljs-string">&quot;code&quot;</span>},
+        <span class="hljs-keyword">None</span>,
+    )
+
+    reg.logger.setLevel(logging.DEBUG)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    logger.info(
+            sg.find_one(
+                <span class="hljs-string">&quot;EventLogEntry&quot;</span>,
+                [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, event[<span class="hljs-string">&quot;id&quot;</span>]]],
+                [<span class="hljs-string">&quot;description&quot;</span>]
+            )[<span class="hljs-string">&quot;description&quot;</span>]
+    )
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo2</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    logger.info(<span class="hljs-string">&quot;This is the second callback function.&quot;</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3_Logging_events.html" class="navigation navigation-prev " aria-label="Previous page: 3. 이벤트 로깅">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5_Processing_events.html" class="navigation navigation-next " aria-label="Next page: 5. 이벤트 처리">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"next":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},"previous":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/4_Filtering_for_events.md","mtime":"2018-11-19T08:57:59.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,880 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. Shotgun 기술 스택 및 보안 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3_The_Web_GUI.html" />
+    
+    
+    <link rel="prev" href="1_A_Developers_Intro_to_Shotgun.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0_Shotgun.html">
+            
+                <a href="0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3_The_Web_GUI.html">
+            
+                <a href="3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4_Resources.html">
+            
+                <a href="4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_AMI/0_AMI.html">
+            
+                <a href="../3_AMI/0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_AMI/1_Script_Keys_Automation.html">
+            
+                <a href="../3_AMI/1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_AMI/2_Action_Menu_Items.html">
+            
+                <a href="../3_AMI/2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_daemon/0_Daemon.html">
+            
+                <a href="../4_daemon/0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_daemon/1_Daemon_Intro.html">
+            
+                <a href="../4_daemon/1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_daemon/2_Installing_the_daemon.html">
+            
+                <a href="../4_daemon/2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_daemon/3_Logging_events.html">
+            
+                <a href="../4_daemon/3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_daemon/4_Filtering_for_events.html">
+            
+                <a href="../4_daemon/4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_daemon/5_Processing_events.html">
+            
+                <a href="../4_daemon/5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4_daemon/6_Validation.html">
+            
+                <a href="../4_daemon/6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../4_daemon/7_A_real_example.html">
+            
+                <a href="../4_daemon/7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../4_daemon/8_Best_practices.html">
+            
+                <a href="../4_daemon/8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                <a href="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../4_daemon/10_Example_plugins.html">
+            
+                <a href="../4_daemon/10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../4_daemon/11_Documentation.html">
+            
+                <a href="../4_daemon/11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolkit/0_Toolkit.html">
+            
+                <a href="../5_toolkit/0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolkit/1_Toolkit_Itro.html">
+            
+                <a href="../5_toolkit/1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolkit/2_Managing_software_versions.html">
+            
+                <a href="../5_toolkit/2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                <a href="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_toolkit/7_Managing_config_versions.html">
+            
+                <a href="../5_toolkit/7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_toolkit/8_Taking_over_the_config.html">
+            
+                <a href="../5_toolkit/8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_toolkit/9_Version_control.html">
+            
+                <a href="../5_toolkit/9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../5_toolkit/10_The_development_environment.html">
+            
+                <a href="../5_toolkit/10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../5_toolkit/14_tk_config_default2.html">
+            
+                <a href="../5_toolkit/14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                <a href="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                <a href="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2. Shotgun 기술 스택 및 보안</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="shotgun-&#xAE30;&#xC220;-&#xC2A4;&#xD0DD;-&#xBC0F;-&#xBCF4;&#xC548;">Shotgun &#xAE30;&#xC220; &#xC2A4;&#xD0DD; &#xBC0F; &#xBCF4;&#xC548;</h1>
+<blockquote>
+<p>Shotgun &#xAE30;&#xC220; &#xC2A4;&#xD0DD; &#xBC0F; &#xBCF4;&#xC548;&#xC744; &#xAE4A;&#xC774; &#xC788;&#xAC8C; &#xC0B4;&#xD3B4;&#xBD05;&#xB2C8;&#xB2E4;. Shotgun&#xC758; &#xAD6C;&#xC131;&#xC694;&#xC18C; &#xC911; &#xB9CE;&#xC740; &#xBD80;&#xBD84;&#xC774; &#xC544;&#xD2F0;&#xC2A4;&#xD2B8;&#xC640; &#xC81C;&#xC791;&#xC790;&#xC5D0;&#xAC8C;&#xB294; &#xC801;&#xC808;&#xD558;&#xAC8C; &#xAC10;&#xCD94;&#xC5B4;&#xC838; &#xC788;&#xC9C0;&#xB9CC; &#xAC1C;&#xBC1C;&#xC790;&#xB294; Shotgun&#xC758; &#xB0B4;&#xBD80; &#xC791;&#xB3D9; &#xBC29;&#xC2DD;&#xACFC; &#xADF8; &#xAD6C;&#xC131; &#xC694;&#xC18C;&#xB97C; &#xC798; &#xC774;&#xD574;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<p><a href="https://www.youtube.com/watch?v=IR_8JT_FtkI" target="_blank">Developer Training - Shotgun: The Shotgun Tech Stack &amp; Security</a></p>
+<p><img src="../../img/2/1.png" alt="Local Image"></p>
+<h2 id="shotgun&#xC758;-&#xAE30;&#xB2A5;">Shotgun&#xC758; &#xAE30;&#xB2A5;</h2>
+<h2 id="&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-postgres">&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;: Postgres</h2>
+<p><img src="../../img/2/2.png" alt="Local Image"></p>
+<h2 id="&#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;-&#xC11C;&#xBC84;-ruby">&#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC11C;&#xBC84;: Ruby</h2>
+<h2 id="&#xC6F9;-&#xD504;&#xB7F0;&#xD2B8;-&#xC5D4;&#xB4DC;-javascript-&#xBC0F;-&#xBE0C;&#xB77C;&#xC6B0;&#xC800;">&#xC6F9; &#xD504;&#xB7F0;&#xD2B8; &#xC5D4;&#xB4DC;: Javascript &#xBC0F; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;</h2>
+<h2 id="&#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;">&#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;</h2>
+<h2 id="aws-s3-amazon-simple-storage-service">AWS S3: Amazon Simple Storage Service</h2>
+<h2 id="&#xC6F9;-&#xAC00;&#xC18D;&#xAE30;">&#xC6F9; &#xAC00;&#xC18D;&#xAE30;</h2>
+<h2 id="shotgun-python-api">Shotgun Python API</h2>
+<h2 id="shotgun-&#xC774;&#xBCA4;&#xD2B8;-&#xB370;&#xBAAC;">Shotgun &#xC774;&#xBCA4;&#xD2B8; &#xB370;&#xBAAC;</h2>
+<h2 id="&#xCEE4;&#xC2A4;&#xD140;-&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;-&#xBC0F;-&#xB3C4;&#xAD6C;">&#xCEE4;&#xC2A4;&#xD140; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBC0F; &#xB3C4;&#xAD6C;</h2>
+<h2 id="&#xC544;&#xD2F0;&#xC2A4;&#xD2B8;-&#xB3C4;&#xAD6C;">&#xC544;&#xD2F0;&#xC2A4;&#xD2B8; &#xB3C4;&#xAD6C;</h2>
+<h2 id="shotgun-&#xD1B5;&#xD569;-&#xBC0F;-&#xD234;&#xD0B7;">Shotgun &#xD1B5;&#xD569; &#xBC0F; &#xD234;&#xD0B7;</h2>
+<h2 id="shotgun-&#xB370;&#xC2A4;&#xD06C;&#xD1B1;">Shotgun &#xB370;&#xC2A4;&#xD06C;&#xD1B1;</h2>
+<h2 id="rv">RV</h2>
+<h2 id="ios&#xB97C;-&#xC704;&#xD55C;-shotgun-review">iOS&#xB97C; &#xC704;&#xD55C; Shotgun Review</h2>
+<h2 id="&#xBCF4;&#xC548;">&#xBCF4;&#xC548;</h2>
+<h2 id="&#xACB0;&#xB860;">&#xACB0;&#xB860;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1_A_Developers_Intro_to_Shotgun.html" class="navigation navigation-prev " aria-label="Previous page: 1. 개발자를 위한 Shotgun 소개">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3_The_Web_GUI.html" class="navigation navigation-next " aria-label="Next page: 3. 웹 GUI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. Shotgun 기술 스택 및 보안","level":"1.2.2","depth":2,"next":{"title":"3. 웹 GUI","level":"1.2.3","depth":2,"path":"posts/1_shotgun/3_The_Web_GUI.md","ref":"posts/1_shotgun/3_The_Web_GUI.md","articles":[]},"previous":{"title":"1. 개발자를 위한 Shotgun 소개","level":"1.2.1","depth":2,"path":"posts/1_shotgun/1_A_Developers_Intro_to_Shotgun.md","ref":"posts/1_shotgun/1_A_Developers_Intro_to_Shotgun.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/1_shotgun/2_The_Shotgun_Tech_Stack_Security.md","mtime":"2018-11-12T12:29:09.824Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1014 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5. 이벤트 처리 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6_Validation.html" />
+    
+    
+    <link rel="prev" href="4_Filtering_for_events.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_shotgun/0_Shotgun.html">
+            
+                <a href="../1_shotgun/0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_shotgun/3_The_Web_GUI.html">
+            
+                <a href="../1_shotgun/3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_shotgun/4_Resources.html">
+            
+                <a href="../1_shotgun/4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_AMI/0_AMI.html">
+            
+                <a href="../3_AMI/0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_AMI/1_Script_Keys_Automation.html">
+            
+                <a href="../3_AMI/1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_AMI/2_Action_Menu_Items.html">
+            
+                <a href="../3_AMI/2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="0_Daemon.html">
+            
+                <a href="0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="1_Daemon_Intro.html">
+            
+                <a href="1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="2_Installing_the_daemon.html">
+            
+                <a href="2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3_Logging_events.html">
+            
+                <a href="3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4_Filtering_for_events.html">
+            
+                <a href="4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="5_Processing_events.html">
+            
+                <a href="5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="6_Validation.html">
+            
+                <a href="6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="7_A_real_example.html">
+            
+                <a href="7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="8_Best_practices.html">
+            
+                <a href="8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="9_Managing_the_event_backlog.html">
+            
+                <a href="9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="10_Example_plugins.html">
+            
+                <a href="10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="11_Documentation.html">
+            
+                <a href="11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolkit/0_Toolkit.html">
+            
+                <a href="../5_toolkit/0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolkit/1_Toolkit_Itro.html">
+            
+                <a href="../5_toolkit/1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolkit/2_Managing_software_versions.html">
+            
+                <a href="../5_toolkit/2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                <a href="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_toolkit/7_Managing_config_versions.html">
+            
+                <a href="../5_toolkit/7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_toolkit/8_Taking_over_the_config.html">
+            
+                <a href="../5_toolkit/8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_toolkit/9_Version_control.html">
+            
+                <a href="../5_toolkit/9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../5_toolkit/10_The_development_environment.html">
+            
+                <a href="../5_toolkit/10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../5_toolkit/14_tk_config_default2.html">
+            
+                <a href="../5_toolkit/14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                <a href="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                <a href="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >5. 이벤트 처리</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="processing-events-&#xC774;&#xBCA4;&#xD2B8;-&#xCC98;&#xB9AC;"><a href="https://youtu.be/YPZ1FWvhf7k?t=13m15s" target="_blank">Processing events (&#xC774;&#xBCA4;&#xD2B8; &#xCC98;&#xB9AC;)</a></h1>
+<p>Next let&apos;s look at the demo function that are registered callback method references.
+&#xC774;&#xC81C; &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xC5D0; &#xB4F1;&#xB85D;&#xB41C; demo &#xD568;&#xC218;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>We already know that this function is run when an asset status field is changed but we haven&apos;t yet looked at the available<code>sg</code>, <code>logger</code>, <code>event</code> and <code>args</code> argument variables.
+&#xC5B4;&#xC14B; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xBCC0;&#xACBD;&#xB420; &#xB54C; &#xC774; &#xAE30;&#xB2A5;&#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC774;&#xBBF8; &#xC54C;&#xACE0; &#xC788;&#xC9C0;&#xB9CC; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; <code>sg</code>, <code>logger</code>, <code>event</code>, <code>args</code> &#xC778;&#xC218; &#xBCC0;&#xC218;&#xB294; &#xC544;&#xC9C1; &#xD655;&#xC778;&#xD558;&#xC9C0; &#xC54A;&#xC558;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>The <code>sg</code> object is fairly straightforward.
+<code>sg</code> &#xC624;&#xBE0C;&#xC81D;&#xD2B8;&#xB294; &#xAF64; &#xAC04;&#xB2E8;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>It&apos;s an authenticated shotgun a connection object the daemon creates with the script key credentials that are passed into the register callback function.
+&#xC774;&#xAC83;&#xC740; &#xB85C;&#xADF8;&#xC778; &#xB300;&#xBAAC;&#xC774; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xD568;&#xC218;&#xC5D0; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4; &#xC790;&#xACA9; &#xC99D;&#xBA85;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC0DD;&#xC131;&#xD55C; &#xC778;&#xC99D;&#xB41C; &#xC0F7;&#xAC74; &#xC5F0;&#xACB0; &#xAC1C;&#xCCB4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Up here we can use it to run shotgun Python API commands.
+&#xC5EC;&#xAE30;&#xC11C;&#xB294; Shotgun Python API &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xB370; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Cool. Next we&apos;ve got a logger instance this is what&apos;s sending info to standard output in the terminal and to our log files.
+&#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC74C;&#xC740; &#xB85C;&#xAC70; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC785;&#xB2C8;&#xB2E4;. &#xD130;&#xBBF8;&#xB110;&#xC758; &#xD45C;&#xC900; &#xCD9C;&#xB825;&#xACFC; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xB85C; &#xC815;&#xBCF4;&#xB97C; &#xC804;&#xC1A1;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s test these two together.
+&#xC774; &#xB450; &#xAC00;&#xC9C0;&#xB97C; &#xD568;&#xAED8; &#xD14C;&#xC2A4;&#xD2B8;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>I&apos;ll search for a project on our site and spit it out with a logger.
+&#xB098;&#xB294; &#xC6B0;&#xB9AC; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xCC3E;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xB85C;&#xAC70;&#xB85C; &#xCD9C;&#xB825; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;xvlx2-okVdinoaxbltqempnjw&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-string">&quot;sg_status_list&quot;</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        <span class="hljs-keyword">None</span>,
+    )
+
+    reg.logger.setLevel(logging.DEBUG)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    logger.info(sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, []))
+</code></pre>
+<p>Great it works.
+&#xC798; &#xB40D;&#xB2C8;&#xB2E4;.</p>
+<p>Remember to use this logger instance when you want to report anything don&apos;t use print statements or create your own logger instant.
+&#xAE30;&#xC5B5; &#xD558;&#xC138;&#xC694;. &#xC774; &#xB85C;&#xAC70; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xBCF4;&#xACE0;&#xB97C; &#xBC1B;&#xC73C;&#xC138;&#xC694;. <code>print</code>&#xBB38;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xAC70;&#xB098; &#xC9C1;&#xC811; &#xB9CC;&#xB4E0; &#xB85C;&#xAC70;&#xB97C; &#xC0AC;&#xC6A9; &#xD558;&#xBA74; &#xC548;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>Next up we have the event dictionary.
+&#xB2E4;&#xC74C;&#xC740; &#xC774;&#xBCA4;&#xD2B8; &#xC0AC;&#xC804;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s send it out to the terminal to see what&apos;s in it.
+&#xD130;&#xBBF8;&#xB110;&#xB85C; &#xBB50;&#xAC00; &#xBCF4;&#xB0B4;&#xC9C0;&#xB294;&#xC9C0; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>I like to copy the output back into the plug-in I&apos;m working on.
+&#xC791;&#xC5C5; &#xC911;&#xC778; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xCD9C;&#xB825;&#xC744; &#xB2E4;&#xC2DC; &#xBCF5;&#xC0AC;&#xD558;&#xACE0; &#xC2F6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>For reference if you take a close look at the output here you&apos;ll realize we&apos;ve already got enough data to take action.
+&#xCC38;&#xACE0;&#xB97C; &#xC704;&#xD574; &#xC5EC;&#xAE30;&#xC758; &#xCD9C;&#xB825;&#xC744; &#xC790;&#xC138;&#xD788; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; &#xC774;&#xBBF8; &#xC870;&#xCE58;&#xB97C; &#xCDE8;&#xD560; &#xC218; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xAC00; &#xCDA9;&#xBD84;&#xD558;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;xvlx2-okVdinoaxbltqempnjw&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-string">&quot;sg_status_list&quot;</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        <span class="hljs-keyword">None</span>,
+    )
+
+    reg.logger.setLevel(logging.DEBUG)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    <span class="hljs-comment"># attribute_name, sg_status_list</span>
+    <span class="hljs-comment"># event_type, Shotgun_Asset_Change</span>
+    <span class="hljs-comment"># created_at, 2018 - 11 - 14</span>
+    <span class="hljs-comment"># 04:04:13 + 0</span>
+    <span class="hljs-comment"># 9:00</span>
+    <span class="hljs-comment"># entity, {&apos;type&apos;: &apos;Asset&apos;, &apos;id&apos;: 3302, &apos;name&apos;: &apos;AAA&apos;}</span>
+    <span class="hljs-comment"># project, {&apos;type&apos;: &apos;Project&apos;, &apos;id&apos;: 336, &apos;name&apos;: &apos;Project X&apos;}</span>
+    <span class="hljs-comment"># meta, {&apos;entity_id&apos;: 3302, &apos;attribute_name&apos;: &apos;sg_status_list&apos;, &apos;entity_type&apos;: &apos;Asset&apos;, &apos;old_value&apos;: &apos;omt&apos;,</span>
+    <span class="hljs-comment">#        &apos;field_data_type&apos;: &apos;status_list&apos;, &apos;new_value&apos;: &apos;ip&apos;, &apos;type&apos;: &apos;attribute_change&apos;}</span>
+    <span class="hljs-comment"># user, {&apos;type&apos;: &apos;HumanUser&apos;, &apos;id&apos;: 169, &apos;name&apos;: &apos;\xea\xb7\xbc\xeb\xaa\xa8 \xea\xb9\x80&apos;}</span>
+    <span class="hljs-comment"># session_uuid, 560803</span>
+    <span class="hljs-comment"># a4 - e76e - 11e8 - b528 - 0242</span>
+    <span class="hljs-comment"># ac110004</span>
+    <span class="hljs-comment"># type, EventLogEntry</span>
+    <span class="hljs-comment"># id, 2445666</span>
+    <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> event.iteritems():
+        logger.info(<span class="hljs-string">&quot;%s, %s&quot;</span> % (k, v))
+</code></pre>
+<p>Let&apos;s write a simple bit of code that updates an assets description field when it&apos;s status field is set to on hold.
+&#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xBCF4;&#xB958; &#xC0C1;&#xD0DC;&#xB85C; &#xC124;&#xC815;&#xB41C; &#xACBD;&#xC6B0; &#xC790;&#xC0B0; &#xC124;&#xBA85; &#xD544;&#xB4DC;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD558;&#xB294; &#xAC04;&#xB2E8;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>I&apos;ll use the register callback methods last argument to pass in a setting called target status.
+&#xB9C8;&#xC9C0;&#xB9C9; &#xC778;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBAA9;&#xD45C; &#xC0C1;&#xD0DC;&#xB77C;&#xB294; &#xC124;&#xC815;&#xC744; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>I like to define static variable settings in the register callbacks function instead of cluttering the function body.
+&#xC800;&#xB294; &#xAE30;&#xB2A5; &#xBCF8;&#xBB38;&#xC744; &#xBCF5;&#xC7A1;&#xD558;&#xAC8C; &#xB9CC;&#xB4DC;&#xB294; &#xB300;&#xC2E0; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xAE30;&#xB2A5;&#xC5D0; &#xC815;&#xC801; &#xBCC0;&#xC218; &#xC124;&#xC815;&#xC744; &#xC815;&#xC758;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC88B;&#xC544;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Pretty straightforward right.
+&#xC544;&#xC8FC; &#xAC04;&#xB2E8;&#xD558;&#xC8E0;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+
+SGDAEMON_LOGARGS_NAME = <span class="hljs-string">&quot;demo.py&quot;</span>
+SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;xvlx2-okVdinoaxbltqempnjw&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">registerCallbacks</span><span class="hljs-params">(reg)</span>:</span>
+    eventFilter = {
+        <span class="hljs-string">&quot;Shotgun_Asset_Change&quot;</span>: <span class="hljs-string">&quot;sg_status_list&quot;</span>
+    }
+    reg.registerCallback(
+        SGDAEMON_LOGARGS_NAME,
+        SGDAEMON_LOGARGS_KEY,
+        demo,
+        eventFilter,
+        {<span class="hljs-string">&quot;target_status&quot;</span>: <span class="hljs-string">&quot;hld&quot;</span>},
+    )
+
+    reg.logger.setLevel(logging.DEBUG)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">demo</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
+    <span class="hljs-comment"># attribute_name, sg_status_list</span>
+    <span class="hljs-comment"># event_type, Shotgun_Asset_Change</span>
+    <span class="hljs-comment"># created_at, 2018 - 11 - 14</span>
+    <span class="hljs-comment"># 04:04:13 + 0</span>
+    <span class="hljs-comment"># 9:00</span>
+    <span class="hljs-comment"># entity, {&apos;type&apos;: &apos;Asset&apos;, &apos;id&apos;: 3302, &apos;name&apos;: &apos;AAA&apos;}</span>
+    <span class="hljs-comment"># project, {&apos;type&apos;: &apos;Project&apos;, &apos;id&apos;: 336, &apos;name&apos;: &apos;Project X&apos;}</span>
+    <span class="hljs-comment"># meta, {&apos;entity_id&apos;: 3302, &apos;attribute_name&apos;: &apos;sg_status_list&apos;, &apos;entity_type&apos;: &apos;Asset&apos;, &apos;old_value&apos;: &apos;omt&apos;,</span>
+    <span class="hljs-comment">#        &apos;field_data_type&apos;: &apos;status_list&apos;, &apos;new_value&apos;: &apos;ip&apos;, &apos;type&apos;: &apos;attribute_change&apos;}</span>
+    <span class="hljs-comment"># user, {&apos;type&apos;: &apos;HumanUser&apos;, &apos;id&apos;: 169, &apos;name&apos;: &apos;\xea\xb7\xbc\xeb\xaa\xa8 \xea\xb9\x80&apos;}</span>
+    <span class="hljs-comment"># session_uuid, 560803</span>
+    <span class="hljs-comment"># a4 - e76e - 11e8 - b528 - 0242</span>
+    <span class="hljs-comment"># ac110004</span>
+    <span class="hljs-comment"># type, EventLogEntry</span>
+    <span class="hljs-comment"># id, 2445666</span>
+    <span class="hljs-keyword">if</span> event[<span class="hljs-string">&quot;meta&quot;</span>][<span class="hljs-string">&quot;new_value&quot;</span>] == args[<span class="hljs-string">&quot;target_status&quot;</span>]:
+        sg.update(
+            event[<span class="hljs-string">&quot;entity&quot;</span>][<span class="hljs-string">&quot;type&quot;</span>],
+            event[<span class="hljs-string">&quot;entity&quot;</span>][<span class="hljs-string">&quot;id&quot;</span>],
+            {<span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;{} set this {} to {}.&quot;</span>.format(
+                event[<span class="hljs-string">&quot;user&quot;</span>][<span class="hljs-string">&quot;name&quot;</span>],
+                event[<span class="hljs-string">&quot;entity&quot;</span>][<span class="hljs-string">&quot;type&quot;</span>],
+                args[<span class="hljs-string">&quot;target_status&quot;</span>]
+            )}
+        )
+</code></pre>
+<p>Let&apos;s see if it works.
+&#xD6A8;&#xACFC;&#xAC00; &#xC788;&#xB294;&#xC9C0; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>Amazing.
+&#xC2E0;&#xAE30;&#xD558;&#xB124;&#xC694;.</p>
+<p>What&apos;s that feeling in your chest you ask. That&apos;s adrenaline. Your heart is racing.
+&#xAC00;&#xC2B4; &#xC18D;&#xC758; &#xADF8; &#xB290;&#xB08C;&#xC774; &#xC5B4;&#xB54C;&#xC694;? &#xC544;&#xB4DC;&#xB808;&#xB0A0;&#xB9B0;&#xC774;&#xC57C;. &#xC2EC;&#xC7A5;&#xC774; &#xB6F0;&#xC5B4;&#xC694;.</p>
+<p>You&apos;re starting to realize the Damon&apos;s potential you&apos;re itching to write thousands of lines of code to  impress your boss your family and friends.
+&#xB2F9;&#xC2E0;&#xC740; &#xB2F9;&#xC2E0;&#xC758; &#xC0C1;&#xC0AC;&#xC5D0;&#xAC8C; &#xB2F9;&#xC2E0;&#xC758; &#xAC00;&#xC871;&#xACFC; &#xCE5C;&#xAD6C;&#xB4E4;&#xC744; &#xAC10;&#xB3D9;&#xC2DC;&#xD0A4;&#xAE30; &#xC704;&#xD574; &#xC218;&#xCC9C;&#xC904;&#xC758; &#xCF54;&#xB4DC;&#xB97C; &#xC4F0;&#xACE0; &#xC2F6;&#xC5B4;&#xD558;&#xB294; &#xB370;&#xBAAC;&#xC758; &#xC7A0;&#xC7AC;&#xB825;&#xC744; &#xAE68;&#xB2EB;&#xAE30; &#xC2DC;&#xC791;&#xD588;&#xB2E4;.</p>
+<p>That&apos;s great now take a deep breath try to calm down and finish watching this video.
+&#xC774;&#xC81C; &#xC2EC;&#xD638;&#xD761;&#xC744; &#xD574;&#xC11C; &#xC9C4;&#xC815;&#xD558;&#xACE0; &#xBE44;&#xB514;&#xC624; &#xBCF4;&#xB294; &#xAC83;&#xC744; &#xB05D;&#xB0B4;&#xC138;&#xC694;.</p>
+<p>If you stop now you run the risk of wielding great power irresponsibly.
+&#xB2F9;&#xC2E0;&#xC774; &#xC9C0;&#xAE08; &#xBA48;&#xCD94;&#xBA74; &#xB2F9;&#xC2E0;&#xC740; &#xBB34;&#xCC45;&#xC784;&#xD558;&#xAC8C; &#xAD8C;&#xB825;&#xC744; &#xD718;&#xB450;&#xB974;&#xB294; &#xC704;&#xD5D8;&#xC744; &#xBB34;&#xB985;&#xC4F0;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4_Filtering_for_events.html" class="navigation navigation-prev " aria-label="Previous page: 4. 이벤트 필터링">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6_Validation.html" class="navigation navigation-next " aria-label="Next page: 6. 유효성 확인">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"next":{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"path":"posts/4_daemon/6_Validation.md","ref":"posts/4_daemon/6_Validation.md","articles":[]},"previous":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"path":"posts/4_daemon/4_Filtering_for_events.md","ref":"posts/4_daemon/4_Filtering_for_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/5_Processing_events.md","mtime":"2018-11-19T08:58:04.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

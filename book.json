@@ -1,0 +1,12 @@
+{
+    "plugins": ["ga", "expandable-chapters"],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-123456-1",
+            "expandable-chapters":{}
+        }
+    },
+    "variables": {
+        "BASE_URL": "https://github.com/GuenMo/Shoutgun_Dev_Doc"
+    }
+}

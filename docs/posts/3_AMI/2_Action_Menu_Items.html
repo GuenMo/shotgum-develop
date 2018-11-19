@@ -1,0 +1,1361 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. 액션 메뉴 항목 생성, 테스팅 및 디버깅 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4_daemon/0_Daemon.html" />
+    
+    
+    <link rel="prev" href="1_Script_Keys_Automation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_shotgun/0_Shotgun.html">
+            
+                <a href="../1_shotgun/0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_shotgun/3_The_Web_GUI.html">
+            
+                <a href="../1_shotgun/3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_shotgun/4_Resources.html">
+            
+                <a href="../1_shotgun/4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="0_AMI.html">
+            
+                <a href="0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1_Script_Keys_Automation.html">
+            
+                <a href="1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="2_Action_Menu_Items.html">
+            
+                <a href="2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_daemon/0_Daemon.html">
+            
+                <a href="../4_daemon/0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_daemon/1_Daemon_Intro.html">
+            
+                <a href="../4_daemon/1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_daemon/2_Installing_the_daemon.html">
+            
+                <a href="../4_daemon/2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_daemon/3_Logging_events.html">
+            
+                <a href="../4_daemon/3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_daemon/4_Filtering_for_events.html">
+            
+                <a href="../4_daemon/4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_daemon/5_Processing_events.html">
+            
+                <a href="../4_daemon/5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4_daemon/6_Validation.html">
+            
+                <a href="../4_daemon/6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../4_daemon/7_A_real_example.html">
+            
+                <a href="../4_daemon/7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../4_daemon/8_Best_practices.html">
+            
+                <a href="../4_daemon/8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                <a href="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../4_daemon/10_Example_plugins.html">
+            
+                <a href="../4_daemon/10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../4_daemon/11_Documentation.html">
+            
+                <a href="../4_daemon/11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolkit/0_Toolkit.html">
+            
+                <a href="../5_toolkit/0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolkit/1_Toolkit_Itro.html">
+            
+                <a href="../5_toolkit/1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolkit/2_Managing_software_versions.html">
+            
+                <a href="../5_toolkit/2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                <a href="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_toolkit/7_Managing_config_versions.html">
+            
+                <a href="../5_toolkit/7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_toolkit/8_Taking_over_the_config.html">
+            
+                <a href="../5_toolkit/8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_toolkit/9_Version_control.html">
+            
+                <a href="../5_toolkit/9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../5_toolkit/10_The_development_environment.html">
+            
+                <a href="../5_toolkit/10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../5_toolkit/14_tk_config_default2.html">
+            
+                <a href="../5_toolkit/14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                <a href="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                <a href="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2. 액션 메뉴 항목 생성, 테스팅 및 디버깅</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC561;&#xC158;-&#xBA54;&#xB274;-&#xD56D;&#xBAA9;-&#xC0DD;&#xC131;-&#xD14C;&#xC2A4;&#xD305;-&#xBC0F;-&#xB514;&#xBC84;&#xAE45;"><a href="https://www.youtube.com/watch?v=u3u8pL9o-as&amp;feature=youtu.be&amp;t=0s" target="_blank">&#xC561;&#xC158; &#xBA54;&#xB274; &#xD56D;&#xBAA9; &#xC0DD;&#xC131;, &#xD14C;&#xC2A4;&#xD305; &#xBC0F; &#xB514;&#xBC84;&#xAE45;</a></h1>
+<blockquote>
+<p>&#xC561;&#xC158; &#xBA54;&#xB274; &#xD56D;&#xBAA9; &#xB610;&#xB294; &#xC904;&#xC5EC;&#xC11C; AMI&#xB294; &#xD234;&#xD0B7; &#xC561;&#xC158;&#xC758; &#xACBD;&#xB7C9; &#xBC84;&#xC804;&#xC785;&#xB2C8;&#xB2E4;.
+AMI&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; HTTP &#xB610;&#xB294; HTTPS &#xAC19;&#xC740; &#xC9C0;&#xC815;&#xB41C; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;, &#xC544;&#xB2C8;&#xBA74; &#xCEE4;&#xC2A4;&#xD140; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC744; &#xD1B5;&#xD574; Shotgun &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xC815;&#xBCF4;&#xB97C; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774; &#xB3D9;&#xC601;&#xC0C1;&#xC5D0;&#xC11C;&#xB294; &#xC5EC;&#xB7EC; AMI &#xC608;&#xC640; &#xADF8; &#xAD6C;&#xD604; &#xACB0;&#xACFC;&#xB97C; &#xC0B4;&#xD3B4;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<h2 id="&#xC18C;&#xAC1C;">&#xC18C;&#xAC1C;</h2>
+<p><img src="../../img/8/1.png" alt="Local Image"></p>
+<p>AMI&#xB294; &#xD234;&#xD0B7; &#xC561;&#xC158; &#xB300;&#xC2E0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xACBD;&#xB7C9; &#xC635;&#xC158;&#xC785;&#xB2C8;&#xB2E4;.
+AMI&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; http &#xB610;&#xB294; https&#xC640; &#xAC19;&#xC740; &#xD2B9;&#xC815; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC774;&#xB098; &#xCEE4;&#xC2A4;&#xD140; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC744; &#xD1B5;&#xD574; Shotgun &#xD398;&#xC774;&#xC9C0;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xBCF4;&#xB0BC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/2.png" alt="Local Image"></p>
+<p>AMI&#xC5D0; &#xB300;&#xD574; &#xC54C;&#xC544;&#xC57C; &#xD560; &#xC911;&#xC694;&#xD55C; &#xC0AC;&#xD56D;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xBCF4;&#xB0B4;&#xAE30;&#xB294; &#xD558;&#xC9C0;&#xB9CC; &#xBC1B;&#xC744; &#xC218;&#xB294; &#xC5C6;&#xB2E4;&#xB294; &#xC810;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>AMI&#xAC00; &#xB370;&#xC774;&#xD130;&#xB97C; &#xBCF4;&#xB0B4;&#xB294; &#xBC29;&#xBC95;&#xC5D0;&#xB294; POST&#xC640; GET, &#xB450; &#xAC00;&#xC9C0;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/3.png" alt="Local Image"></p>
+<p><img src="../../img/8/4.png" alt="Local Image"></p>
+<h2 id="ami-&#xB4F1;&#xB85D;">AMI &#xB4F1;&#xB85D;</h2>
+<p><img src="../../img/8/5.png" alt="Local Image"></p>
+<p><img src="../../img/8/6.png" alt="Local Image"></p>
+<h2 id="ami&#xC640;-django">AMI&#xC640; Django</h2>
+<p>Django&#xB294; &#xC644;&#xBCBD;&#xD55C; &#xAE30;&#xB2A5;&#xC744; &#xAC16;&#xCD98; Python &#xAE30;&#xBC18;&#xC758; &#xC624;&#xD508; &#xC18C;&#xC2A4; &#xC6F9; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xC774;&#xBA70; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xBC0F; &#xAD00;&#xB9AC; &#xC6F9; &#xD3EC;&#xD138;&#xACFC; &#xD568;&#xAED8; &#xD328;&#xD0A4;&#xC9D5;&#xB41C; &#xC0C1;&#xD0DC;&#xB85C; &#xC81C;&#xACF5;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD3F4;&#xB354;&#xC640; &#xAC00;&#xC0C1;&#xD658;&#xACBD;&#xC744; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/8.png" alt="Local Image"></p>
+<p><code>Django</code> &#xC640; <code>Shotgun Python API</code>&#xB97C; &#xC124;&#xCE58; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-console">pip install django
+pip install git+git://github.com/shotgunsoftware/python-api.git@v3.0.26
+</code></pre>
+<p><strong>&#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC640; &#xC571;&#xC744; &#xC0DD;&#xC131; &#xD569;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-console">django-admin startproject mysite .
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py startapp ami
+</code></pre>
+<p><strong>&#xC791;&#xB3D9; &#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778; &#xD569;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-python">python manage.py runserver
+</code></pre>
+<p><img src="../../img/8/9.png" alt="Local Image"></p>
+<p><strong>&#xC124;&#xC815; &#xD30C;&#xC77C;&#xC744; &#xC218;&#xC815; &#xD569;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># mysite/settings.py</span>
+
+ALLOWED_HOSTS = [<span class="hljs-string">&apos;*&apos;</span>]
+
+INSTALLED_APPS = [
+    <span class="hljs-string">&apos;ami&apos;</span>,
+]
+
+TEMPLATES = [
+    {
+        <span class="hljs-string">&apos;BACKEND&apos;</span>: <span class="hljs-string">&apos;django.template.backends.django.DjangoTemplates&apos;</span>,
+        <span class="hljs-string">&apos;DIRS&apos;</span>: [os.path.join(BASE_DIR, <span class="hljs-string">&apos;templates&apos;</span>)],
+</code></pre>
+<pre><code class="lang-console">python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+<p><strong>Template &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- ami/templates/ami/ami_for_asset.html --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p><strong>urls &#xC124;&#xC815; &#xD569;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># mysite/urls.py</span>
+
+<span class="hljs-keyword">from</span> django.conf.urls <span class="hljs-keyword">import</span> include, url
+<span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
+
+urlpatterns = [
+    url(<span class="hljs-string">r&apos;^ami/&apos;</span>, include(<span class="hljs-string">&apos;ami.urls&apos;</span>, namespace=<span class="hljs-string">&apos;ami&apos;</span>)),
+    url(<span class="hljs-string">r&apos;^admin/&apos;</span>, admin.site.urls),
+]
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/urls.py</span>
+
+<span class="hljs-keyword">from</span> django.conf.urls <span class="hljs-keyword">import</span> url
+
+<span class="hljs-keyword">from</span> .views <span class="hljs-keyword">import</span> AmiView
+
+app_name = <span class="hljs-string">&apos;ami&apos;</span>
+
+urlpatterns = [
+    url(<span class="hljs-string">r&apos;^$&apos;</span>, AmiView.as_view(), name=<span class="hljs-string">&apos;index&apos;</span>),
+]
+</code></pre>
+<p><strong>view&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/views.py</span>
+<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> unicode_literals
+
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.views.generic.base <span class="hljs-keyword">import</span> TemplateView
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AmiView</span><span class="hljs-params">(TemplateView)</span>:</span>
+    template_name = <span class="hljs-string">&apos;ami/ami_for_asset.html&apos;</span>
+</code></pre>
+<p><strong>url&#xC774; &#xC791;&#xB3D9;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778; &#xD569;&#xB2C8;&#xB2E4;.</strong></p>
+<pre><code class="lang-console">python manage.py runserver
+</code></pre>
+<p><a href="http://127.0.0.1:8000/ami/" target="_blank">http://127.0.0.1:8000/ami/</a></p>
+<p><img src="../../img/8/10.png" alt="Local Image"></p>
+<p><strong>POST GET &#xAD6C;&#xD604;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/views.py</span>
+
+<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> unicode_literals
+
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.views.generic.base <span class="hljs-keyword">import</span> View, ContextMixin, TemplateResponseMixin
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AmiView</span><span class="hljs-params">(ContextMixin, TemplateResponseMixin, View)</span>:</span>
+    template_name = <span class="hljs-string">&apos;ami/ami_for_asset.html&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        context = self.get_context_data(*args, **kwargs)
+        context[<span class="hljs-string">&apos;method&apos;</span>] = <span class="hljs-string">&apos;get&apos;</span>
+        <span class="hljs-keyword">return</span> render(request, self.template_name, context)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        context = self.get_context_data(*args, **kwargs)
+        context[<span class="hljs-string">&apos;method&apos;</span>] = <span class="hljs-string">&apos;post&apos;</span>
+        <span class="hljs-keyword">return</span> render(request, self.template_name, context)
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- ami/templates/ami/ami_for_asset.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p><a href="http://127.0.0.1:8000/ami/" target="_blank">http://127.0.0.1:8000/ami/</a></p>
+<p><img src="../../img/8/11.png" alt="Local Image"></p>
+<p><strong>Shotgun API &#xC5F0;&#xB3D9;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/views.py</span>
+
+<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> unicode_literals
+
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.views.generic.base <span class="hljs-keyword">import</span> View, ContextMixin, TemplateResponseMixin
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> .config <span class="hljs-keyword">import</span> *
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AmiView</span><span class="hljs-params">(ContextMixin, TemplateResponseMixin, View)</span>:</span>
+    template_name = <span class="hljs-string">&apos;ami/ami_for_asset.html&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">shotgun</span><span class="hljs-params">(self)</span>:</span>
+        sg = shotgun_api3.Shotgun(URL, script_name=SCRIPT_NAME, api_key=API_KEY)
+        <span class="hljs-keyword">return</span> sg
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        context = self.get_context_data(*args, **kwargs)
+        sg = self.shotgun()
+        projects = sg.find(
+            <span class="hljs-string">&apos;Project&apos;</span>, [
+                [<span class="hljs-string">&apos;is_template&apos;</span>, <span class="hljs-string">&apos;is&apos;</span>, <span class="hljs-keyword">False</span>],
+                [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;not_contains&apos;</span>, <span class="hljs-string">&apos;demo&apos;</span>],
+            ],
+            [<span class="hljs-string">&apos;name&apos;</span>]
+        )
+        context[<span class="hljs-string">&apos;projects&apos;</span>] = projects
+        <span class="hljs-keyword">return</span> render(request, self.template_name, context)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        context = self.get_context_data(*args, **kwargs)
+        context[<span class="hljs-string">&apos;method&apos;</span>] = <span class="hljs-string">&apos;post&apos;</span>
+        <span class="hljs-keyword">return</span> render(request, self.template_name, context)
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- ami/templates/ami/ami_for_asset.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Project List<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p><a href="http://127.0.0.1:8000/ami/" target="_blank">http://127.0.0.1:8000/ami/</a></p>
+<p><img src="../../img/8/12.png" alt="Local Image"></p>
+<p><code>demo</code> script key&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&#xC744; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><strong>CSRF &#xCC98;&#xB9AC;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># mysite/mixins.py</span>
+
+<span class="hljs-keyword">from</span> django.utils.decorators <span class="hljs-keyword">import</span> method_decorator
+<span class="hljs-keyword">from</span> django.views.decorators.csrf <span class="hljs-keyword">import</span> csrf_exempt
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CsrfExemptMixin</span><span class="hljs-params">(object)</span>:</span>
+<span class="hljs-meta">    @method_decorator(csrf_exempt)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dispatch</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        <span class="hljs-keyword">return</span> super(CsrfExemptMixin, self).dispatch(request, *args, **kwargs)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/views.py</span>
+
+<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> unicode_literals
+
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.views.generic.base <span class="hljs-keyword">import</span> View, ContextMixin, TemplateResponseMixin
+
+<span class="hljs-keyword">from</span> mysite.mixins <span class="hljs-keyword">import</span> CsrfExemptMixin
+<span class="hljs-keyword">from</span> .config <span class="hljs-keyword">import</span> *
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AmiView</span><span class="hljs-params">(ContextMixin, TemplateResponseMixin, CsrfExemptMixin, View)</span>:</span>
+    template_name = <span class="hljs-string">&apos;ami/ami_for_asset.html&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">shotgun</span><span class="hljs-params">(self)</span>:</span>
+        sg = shotgun_api3.Shotgun(URL, script_name=SCRIPT_NAME, api_key=API_KEY)
+        <span class="hljs-keyword">return</span> sg
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        context = self.get_context_data(*args, **kwargs)
+        sg = self.shotgun()
+        projects = sg.find(
+            <span class="hljs-string">&apos;Project&apos;</span>, [
+                [<span class="hljs-string">&apos;is_template&apos;</span>, <span class="hljs-string">&apos;is&apos;</span>, <span class="hljs-keyword">False</span>],
+                [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;not_contains&apos;</span>, <span class="hljs-string">&apos;demo&apos;</span>],
+            ],
+            [<span class="hljs-string">&apos;name&apos;</span>]
+        )
+        context[<span class="hljs-string">&apos;projects&apos;</span>] = projects
+        <span class="hljs-keyword">return</span> render(request, self.template_name, context)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        sg = self.shotgun()
+        projects = sg.find_one(<span class="hljs-string">&apos;Project&apos;</span>, [])
+        <span class="hljs-keyword">return</span> JsonResponse(projects)
+</code></pre>
+<p><img src="../../img/8/13.png" alt="Local Image"></p>
+<p>Shotgun AMI &#xD074;&#xB9AD; &#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; Django &#xC5D0;&#xC11C; &#xCC98;&#xB9AC; &#xD558;&#xB3C4;&#xB85D; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># ami/views.py</span>
+
+<span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> __future__ <span class="hljs-keyword">import</span> unicode_literals
+
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.views.generic.base <span class="hljs-keyword">import</span> View, ContextMixin, TemplateResponseMixin
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> JsonResponse
+
+<span class="hljs-keyword">from</span> mysite.mixins <span class="hljs-keyword">import</span> CsrfExemptMixin
+<span class="hljs-keyword">from</span> .config <span class="hljs-keyword">import</span> *
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AmiView</span><span class="hljs-params">(ContextMixin, TemplateResponseMixin, CsrfExemptMixin, View)</span>:</span>
+    template_name = <span class="hljs-string">&apos;ami/ami_for_asset.html&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">shotgun</span><span class="hljs-params">(self)</span>:</span>
+        sg = shotgun_api3.Shotgun(URL, script_name=SCRIPT_NAME, api_key=API_KEY)
+        <span class="hljs-keyword">return</span> sg
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span><span class="hljs-params">(self, request, *args, **kwargs)</span>:</span>
+        sg = self.shotgun()
+        projects = sg.find_one(<span class="hljs-string">&apos;Project&apos;</span>, [])
+        post_data = dict(request.POST.iterlists())
+        <span class="hljs-keyword">if</span> len(post_data[<span class="hljs-string">&apos;selected_ids&apos;</span>]) != <span class="hljs-number">1</span>:
+            message = <span class="hljs-string">&apos;Error: Select one entity!&apos;</span>
+        <span class="hljs-keyword">else</span>:
+            asset = sg.find_one(
+                post_data[<span class="hljs-string">&apos;entity_type&apos;</span>][<span class="hljs-number">0</span>],
+                [
+                    [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;is&apos;</span>, int(post_data[<span class="hljs-string">&apos;selected_ids&apos;</span>][<span class="hljs-number">0</span>])]
+                ],
+                [<span class="hljs-string">&apos;shots&apos;</span>, <span class="hljs-string">&apos;code&apos;</span>],
+            )
+            message = <span class="hljs-string">&apos;{} is used in the following shots: {}&apos;</span>.format(
+                asset[<span class="hljs-string">&apos;code&apos;</span>], [x[<span class="hljs-string">&apos;name&apos;</span>] <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> asset[<span class="hljs-string">&apos;shots&apos;</span>]]
+            )
+        <span class="hljs-keyword">return</span> render(request, self.template_name, {<span class="hljs-string">&apos;message&apos;</span>: message})
+        <span class="hljs-comment">#return JsonResponse(post_data, json_dumps_params={&apos;indent&apos;: 4})</span>
+</code></pre>
+<p>Shotgun&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xCEE4;&#xC2A4;&#xD140; &#xBDF0;&#xB97C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB294; &#xC815;&#xB9D0;&#xB85C; &#xBA4B;&#xC9C4; &#xC194;&#xB8E8;&#xC158;&#xC785;&#xB2C8;&#xB2E4;.
+&#xBCF4;&#xACE0;&#xC11C;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xACE0;, &#xADF8;&#xB798;&#xD504;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0;, &#xD1B5;&#xCC30;&#xB825; &#xC788;&#xB294; &#xC815;&#xBCF4;&#xB97C; &#xC544;&#xD2F0;&#xC2A4;&#xD2B8;, &#xD504;&#xB85C;&#xB4C0;&#xC11C;, &#xAC10;&#xB3C5;&#xC5D0;&#xAC8C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xB4F1; &#xC6D0;&#xD558;&#xB294; &#xC5B4;&#xB5A4; &#xC791;&#xC5C5;&#xC774;&#xB4E0; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/14.png" alt="Local Image"></p>
+<p><img src="../../img/8/15.png" alt="Local Image"></p>
+<p>&#xB450; &#xBC88;&#xC9F8; &#xBB38;&#xC81C;&#xB294; &#xACF5;&#xC720; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; Flask &#xB610;&#xB294; Django &#xC6F9; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xD558;&#xB294; &#xC561;&#xC158;&#xC774; &#xC11C;&#xBC84; &#xC0AC;&#xC6A9;&#xC790; &#xBC0F; &#xAD8C;&#xD55C; &#xADDC;&#xCE59; &#xC138;&#xD2B8;&#xB97C; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xC218;&#xD589;&#xB41C;&#xB2E4;&#xB294; &#xC810;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610;&#xD55C;, Shotgun&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB9CC;&#xB4E4;&#xAC70;&#xB098; &#xBCC0;&#xACBD;&#xD558;&#xAE30; &#xC704;&#xD574; Shotgun Python API&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xD558;&#xB294; &#xC561;&#xC158;&#xC774; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC0AC;&#xC6A9;&#xC790;&#xB85C;&#xBD80;&#xD130; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAE30;&#xB85D;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; AMI&#xAC00; Shotgun&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xC544;&#xD2F0;&#xC2A4;&#xD2B8;&#xC758; &#xB85C;&#xCEEC; &#xCEF4;&#xD4E8;&#xD130;&#xB85C; &#xC804;&#xB2EC;&#xD558;&#xACE0; &#xAC70;&#xAE30;&#xC11C; &#xD574;&#xB2F9; &#xC0AC;&#xC6A9;&#xC790;&#xC758; Shotgun &#xC790;&#xACA9; &#xC99D;&#xBA85;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB97C; &#xD2B8;&#xB9AC;&#xAC70;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xBA74; &#xC88B;&#xC9C0; &#xC54A;&#xC744;&#xAE4C;&#xC694;?</p>
+<h2 id="amis-with-custom-protocol-handlers">AMIs with custom protocol handlers</h2>
+<p>Custom protocol handlers&#xB294; &#xC6F9; &#xC571;&#xC5D0; &#xC758;&#xD574; &#xB85C;&#xCEEC; &#xCEF4;&#xD4E8;&#xD130;&#xAC00; &#xC5B4;&#xB5A4; &#xC791;&#xC5C5;&#xC744; &#xD558;&#xAC8C; &#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xC5B4;&#xB5A4; &#xC791;&#xC5C5;&#xC774;&#xB77C; &#xD558;&#xBA74; python script&#xB97C; &#xC2E4;&#xD589; &#xD558;&#xAC8C; &#xD558;&#xB294; &#xAC83;&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xBAA8;&#xB4E0; &#xC791;&#xC5C5;&#xC774; &#xAC00;&#xB2A5; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAC04;&#xB2E8;&#xD55C; &#xC608;&#xB85C;, AMI&#xB97C; &#xC124;&#xC815;&#xD558;&#xACE0; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC124;&#xCE58;&#xD55C; Skype&#xB97C; &#xAC00;&#xB9AC;&#xD0A4;&#xB3C4;&#xB85D; &#xD560; &#xACBD;&#xC6B0;
+AMI&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; Skype&#xAC00; &#xC2DC;&#xC791;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/16.png" alt="Local Image"></p>
+<p>Skype&#xB294; &#xC124;&#xCE58;&#xC2DC; OS&#xC5D0;&#xC11C; &#xD638;&#xCD9C; &#xAC00;&#xB2A5; &#xD558;&#xB3C4;&#xB85D; &#xB418;&#xC5B4; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBC14;&#xB85C; &#xD638;&#xCD9C;&#xC774; &#xAC00;&#xB2A5; &#xD558;&#xC9C0;&#xB9CC; &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xB9CC;&#xB4E0; app&#xC774;&#xB098; script&#xB294; &#xD638;&#xCD9C; &#xAC00;&#xB2A5; &#xD558;&#xB3C4;&#xB85D; &#xC124;&#xC815;&#xC744; &#xD574;&#xC918;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB294; &#xAC01; OS&#xB9C8;&#xB2E4; &#xC124;&#xC815; &#xBC29;&#xBC95;&#xC774; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;.</p>
+<p><a href="https://support.shotgunsoftware.com/hc/ko/articles/219031308-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EC%9D%91%EC%9A%A9%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%8B%A4%ED%96%89" target="_blank">OS &#xBCC4; &#xCEE4;&#xC2A4;&#xD140; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD504;&#xB85C;&#xD1A0;&#xCF5C; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</a></p>
+<h2 id="windows">Windows</h2>
+<p><strong>&#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC; &#xD3B8;&#xC9D1;.</strong></p>
+<p><code>Windows</code>&#xD0A4; + R &#xD074;&#xB9AD;&#xD55C; &#xD6C4; &#xADF8;&#xB9BC;&#xACFC; &#xAC19;&#xC774; &#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC; &#xD3B8;&#xC9D1;&#xAE30;&#xB97C; &#xC5FD;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/17.png" alt="Local Image"></p>
+<p><code>HKEY_CLASSES_ROOT</code>&#xC5D0; &#xD0A4;&#xB97C; &#xC0DD;&#xC131; &#xD569;&#xB2C8;&#xB2E4;. &#xD0A4; &#xAC12;&#xC740; <code>shotgun_ami</code> &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/18.png" alt="Local Image"></p>
+<p><img src="../../img/8/26.png" alt="Local Image"></p>
+<p><code>shotgun</code>&#xD0A4;&#xC5D0; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;. &#xBB38;&#xC790;&#xC5F4; &#xAC12;&#xC740; <code>URL_protocol</code> &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/27.png" alt="Local Image"></p>
+<p><img src="../../img/8/28.png" alt="Local Image"></p>
+<p>&#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; <code>shell</code>, <code>open</code>, <code>command</code>&#xB97C; &#xADF8;&#xB9BC;&#xACFC; &#xAC19;&#xC774; &#xC0DD;&#xC131;&#xD574; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/29.png" alt="Local Image"></p>
+<p>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; <code>command</code>&#xD0A4; &#xAC12; &#xC548;&#xC5D0; &#xBB38;&#xC790;&#xC5F4; &#xD3B8;&#xC9D1; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/30.png" alt="Local Image"></p>
+<blockquote>
+<p><code>&#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xACBD;&#xB85C;</code> <code>%1</code></p>
+</blockquote>
+<p>&#xC5EC;&#xAE30;&#xC11C; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC740; <code>python</code> &#xB429;&#xB2C8;&#xB2E4;. <code>python</code>&#xB300;&#xC2E0; <code>pythonw</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xCF58;&#xC194;&#xCC3D;&#xC774; &#xC0DD;&#xAE30;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC8FC;&#xC758; &#xD560;&#xC810;&#xC740; python&#xC774; Shotgun Python API&#xB97C; &#xC0AC;&#xC6A9; &#xD574;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB530;&#xB85C; <code>vertualenv</code>&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB193;&#xC740; &#xD6C4; vertualenv&#xC758; python&#xC744; &#xC0AC;&#xC6A9; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.
+<code>%1</code>&#xC740; &#xC778;&#xC790; &#xAC12;&#xC744; &#xBC1B;&#xAE30; &#xC704;&#xD568;&#xC774;&#xACE0; &#xC778;&#xC790;&#xAC12;&#xC744; &#xBC1B;&#xC544;&#xC57C; &#xD558;&#xB294; &#xBD80;&#xBD84;&#xC774; &#xC788;&#xB2E4;&#xBA74; &#xCD94;&#xAC00; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xC81C; &#xC5D0;&#xC11C;&#xB294; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; <code>D:\shotgun_venv\Scripts\python</code>&#xC73C;&#xB85C; &#xD558;&#xACE0; &#xCCAB;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xB294; <code>D:\ami_test\sgTriggerScript.py</code>, &#xB450;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xB294; url&#xC5D0;&#xC11C; &#xBC1B;&#xC544;&#xC57C; &#xD558;&#xBBC0;&#xB85C; <code>%1</code>&#xB85C; &#xC124;&#xC815; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC; &#xB4F1;&#xB85D;&#xC774; &#xC644;&#xB8CC; &#xB429;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774;&#xC81C; &#xC6F9;&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; <code>shotgun://</code>&#xC744; &#xD638;&#xCD9C; &#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+<p><strong>Python Script &#xC0DD;&#xC131;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> shotgun_api3
+
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;D:/ami_test/result.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> result:
+    sg = shotgun_api3.Shotgun(
+        <span class="hljs-string">&apos;https://aiw.shotgunstudio.com&apos;</span>,
+        login=<span class="hljs-string">&apos;geunmo_kim&apos;</span>,
+        password=<span class="hljs-string">&apos;**********&apos;</span>
+    )
+    project =  sg.find_one(<span class="hljs-string">&apos;Project&apos;</span>, [])
+
+    <span class="hljs-keyword">try</span>:
+        result.write(json.dumps(project, indent=<span class="hljs-number">4</span>))
+    <span class="hljs-keyword">except</span>:
+        result.write(<span class="hljs-string">u&apos;Failed.&apos;</span>)
+</code></pre>
+<p><strong>AMI &#xB4F1;&#xB85D;.</strong></p>
+<p>Shotgun AMI&#xB97C; &#xB4F1;&#xB85D; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>URL</code>&#xB97C; <code>shotgun://</code>&#xB85C; &#xC218;&#xC815; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/8/31.png" alt="Local Image"></p>
+<p>&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xACB0;&#xACFC;&#xB85C; <code>result.txt</code> &#xD30C;&#xC77C;&#xC774; &#xC0DD;&#xC131; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><strong>&#xB77C;&#xC6B0;&#xD305;.</strong></p>
+<p>&#xC774; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xBAA8;&#xB4E0; AMI &#xC694;&#xCCAD;&#xC744; &#xD2B9;&#xC815; &#xD568;&#xC218;&#xB85C; &#xB77C;&#xC6B0;&#xD305;&#xD558;&#xBBC0;&#xB85C; &#xD2B9;&#xC815; &#xC561;&#xC158;&#xC744; &#xC2DD;&#xBCC4;&#xD560; &#xBC29;&#xBC95;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC561;&#xC158; &#xBA54;&#xB274;&#xB97C; &#xB450;&#xAC1C; &#xCD94;&#xAC00; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Launch Python1</td>
+<td>shotgun://ami_test1</td>
+</tr>
+<tr>
+<td>Launch Python2</td>
+<td>shotgun://ami_test2</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../img/8/33.png" alt="Local Image"></p>
+<p><strong>Python Script &#xC218;&#xC815;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">import</span> urllib
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    arg = sys.argv[<span class="hljs-number">1</span>]
+    _, fullPath = arg.split(<span class="hljs-string">&apos;:&apos;</span>, <span class="hljs-number">1</span>)
+    path, fullArgs = fullPath.split(<span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-number">1</span>)
+    action = path.strip(<span class="hljs-string">&apos;/&apos;</span>)
+    args = fullArgs.split(<span class="hljs-string">&apos;&amp;&apos;</span>)
+
+    get_dict = {}
+    <span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> args:
+        key, value = map(urllib.unquote, arg.split(<span class="hljs-string">&apos;=&apos;</span>, <span class="hljs-number">1</span>))
+        get_dict[key] = value
+
+    <span class="hljs-keyword">if</span> action == <span class="hljs-string">&apos;ami_test1&apos;</span>:
+        <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;D:/ami_test/result.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> result:
+            result.write(action)
+            result.write(json.dumps(get_dict))
+
+    <span class="hljs-keyword">if</span> action == <span class="hljs-string">&apos;ami_test2&apos;</span>:
+        <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;D:/ami_test/result.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> result:
+            result.write(action)
+            result.write(json.dumps(get_dict))
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    sys.exit(main())
+</code></pre>
+<p><code>Launch Python1</code>&#xC640; <code>Launch Python2</code>&#xB97C; &#xC2DC;&#xD589; &#xC2DC;&#xCF30;&#xC744; &#xB54C; &#xB2E4;&#xB978; &#xACB0;&#xACFC;&#xB97C; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><strong>&#xAC00;&#xB2A5;&#xD55C; &#xBCC0;&#xD615;.</strong></p>
+<p>AMI&#xC5D0;&#xC11C; URL&#xC758; // &#xBD80;&#xBD84; &#xB4A4;&#xC5D0; &#xC624;&#xB294; &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xBCC0;&#xACBD;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xB0B4; action &#xBCC0;&#xC218;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB54C; &#xAC19;&#xC740; shotgun:// &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC774; &#xC720;&#xC9C0;&#xB418;&#xACE0;, &#xCEE4;&#xC2A4;&#xD140; &#xD504;&#xB85C;&#xD1A0;&#xCF5C; &#xD558;&#xB098;&#xB9CC; &#xB4F1;&#xB85D;&#xB429;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7EC;&#xBA74; action &#xBCC0;&#xC218;&#xC758; &#xB0B4;&#xC6A9;&#xACFC; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xD1B5;&#xD574; &#xC758;&#xB3C4;&#xB41C; &#xB3D9;&#xC791;&#xC774; &#xBB34;&#xC5C7;&#xC778;&#xC9C0; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xD30C;&#xC545;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC5F4;&#xACE0;, FTP &#xAC19;&#xC740; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD1B5;&#xD574; &#xCEE8;&#xD150;&#xCE20;&#xB97C; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xACE0;, &#xB370;&#xC774;&#xD130;&#xB97C; &#xBCF4;&#xAD00;&#xD558;&#xACE0;, &#xC774;&#xBA54;&#xC77C;&#xC744; &#xBCF4;&#xB0B4;&#xAC70;&#xB098;, PDF &#xBCF4;&#xACE0;&#xC11C;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="ami-&#xB514;&#xBC84;&#xAE45;">AMI &#xB514;&#xBC84;&#xAE45;</h2>
+<p>&#xAC1C;&#xBC1C; &#xB3C4;&#xC911;&#xC5D0; AMI &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC624;&#xB958;&#xB97C; &#xC27D;&#xAC8C; &#xD3EC;&#xCC29;&#xD558;&#xAC70;&#xB098; &#xD504;&#xB85C;&#xB355;&#xC158; &#xB2E8;&#xACC4;&#xC5D0;&#xC11C; &#xB514;&#xBC84;&#xADF8;&#xD558;&#xB824;&#xBA74; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC758; &#xB514;&#xBC84;&#xAE45; &#xB3C4;&#xAD6C;&#xC5D0; &#xC775;&#xC219;&#xD574;&#xC838;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD06C;&#xB86C; shotgun &#xD398;&#xC774;&#xC9C0; &#xC5D0;&#xC11C; &#xACC4;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xB97C; &#xD074;&#xB9AD;&#xD569;&#xB2C8;&#xB2E4;.
+<code>Nsetwork</code> &#xC120;&#xD0DD; &#xD558;&#xBA74; shotgun &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xBCF4;&#xB0B4;&#xB294; &#xC815;&#xBCF4;&#xB4DC;&#xB97C; &#xD655;&#xC778; &#xD560;&#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>custom protocol &#xAC19;&#xC740; &#xACBD;&#xC6B0; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C; &#xC0DD;&#xAE30;&#xB294; &#xBB38;&#xC81C;&#xB294; &#xAC1C;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xC5D0;&#xC11C; &#xD655;&#xC778; &#xD560; &#xC218;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB7F0; &#xACBD;&#xC6B0; python script&#xC5D0; logging &#xBAA8;&#xB4C8;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xB85C; &#xB0A8;&#xAE41;&#xB2C8;&#xB2E4;.</p>
+<p><strong>logging &#xBAA8;&#xB4C8; &#xC608;&#xC81C;.</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">import</span> logging.handlers
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-comment"># looger &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;, &#xB85C;&#xADF8; &#xB808;&#xBCA8;, &#xD3EC;&#xBA67; &#xC124;&#xC815;</span>
+    logger = logging.getLogger(<span class="hljs-string">&apos;my&apos;</span>)
+    logger.setLevel(logging.DEBUG)
+    formatter = logging.Formatter(<span class="hljs-string">&apos;%(asctime)s - %(name)s - %(levelname)s - %(message)s&apos;</span>)
+    file_max_bytes = <span class="hljs-number">10</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> <span class="hljs-comment"># 10MB</span>
+
+    <span class="hljs-comment"># &#xD654;&#xBA74; &#xCD9C;&#xB825; &#xB85C;&#xADF8; &#xC0DD;&#xC131;</span>
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+    logger.addHandler(stream_handler)
+
+    <span class="hljs-comment"># &#xD30C;&#xC77C; &#xCD9C;&#xB825; &#xB85C;&#xADF8; &#xC0DD;&#xC131;</span>
+    file_handler = logging.handlers.RotatingFileHandler(
+        filename=<span class="hljs-string">&apos;./my.log&apos;</span>,
+        maxBytes=file_max_bytes,
+        backupCount=<span class="hljs-number">10</span>
+        )
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    <span class="hljs-comment"># Test</span>
+    logger.debug(<span class="hljs-string">&apos;Debug&apos;</span>)
+    logger.info(<span class="hljs-string">&apos;Info&apos;</span>)
+    logger.warning(<span class="hljs-string">&apos;Warning&apos;</span>)
+    logger.error(<span class="hljs-string">&apos;Error&apos;</span>)
+    logger.critical(<span class="hljs-string">&apos;Critical&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">import</span> urllib
+
+<span class="hljs-keyword">import</span> shotgun_api3
+
+<span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">import</span> logging.handlers
+
+<span class="hljs-comment"># &#xB85C;&#xADF8;&#xC778; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131;</span>
+logger = logging.getLogger(<span class="hljs-string">&apos;shotgun_ami_log&apos;</span>)
+logger.setLevel(logging.DEBUG)
+formatter = logging.Formatter(<span class="hljs-string">&apos;%(asctime)s - %(name)s - %(levelname)s - %(message)s&apos;</span>)
+file_max_bytes = <span class="hljs-number">10</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> <span class="hljs-comment"># 10MB</span>
+
+<span class="hljs-comment"># &#xD654;&#xBA74; &#xCD9C;&#xB825; &#xB85C;&#xADF8; &#xC0DD;&#xC131;</span>
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
+
+<span class="hljs-comment"># &#xD30C;&#xC77C; &#xCD9C;&#xB825; &#xB85C;&#xADF8; &#xC0DD;&#xC131;</span>
+file_handler = logging.handlers.RotatingFileHandler(
+    filename=<span class="hljs-string">&apos;D:/ami_test/my.log&apos;</span>,
+    maxBytes=file_max_bytes,
+    backupCount=<span class="hljs-number">10</span>
+    )
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+arg = sys.argv[<span class="hljs-number">1</span>]
+handler, fullPath = arg.split(<span class="hljs-string">&apos;:&apos;</span>, <span class="hljs-number">1</span>)
+path, fullArgs = fullPath.split(<span class="hljs-string">&apos;?&apos;</span>, <span class="hljs-number">1</span>)
+action = path.strip(<span class="hljs-string">&apos;/&apos;</span>)
+args = fullArgs.split(<span class="hljs-string">&apos;&amp;&apos;</span>)
+logger.debug(<span class="hljs-string">&apos;Action is &apos;</span> + action)
+logger.debug(<span class="hljs-string">&apos;Full arg is &apos;</span> + fullArgs)
+<span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> args:
+    logger.debug(a)
+
+get_dict = {}
+<span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> args:
+    key, value = map(urllib.unquote, arg.split(<span class="hljs-string">&apos;=&apos;</span>, <span class="hljs-number">1</span>))
+    get_dict[key] = value
+    logger.debug(key + <span class="hljs-string">&apos; = &apos;</span> + value)
+
+<span class="hljs-keyword">if</span> action == <span class="hljs-string">&apos;ami_test1&apos;</span>:
+    logger.debug(action)
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;D:/ami_test/result.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> result:
+        sg = shotgun_api3.Shotgun(
+            <span class="hljs-string">&apos;https://aiw.shotgunstudio.com&apos;</span>,
+            login=<span class="hljs-string">&apos;geunmo_kim&apos;</span>,
+            password=<span class="hljs-string">&apos;1004kyjkesphw44^^&apos;</span>
+        )
+        project =  sg.find_one(<span class="hljs-string">&apos;Project&apos;</span>, [])
+
+        <span class="hljs-keyword">try</span>:
+            result.write(json.dumps(project, indent=<span class="hljs-number">4</span>))
+        <span class="hljs-keyword">except</span>:
+            result.write(<span class="hljs-string">u&apos;Failed.&apos;</span>)
+
+<span class="hljs-keyword">if</span> action == <span class="hljs-string">&apos;ami_test2&apos;</span>:
+    logger.debug(action)
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;D:/ami_test/result.txt&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> result:
+        result.write(action)
+</code></pre>
+<h2 id="custom-protocol-handlers-&#xB2E8;&#xC810;">Custom protocol handlers &#xB2E8;&#xC810;</h2>
+<p><code>custom protocol handlers</code>&#xB97C; &#xD1B5;&#xD55C; &#xC751;&#xC6A9;&#xD504;&#xB7A8; &#xD638;&#xCD9C;&#xC5D0; &#xBA87;&#xAC00;&#xC9C0; &#xB2E8;&#xC810;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC;&#xC5D0; &#xD638;&#xCD9C;&#xB418;&#xB294; &#xC774;&#xB984;&#xC774; &#xACE0;&#xC720;&#xC758; &#xAC12;&#xC774;&#xC57C; &#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.
+&#xB9CC;&#xC57D; &#xB2E4;&#xB978; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xACFC; &#xD638;&#xCD9C; &#xC774;&#xB984;&#xC774; &#xAC19;&#xB2E4;&#xBA74; &#xB458; &#xC911;&#xC5D0; &#xC5B4;&#xB290;&#xAC83;&#xC774; &#xD638;&#xCD9C;&#xB420;&#xC9C0; &#xBAA8;&#xB985;&#xB2C8;&#xB2E4;.
+&#xB610;&#xD55C; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xD638;&#xCD9C;&#xC2DC; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xD31D;&#xC5C5;&#xCC28;&#xC5D0;&#xC11C;&#xB3C4; &#xD655;&#xC778; &#xD560; &#xC218; &#xC788;&#xB4EF;&#xC774; &#xD638;&#xCD9C; &#xB0B4;&#xC6A9;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xC810;&#xC740; &#xACF5;&#xACA9; &#xB2F9;&#xD558;&#xAE30; &#xC26C;&#xC6B4; &#xBD80;&#xBD84;&#xC774; &#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C; nsis &#xC778;&#xC2A4;&#xD1A8;&#xB7EC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC2DC;&#xB294; &#xBD84;&#xB4E4;&#xC740; &#xC778;&#xC2A4;&#xD1A8;&#xC2DC;&#xC5D0; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC2DC;&#xC5B4; &#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC;&#xC5D0; &#xB4F1;&#xB85D;&#xD558;&#xC2DC;&#xBA74; &#xB3C4;&#xC6C0;&#xC774; &#xB420; &#xAC83;&#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>WriteRegStr HKCR &quot;${Appname}&quot; &quot;URL protocl&quot; &quot;&quot;</p>
+<blockquote>
+<p>WriteRegStr HKCR &quot;${Appname}\shell&quot; &quot;&quot; &quot;open&quot;
+WriteRegStr HKCR &quot;${Appname}\shell\open&quot; &quot;&quot; &quot;command&quot;
+WriteRegStr HKCR &quot;$&gt;{Appname}\shell\oepn\command&quot; &quot;&quot; &apos;&quot;path\Appendname.exe&quot; &quot;%1&quot;&apos;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1_Script_Keys_Automation.html" class="navigation navigation-prev " aria-label="Previous page: 1. 스크립트 키 및 자동화">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4_daemon/0_Daemon.html" class="navigation navigation-next " aria-label="Next page: Daemon">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. 액션 메뉴 항목 생성, 테스팅 및 디버깅","level":"1.4.2","depth":2,"next":{"title":"Daemon","level":"1.5","depth":1,"path":"posts/4_daemon/0_Daemon.md","ref":"posts/4_daemon/0_Daemon.md","articles":[{"title":"1. 이벤트 데몬 소개","level":"1.5.1","depth":2,"path":"posts/4_daemon/1_Daemon_Intro.md","ref":"posts/4_daemon/1_Daemon_Intro.md","articles":[]},{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"path":"posts/4_daemon/2_Installing_the_daemon.md","ref":"posts/4_daemon/2_Installing_the_daemon.md","articles":[]},{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"path":"posts/4_daemon/4_Filtering_for_events.md","ref":"posts/4_daemon/4_Filtering_for_events.md","articles":[]},{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"path":"posts/4_daemon/6_Validation.md","ref":"posts/4_daemon/6_Validation.md","articles":[]},{"title":"7. 실제 예시","level":"1.5.7","depth":2,"path":"posts/4_daemon/7_A_real_example.md","ref":"posts/4_daemon/7_A_real_example.md","articles":[]},{"title":"8. 모범 사례","level":"1.5.8","depth":2,"path":"posts/4_daemon/8_Best_practices.md","ref":"posts/4_daemon/8_Best_practices.md","articles":[]},{"title":"9. 이벤트 백로그 관리","level":"1.5.9","depth":2,"path":"posts/4_daemon/9_Managing_the_event_backlog.md","ref":"posts/4_daemon/9_Managing_the_event_backlog.md","articles":[]},{"title":"10. 예시 플러그인","level":"1.5.10","depth":2,"path":"posts/4_daemon/10_Example_plugins.md","ref":"posts/4_daemon/10_Example_plugins.md","articles":[]},{"title":"11. 설명서","level":"1.5.11","depth":2,"path":"posts/4_daemon/11_Documentation.md","ref":"posts/4_daemon/11_Documentation.md","articles":[]}]},"previous":{"title":"1. 스크립트 키 및 자동화","level":"1.4.1","depth":2,"path":"posts/3_AMI/1_Script_Keys_Automation.md","ref":"posts/3_AMI/1_Script_Keys_Automation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/3_AMI/2_Action_Menu_Items.md","mtime":"2018-11-19T08:59:07.739Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

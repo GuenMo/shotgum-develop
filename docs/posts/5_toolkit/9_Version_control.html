@@ -1,0 +1,941 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9. 버전 제어 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10_The_development_environment.html" />
+    
+    
+    <link rel="prev" href="8_Taking_over_the_config.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_shotgun/0_Shotgun.html">
+            
+                <a href="../1_shotgun/0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_shotgun/3_The_Web_GUI.html">
+            
+                <a href="../1_shotgun/3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_shotgun/4_Resources.html">
+            
+                <a href="../1_shotgun/4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_AMI/0_AMI.html">
+            
+                <a href="../3_AMI/0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_AMI/1_Script_Keys_Automation.html">
+            
+                <a href="../3_AMI/1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_AMI/2_Action_Menu_Items.html">
+            
+                <a href="../3_AMI/2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_daemon/0_Daemon.html">
+            
+                <a href="../4_daemon/0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_daemon/1_Daemon_Intro.html">
+            
+                <a href="../4_daemon/1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_daemon/2_Installing_the_daemon.html">
+            
+                <a href="../4_daemon/2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../4_daemon/3_Logging_events.html">
+            
+                <a href="../4_daemon/3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../4_daemon/4_Filtering_for_events.html">
+            
+                <a href="../4_daemon/4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../4_daemon/5_Processing_events.html">
+            
+                <a href="../4_daemon/5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../4_daemon/6_Validation.html">
+            
+                <a href="../4_daemon/6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../4_daemon/7_A_real_example.html">
+            
+                <a href="../4_daemon/7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../4_daemon/8_Best_practices.html">
+            
+                <a href="../4_daemon/8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                <a href="../4_daemon/9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../4_daemon/10_Example_plugins.html">
+            
+                <a href="../4_daemon/10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../4_daemon/11_Documentation.html">
+            
+                <a href="../4_daemon/11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="0_Toolkit.html">
+            
+                <a href="0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="1_Toolkit_Itro.html">
+            
+                <a href="1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="2_Managing_software_versions.html">
+            
+                <a href="2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3_Which_software_versions_should_I_lock.html">
+            
+                <a href="3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="6_Locking_the_basic_config_version.html">
+            
+                <a href="6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="7_Managing_config_versions.html">
+            
+                <a href="7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="8_Taking_over_the_config.html">
+            
+                <a href="8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.9" data-path="9_Version_control.html">
+            
+                <a href="9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="10_The_development_environment.html">
+            
+                <a href="10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="14_tk_config_default2.html">
+            
+                <a href="14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="15_Taking_over_tk_config_default2.html">
+            
+                <a href="15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="17_Install_strategy_pros_and_cons.html">
+            
+                <a href="17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >9. 버전 제어</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xBC84;&#xC804;-&#xC81C;&#xC5B4;">&#xBC84;&#xC804; &#xC81C;&#xC5B4;</h1>
+<p><a href="https://youtu.be/5nRZ5GgcOnk?t=22m53s" target="_blank">Version control</a></p>
+<p>As responsible citizens of the galaxy we should always encourage each other to version control critical files like a complex code or settings files.
+&#xCC45;&#xC784;&#xC788;&#xB294; &#xC740;&#xD558;&#xACC4; &#xC2DC;&#xBBFC;&#xC73C;&#xB85C;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xD56D;&#xC0C1; &#xC11C;&#xB85C;&#xC5D0;&#xAC8C; &#xBCF5;&#xC7A1;&#xD55C; &#xCF54;&#xB4DC;&#xB098; &#xC124;&#xC815; &#xD30C;&#xC77C;&#xACFC; &#xAC19;&#xC740; &#xC911;&#xC694;&#xD55C; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC81C;&#xC5B4;&#xD558;&#xB3C4;&#xB85D; &#xACA9;&#xB824;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>This is one of those times.
+&#xC9C0;&#xAE08;&#xC774; &#xBC14;&#xB85C; &#xADF8;&#xB7F0; &#xB54C;&#xC57C;.</p>
+<p>I&apos;m going to strongly encourage you to version control your config.
+&#xC800;&#xB294; &#xB2F9;&#xC2E0;&#xC774; &#xB2F9;&#xC2E0;&#xC758; &#xAD6C;&#xC131;&#xC744; &#xC81C;&#xC5B4;&#xD560; &#xAC83;&#xC744; &#xAC15;&#xB825;&#xD788; &#xAD8C;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>It&apos;s up to you how you want to do it with perforce or git or CBS or SVN etc.
+&#xB2F9;&#xC2E0;&#xC774; &#xADF8;&#xAC83;&#xC744; &#xC5B4;&#xB5BB;&#xAC8C; &#xD560; &#xAC83;&#xC778;&#xAC00;&#xB294; &#xB2F9;&#xC2E0;&#xC5D0;&#xAC8C; &#xB2EC;&#xB824;&#xC788;&#xB2E4;.</p>
+<p>If your studio already uses version control technology you should probably just use that.
+&#xC2A4;&#xD29C;&#xB514;&#xC624;&#xC5D0;&#xC11C; &#xC774;&#xBBF8; &#xBC84;&#xC804; &#xC81C;&#xC5B4; &#xAE30;&#xC220;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB2E4;&#xBA74;, &#xC544;&#xB9C8; &#xADF8;&#xB0E5; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>If you&apos;re a games company for example you&apos;ll likely want to use perforce.
+&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xAC8C;&#xC784; &#xD68C;&#xC0AC;&#xC77C; &#xACBD;&#xC6B0; Perforce&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Here at shotgun software we use github to manage and collaborate on code so I&apos;ll use github for this demo.
+&#xC5EC;&#xAE30; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC5D0;&#xC11C;&#xB294; Github&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xCF54;&#xB4DC;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xACE0; &#xACF5;&#xB3D9;&#xC791;&#xC5C5;&#xC744; &#xD558;&#xBBC0;&#xB85C; &#xC774; &#xB370;&#xBAA8;&#xC5D0;&#xC11C;&#xB294; github&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>As an aside if you haven&apos;t chosen a version control technology or service at your studio yet I highly recommend github.
+&#xBCC4;&#xAC1C;&#xB85C;, &#xB9CC;&#xC57D; &#xB2F9;&#xC2E0;&#xC774; &#xB2F9;&#xC2E0;&#xC758; &#xC2A4;&#xD29C;&#xB514;&#xC624;&#xC5D0;&#xC11C; &#xBC84;&#xC804; &#xC81C;&#xC5B4; &#xAE30;&#xC220;&#xC774;&#xB098; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC120;&#xD0DD;&#xD558;&#xC9C0; &#xC54A;&#xC558;&#xB2E4;&#xBA74; &#xB098;&#xB294; Github&#xB97C; &#xAC15;&#xB825;&#xD788; &#xCD94;&#xCC9C;&#xD55C;&#xB2E4;.</p>
+<p>It&apos;s got a snappy intuitive interface you can access it from anywhere as apposed for example to a git or perforce server running on a local network it&apos;s used and trusted by thousands of companies worldwide and you can easily migrate to a local git server if necessary.
+&#xC774; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0;&#xB294; &#xAC04;&#xD3B8;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xD1B5;&#xD574; &#xC5B4;&#xB514;&#xC11C;&#xB098; &#xC561;&#xC138;&#xC2A4;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, &#xC804;&#xC138;&#xACC4; &#xC218;&#xCC9C; &#xAC1C;&#xC758; &#xD68C;&#xC0AC;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC2E0;&#xB8B0;&#xD558;&#xB294; Git &#xB610;&#xB294; Perforce &#xC11C;&#xBC84;&#xC5D0; &#xC561;&#xC138;&#xC2A4;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xD544;&#xC694;&#xD560; &#xACBD;&#xC6B0; &#xC27D;&#xAC8C; &#xB85C;&#xCEEC; &#xC11C;&#xBC84;&#xB85C; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Bitbucket is another good yet based solution for large corporate style studios.
+Bitbucket&#xC740; &#xB300;&#xAE30;&#xC5C5; &#xC2A4;&#xD0C0;&#xC77C; &#xC2A4;&#xD29C;&#xB514;&#xC624;&#xB97C; &#xC704;&#xD55C; &#xB610; &#xB2E4;&#xB978; &#xC6B0;&#xC218;&#xD558;&#xC9C0;&#xB9CC; &#xAE30;&#xBC18; &#xC194;&#xB8E8;&#xC158;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>So if I&apos;m going to keep track of changes I make to teacake and vague basic I need to initialize a github repository.
+&#xADF8;&#xB798;&#xC11C; &#xB9CC;&#xC57D; &#xB0B4;&#xAC00; &#xCC3B;&#xC794;&#xC5D0; &#xB300;&#xD55C; &#xBCC0;&#xACBD;&#xC0AC;&#xD56D;&#xACFC; &#xBAA8;&#xD638;&#xD55C; &#xAE30;&#xBCF8;&#xC0AC;&#xD56D;&#xC744; &#xCD94;&#xC801;&#xD558;&#xB824;&#xBA74;, &#xB098;&#xB294; Github &#xC800;&#xC7A5;&#xC18C;&#xB97C; &#xCD08;&#xAE30;&#xD654;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>My shotgun site is called learn so I&apos;ll call my repo TK config learn.
+&#xB0B4; &#xC0F7;&#xAC74; &#xC0AC;&#xC774;&#xD2B8;&#xB294; <code>aiw</code>&#xB77C;&#xACE0; &#xBD80;&#xB974;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB098;&#xB294; &#xB0B4; <code>tk-config-aiw</code>&#xC5D0; &#xC804;&#xD654;&#xD560; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>Of course you could call it whatever you want.
+&#xBB3C;&#xB860; &#xB108;&#xB294; &#xADF8;&#xAC83;&#xC744; &#xB124;&#xAC00; &#xC6D0;&#xD558;&#xB294; &#xB300;&#xB85C; &#xBD80;&#xB97C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>I&apos;ll clone that to my desktop dump in the contents of TK config basic.
+TK &#xAD6C;&#xC131; &#xAE30;&#xBCF8; &#xCEE8;&#xD150;&#xCE20;&#xC5D0; &#xC788;&#xB294; &#xB370;&#xC2A4;&#xD06C;&#xD1B1; &#xB364;&#xD504;&#xC5D0; &#xBCF5;&#xC81C;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>While being careful to preserve the docket ignore file a very easy thing to overlook.
+&#xB3C4;&#xD0B7;&#xC744; &#xBCF4;&#xC874;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC870;&#xC2EC;&#xD558;&#xB294; &#xB3D9;&#xC548; &#xBB34;&#xC2DC;&#xB418;&#xB294; &#xAC83;&#xC740; &#xAC04;&#xACFC;&#xD558;&#xAE30; &#xC26C;&#xC6B4; &#xC77C;&#xC774;&#xB2E4;.</p>
+<p>And post that to a branch named after the version of TK config basic that I started with.
+&#xADF8;&#xB9AC;&#xACE0; &#xC81C;&#xAC00; &#xC2DC;&#xC791;&#xD55C; TK config basic&#xC758; &#xBC84;&#xC804; &#xC774;&#xB984;&#xC744; &#xB530;&#xC11C; &#xC9C0;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Next I&apos;ll start a development dev branch which is where I&apos;ll post work-in-progress changes.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C;, &#xC9C4;&#xD589; &#xC911;&#xC778; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC744; &#xAC8C;&#xC2DC;&#xD558;&#xB294; &#xAC1C;&#xBC1C; &#xAC1C;&#xBC1C; &#xAC1C;&#xBC1C; &#xC9C0;&#xC810;&#xC744; &#xC2DC;&#xC791;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>And a master branch which is where I&apos;ll tag and release code from actually why don&apos;t I do that right now.
+&#xADF8;&#xB9AC;&#xACE0; &#xC81C;&#xAC00; &#xD0DC;&#xADF8;&#xB97C; &#xBD99;&#xC774;&#xACE0; &#xCF54;&#xB4DC;&#xB97C; &#xD480; &#xC218; &#xC788;&#xB294; &#xC9C0;&#xC810;&#xC778; &#xB9C8;&#xC2A4;&#xD130; &#xBD84;&#xAE30;&#xB294; &#xC65C; &#xC9C0;&#xAE08; &#xB2F9;&#xC7A5; &#xADF8;&#xB807;&#xAC8C; &#xD558;&#xC9C0; &#xC54A;&#xB294;&#xAC00;?</p>
+<p>I&apos;ll push up my master branch draft the initial release download the zip file and then upload it to our primary configuration entity.
+&#xB9C8;&#xC2A4;&#xD130; &#xBC84;&#xC804; &#xCD08;&#xC548;&#xC73C;&#xB85C; zip &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD55C; &#xD6C4; &#xAE30;&#xBCF8; &#xAD6C;&#xC131; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>See how the github version number is visible here.
+Github &#xBC84;&#xC804; &#xBC88;&#xD638;&#xB97C; &#xBCF4;&#xB824;&#xBA74; &#xC5EC;&#xAE30;&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xC2ED;&#xC2DC;&#xC624;.</p>
+<p>Cool right?
+&#xBA4B;&#xC9C0;&#xC9C0;?</p>
+<p>So we know exactly where it came from.
+&#xADF8;&#xB798;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xADF8;&#xAC83;&#xC774; &#xC5B4;&#xB514;&#xC11C; &#xC654;&#xB294;&#xC9C0; &#xC815;&#xD655;&#xD788; &#xC548;&#xB2E4;.</p>
+<p>Let&apos;s release and upload a new version to test that out.
+&#xC0C8; &#xBC84;&#xC804;&#xC744; &#xB9B4;&#xB9AC;&#xC2A4;&#xD558;&#xACE0; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xC5EC; &#xD14C;&#xC2A4;&#xD2B8;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>Sweet but what if there&apos;s something wrong with our new version?
+&#xC88B;&#xC544;&#xC694;, &#xD558;&#xC9C0;&#xB9CC; &#xC0C8; &#xBC84;&#xC804;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xC0DD;&#xAE30;&#xBA74; &#xC5B4;&#xCA4C;&#xC8E0;?</p>
+<p>How do we know which version to roll back to?
+&#xC5B4;&#xB5A4; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xB864;&#xBC31;&#xD560;&#xC9C0; &#xC5B4;&#xB5BB;&#xAC8C; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xAE4C;?</p>
+<p>Well you can right-click on the little attachment icon choose view uploaded config history and then filter for change event types.
+&#xC791;&#xC740; &#xCCA8;&#xBD80; &#xD30C;&#xC77C; &#xC544;&#xC774;&#xCF58;&#xC744; &#xB9C8;&#xC6B0;&#xC2A4; &#xC624;&#xB978;&#xCABD; &#xB2E8;&#xCD94;&#xB85C; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xAD6C;&#xC131; &#xAE30;&#xB85D; &#xBCF4;&#xAE30;&#xB97C; &#xC120;&#xD0DD;&#xD55C; &#xB2E4;&#xC74C; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Now I know exactly what config I should roll back to if there are issues.
+&#xC774;&#xC81C; &#xBB38;&#xC81C;&#xAC00; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC5B4;&#xB5A4; &#xAD6C;&#xC131;&#xC744; &#xB864;&#xBC31;&#xD574;&#xC57C; &#xD558;&#xB294;&#xC9C0; &#xC815;&#xD655;&#xD788; &#xC54C;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>It&apos;s also handy to set up a permanent pull request against the original code you downloaded from shotgun software.
+&#xB610;&#xD55C; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC5D0;&#xC11C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD55C; &#xC6D0;&#xB798; &#xCF54;&#xB4DC;&#xC5D0; &#xB300;&#xD574; &#xC601;&#xAD6C; &#xB2F9;&#xAE30;&#xAE30; &#xC694;&#xCCAD;&#xC744; &#xC124;&#xC815;&#xD558;&#xB294; &#xAC83;&#xB3C4; &#xD3B8;&#xB9AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>That way you can see the sum of all the changes you&apos;ve made in one place.
+&#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xD55C; &#xACF3;&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xD55C; &#xBAA8;&#xB4E0; &#xBCC0;&#xACBD;&#xC0AC;&#xD56D;&#xC758; &#xD569;&#xACC4;&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>You could even load up older versions of our releases to really get a clearer view of what we&apos;ve changed on our end.
+&#xC774;&#xC804; &#xBC84;&#xC804;&#xC758; &#xB9B4;&#xB9AC;&#xC988;&#xB97C; &#xB85C;&#xB4DC;&#xD558;&#xC5EC; &#xCD5C;&#xC885; &#xB2E8;&#xACC4;&#xC5D0;&#xC11C; &#xBCC0;&#xACBD;&#xB41C; &#xC0AC;&#xD56D;&#xC744; &#xBCF4;&#xB2E4; &#xBA85;&#xD655;&#xD558;&#xAC8C; &#xD30C;&#xC545;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Finally let&apos;s talk about the master branch and per project branches.
+&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xB9C8;&#xC2A4;&#xD130; &#xBD84;&#xAE30;&#xC640; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xBD84;&#xAE30;&#xC5D0; &#xB300;&#xD574; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>After chatting internally we think it&apos;s a good idea to use the master branch to release to the global site config.
+&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xCC44;&#xD305;&#xD55C; &#xD6C4; &#xB9C8;&#xC2A4;&#xD130; &#xBD84;&#xAE30;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xAE00;&#xB85C;&#xBC8C; &#xC0AC;&#xC774;&#xD2B8; &#xAD6C;&#xC131;&#xC5D0; &#xB9B4;&#xB9AC;&#xC2A4;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>But you can also host project specific branches in the same repo.
+&#xADF8;&#xB7EC;&#xB098; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD2B9;&#xC815; &#xBD84;&#xAE30;&#xB97C; &#xB3D9;&#xC77C;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD638;&#xC2A4;&#xD2B8;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>For example if I wanted the artists working on the hyperspace madness project to get some extra special apps
+I could create a hyperspace madness branch tag a release from there something like this
+&#xC608;&#xB97C; &#xB4E4;&#xC5B4;, &#xB9CC;&#xC57D; &#xB0B4;&#xAC00; &#xD558;&#xC774;&#xD37C;&#xC2A4;&#xD398;&#xC774;&#xC2A4; &#xAD11;&#xAE30; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xD558;&#xB294; &#xC544;&#xD2F0;&#xC2A4;&#xD2B8;&#xB4E4;&#xC774; &#xBA87; &#xAC1C;&#xC758; &#xD2B9;&#xBCC4;&#xD55C; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744;
+&#xCD08;&#xACF5;&#xAC04; &#xAD11;&#xAE30;&#xC758; &#xBD84;&#xAE30; &#xD0DC;&#xADF8;&#xB97C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>And post it to a primary config linked to the hyperspace madness project.
+&#xADF8;&#xB9AC;&#xACE0; &#xADF8;&#xAC83;&#xC744; &#xD558;&#xC774;&#xD37C;&#xC2A4;&#xD398;&#xC774;&#xC2A4; &#xAD11;&#xAE30; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC640; &#xC5F0;&#xACB0;&#xB41C; &#xC77C;&#xCC28; &#xAD6C;&#xC131;&#xC5D0; &#xAC8C;&#xC2DC;&#xD55C;&#xB2E4;.</p>
+<p>Get it!</p>
+<p>Here&apos;s a picture in case your brain is filling up.
+&#xC5EC;&#xAE30; &#xB2F9;&#xC2E0;&#xC758; &#xB1CC;&#xAC00; &#xAC00;&#xB4DD; &#xCC30; &#xACBD;&#xC6B0;&#xB97C; &#xB300;&#xBE44;&#xD55C; &#xC0AC;&#xC9C4;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Awesome now not only are config payloads coming from our own shotgun sights app store
+they&apos;re hooked up to specific released versions of github repo site or per project branches
+that we control.
+&#xBA4B;&#xC9C4; &#xAD6C;&#xC131; &#xD398;&#xC774;&#xB85C;&#xB4DC;&#xAC00; &#xC6B0;&#xB9AC;&#xC758; &#xC20F;&#xAC74; &#xAD00;&#xAD11; &#xC571; &#xC2A4;&#xD1A0;&#xC5B4;&#xC5D0;&#xC11C; &#xC624;&#xB294; &#xAC83;&#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C;
+Gitub repo &#xC0AC;&#xC774;&#xD2B8; &#xB610;&#xB294; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC9C0;&#xC810;&#xBCC4;&#xB85C; &#xB9B4;&#xB9AC;&#xC2A4;&#xB41C; &#xD2B9;&#xC815; &#xBC84;&#xC804;&#xC5D0; &#xC5F0;&#xACB0;&#xB429;&#xB2C8;&#xB2E4;.
+&#xC6B0;&#xB9AC;&#xAC00; &#xD1B5;&#xC81C;&#xD558;&#xB294;</p>
+<p>This repo should be private and shared with other developers who might make changes to configs.
+&#xC774; &#xC7AC;&#xC791;&#xC131;&#xC740; &#xBE44;&#xACF5;&#xAC1C;&#xC774;&#xC5B4;&#xC57C; &#xD558;&#xBA70; &#xAD6C;&#xC131;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xB294; &#xB2E4;&#xB978; &#xAC1C;&#xBC1C;&#xC790;&#xC640; &#xACF5;&#xC720;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8_Taking_over_the_config.html" class="navigation navigation-prev " aria-label="Previous page: 8. 구성 인계받기">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10_The_development_environment.html" class="navigation navigation-next " aria-label="Next page: 10. 개발 환경">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9. 버전 제어","level":"1.6.9","depth":2,"next":{"title":"10. 개발 환경","level":"1.6.10","depth":2,"path":"posts/5_toolkit/10_The_development_environment.md","ref":"posts/5_toolkit/10_The_development_environment.md","articles":[]},"previous":{"title":"8. 구성 인계받기","level":"1.6.8","depth":2,"path":"posts/5_toolkit/8_Taking_over_the_config.md","ref":"posts/5_toolkit/8_Taking_over_the_config.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/5_toolkit/9_Version_control.md","mtime":"2018-11-19T09:00:57.936Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,958 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. 데몬 설치 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3_Logging_events.html" />
+    
+    
+    <link rel="prev" href="1_Daemon_Intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_shotgun/0_Shotgun.html">
+            
+                <a href="../1_shotgun/0_Shotgun.html">
+            
+                    
+                    Shotgun
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                <a href="../1_shotgun/1_A_Developers_Intro_to_Shotgun.html">
+            
+                    
+                    1. 개발자를 위한 Shotgun 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                <a href="../1_shotgun/2_The_Shotgun_Tech_Stack_Security.html">
+            
+                    
+                    2. Shotgun 기술 스택 및 보안
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_shotgun/3_The_Web_GUI.html">
+            
+                <a href="../1_shotgun/3_The_Web_GUI.html">
+            
+                    
+                    3. 웹 GUI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_shotgun/4_Resources.html">
+            
+                <a href="../1_shotgun/4_Resources.html">
+            
+                    
+                    4. 리소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_api/0_Shotgun_API.html">
+            
+                <a href="../2_api/0_Shotgun_API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_api/1_Shotgun_API_Basic.html">
+            
+                <a href="../2_api/1_Shotgun_API_Basic.html">
+            
+                    
+                    1. 기본
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_api/2_Shotgun_CRUD.html">
+            
+                <a href="../2_api/2_Shotgun_CRUD.html">
+            
+                    
+                    2. CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                <a href="../2_api/3_The_Python_API_Schema_Methods.html">
+            
+                    
+                    3. 스키마 메서드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                <a href="../2_api/4_The_Python_API_Upload_Download.html">
+            
+                    
+                    4. 업로드/다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                <a href="../2_api/5_The_Python_API_Best_Practices.html">
+            
+                    
+                    5. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_AMI/0_AMI.html">
+            
+                <a href="../3_AMI/0_AMI.html">
+            
+                    
+                    AMI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_AMI/1_Script_Keys_Automation.html">
+            
+                <a href="../3_AMI/1_Script_Keys_Automation.html">
+            
+                    
+                    1. 스크립트 키 및 자동화
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_AMI/2_Action_Menu_Items.html">
+            
+                <a href="../3_AMI/2_Action_Menu_Items.html">
+            
+                    
+                    2. 액션 메뉴 항목 생성, 테스팅 및 디버깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="0_Daemon.html">
+            
+                <a href="0_Daemon.html">
+            
+                    
+                    Daemon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="1_Daemon_Intro.html">
+            
+                <a href="1_Daemon_Intro.html">
+            
+                    
+                    1. 이벤트 데몬 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="2_Installing_the_daemon.html">
+            
+                <a href="2_Installing_the_daemon.html">
+            
+                    
+                    2. 데몬 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3_Logging_events.html">
+            
+                <a href="3_Logging_events.html">
+            
+                    
+                    3. 이벤트 로깅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="4_Filtering_for_events.html">
+            
+                <a href="4_Filtering_for_events.html">
+            
+                    
+                    4. 이벤트 필터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="5_Processing_events.html">
+            
+                <a href="5_Processing_events.html">
+            
+                    
+                    5. 이벤트 처리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="6_Validation.html">
+            
+                <a href="6_Validation.html">
+            
+                    
+                    6. 유효성 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="7_A_real_example.html">
+            
+                <a href="7_A_real_example.html">
+            
+                    
+                    7. 실제 예시
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="8_Best_practices.html">
+            
+                <a href="8_Best_practices.html">
+            
+                    
+                    8. 모범 사례
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="9_Managing_the_event_backlog.html">
+            
+                <a href="9_Managing_the_event_backlog.html">
+            
+                    
+                    9. 이벤트 백로그 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="10_Example_plugins.html">
+            
+                <a href="10_Example_plugins.html">
+            
+                    
+                    10. 예시 플러그인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="11_Documentation.html">
+            
+                <a href="11_Documentation.html">
+            
+                    
+                    11. 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_toolkit/0_Toolkit.html">
+            
+                <a href="../5_toolkit/0_Toolkit.html">
+            
+                    
+                    Toolkit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_toolkit/1_Toolkit_Itro.html">
+            
+                <a href="../5_toolkit/1_Toolkit_Itro.html">
+            
+                    
+                    1. Toolkit 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_toolkit/2_Managing_software_versions.html">
+            
+                <a href="../5_toolkit/2_Managing_software_versions.html">
+            
+                    
+                    2. 소프트웨어 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
+            
+                    
+                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
+            
+                    
+                    4. Shotgun 데스크톱 설치 및 배포
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                <a href="../5_toolkit/5_Should_I_lock_the_basic_configuration.html">
+            
+                    
+                    5. 기초 구성을 잠가야 합니까?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                <a href="../5_toolkit/6_Locking_the_basic_config_version.html">
+            
+                    
+                    6. 기초 구성 버전 잠그기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_toolkit/7_Managing_config_versions.html">
+            
+                <a href="../5_toolkit/7_Managing_config_versions.html">
+            
+                    
+                    7. 구성 버전 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_toolkit/8_Taking_over_the_config.html">
+            
+                <a href="../5_toolkit/8_Taking_over_the_config.html">
+            
+                    
+                    8. 구성 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_toolkit/9_Version_control.html">
+            
+                <a href="../5_toolkit/9_Version_control.html">
+            
+                    
+                    9. 버전 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../5_toolkit/10_The_development_environment.html">
+            
+                <a href="../5_toolkit/10_The_development_environment.html">
+            
+                    
+                    10. 개발 환경
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/11_Automatically_updating_apps_engines_and_frameworks.html">
+            
+                    
+                    11. 앱, 엔진 및 프레임워크 자동 업데이트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+            
+                <a href="../toolkit/12_Manually_editing_the_config.html">
+            
+                    
+                    12. 구성 직접 편집
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                <a href="../5_toolkit/13_Managing_custom_apps_engines_and_frameworks.html">
+            
+                    
+                    13. 커스텀 앱, 엔진 및 프레임워크 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../5_toolkit/14_tk_config_default2.html">
+            
+                <a href="../5_toolkit/14_tk_config_default2.html">
+            
+                    
+                    14. tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                <a href="../5_toolkit/15_Taking_over_tk_config_default2.html">
+            
+                    
+                    15. tk-config-default2 인계받기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                <a href="../5_toolkit/16_tk_config_basic_vs_tk_config_default2.html">
+            
+                    
+                    16. tk-config-basic과 tk-config-default2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                <a href="../5_toolkit/17_Install_strategy_pros_and_cons.html">
+            
+                    
+                    17. 설치 전략의 장단점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../TODO.html">
+            
+                <a href="../TODO.html">
+            
+                    
+                    TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2. 데몬 설치</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="installing-the-daemon-&#xB370;&#xBAAC;-&#xC124;&#xCE58;"><a href="https://youtu.be/YPZ1FWvhf7k?t=1m28s" target="_blank">Installing the daemon (&#xB370;&#xBAAC; &#xC124;&#xCE58;)</a></h1>
+<p>To download the daemon visit shotgun software on github.
+&#xB370;&#xBAAC;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD558;&#xB824;&#xBA74; github&#xC5D0;&#xC11C; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xB97C; &#xBC29;&#xBB38;&#xD558;&#xC2ED;&#xC2DC;&#xC624;.
+<a href="https://github.com/shotgunsoftware?utf8=%E2%9C%93&amp;q=&amp;type=&amp;language=" target="_blank">https://github.com/shotgunsoftware?utf8=%E2%9C%93&amp;q=&amp;type=&amp;language=</a></p>
+<p>Search for <code>shotgun events</code> and clone the repo to the computer that will be running the daemon.
+<code>shotgun events</code>&#xB97C; &#xAC80;&#xC0C9;&#xD558;&#xC5EC; &#xB370;&#xBAAC;&#xC744; &#xC2E4;&#xD589;&#xD560; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xBCF5;&#xC81C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>In my case I&apos;ll just run it off my laptop here.
+&#xC81C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC81C; &#xB178;&#xD2B8;&#xBD81;&#xC5D0;&#xC11C; &#xC124;&#xCE58; &#xD560; &#xAC70;&#xC5D0;&#xC694;.</p>
+<pre><code class="lang-console">git clone https://github.com/shotgunsoftware/shotgunEvents.git
+</code></pre>
+<p><img src="../../img/shotgun/12/1.png" alt="Local Image"></p>
+<p>But in production you&apos;ll want to choose a reliable server that you can access easily and that will fingers crossed be up all the time.
+&#xD558;&#xC9C0;&#xB9CC; &#xD504;&#xB85C;&#xB355;&#xC158; &#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; &#xC27D;&#xAC8C; &#xC561;&#xC138;&#xC2A4;&#xD560; &#xC218; &#xC788;&#xACE0; &#xD56D;&#xC0C1; &#xC11C;&#xB85C; &#xAD50;&#xCC28;&#xD558;&#xB294; &#xC2E0;&#xB8B0;&#xD560; &#xC218; &#xC788;&#xB294; &#xC11C;&#xBC84;&#xB97C; &#xC120;&#xD0DD;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Okay let&apos;s take a look at the shotgun events contents here.
+&#xC790;, &#xADF8;&#xB7FC; &#xC0F7;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xB0B4;&#xC6A9;&#xC744; &#xC0B4;&#xD3B4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>All the goodies are in the source folder. So I&apos;ll open that up.
+&#xBAA8;&#xB4E0;&#xAC83; &#xC6D0;&#xBCF8; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC81C;&#xAC00; &#xADF8;&#xAC83;&#xC744; &#xC5F4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>First I&apos;ll do a save as on the configuration file without the dot example bit and then identify a logs directory my user has access to.
+<code>shotgunEventDaemon.conf.example</code>&#xC744; <code>shotgunEventDaemon.conf</code>&#xB85C; &#xBCF5;&#xC0AC; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>It looks like my user doesn&apos;t have permission to create folders and var log.
+&#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xD3F4;&#xB354;&#xC640; &#xB85C;&#xADF8; &#xC0DD;&#xC131; &#xAD8C;&#xD55C;&#xC774; &#xC5C6;&#xB294; &#xAC83; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>So I&apos;ll just swap that out for my take some time yourself to decide where you&apos;d like these log and ID files to end up on your server and don&apos;t worry about what the PID file and event ID file are just yet we&apos;ll come back to those later.
+&#xC774; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xACFC; ID &#xD30C;&#xC77C;&#xC774; &#xC11C;&#xBC84;&#xC5D0; &#xC800;&#xC7A5;&#xB420; &#xC704;&#xCE58;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC7A0;&#xC2DC; &#xC2DC;&#xAC04;&#xC744; &#xD560;&#xC560;&#xD574; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. PID &#xD30C;&#xC77C;&#xACFC; &#xC774;&#xBCA4;&#xD2B8; ID &#xD30C;&#xC77C;&#xC774; &#xB098;&#xC911;&#xC5D0; &#xC5B4;&#xB5A4; &#xAC83;&#xC778;&#xC9C0;&#xB294; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC2ED;&#xC2DC;&#xC624;.</p>
+<p>Next change the logging level to ten.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xB85C;&#xAE45; &#xC218;&#xC900;&#xC744; 10&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>This will give you more of a boasts log output which is good for developing or learning the daemon.
+&#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xB370;&#xBAAC;&#xC744; &#xAC1C;&#xBC1C;&#xD558;&#xAC70;&#xB098; &#xD559;&#xC2B5;&#xD558;&#xB294; &#xB370; &#xC720;&#xC6A9;&#xD55C; &#xBCF4;&#xB2E4; &#xB9CE;&#xC740; &#xB85C;&#xADF8; &#xCD9C;&#xB825;&#xC774; &#xC81C;&#xACF5;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># src/shotgunEventDaemon.conf</span>
+
+pidFile: I:/WorkSpace/shotgun_projects/shotgunEventDaemon/shotgunEventDaemon.pid
+eventIdFile: I:/WorkSpace/shotgun_projects/shotgunEventDaemon/shotgunEventDaemon.id
+logPath: I:/WorkSpace/shotgun_projects/shotgunEventDaemon/logs
+logging: <span class="hljs-number">10</span>
+</code></pre>
+<p>You can switch it back to 20 sometime in the future once you&apos;re more  familiar with the demon and its quirks.
+&#xB370;&#xBAAC;&#xACFC; &#xB370;&#xBAAC;&#xC758; &#xAE30;&#xB2A5;&#xC5D0; &#xB300;&#xD574; &#xB354; &#xC798; &#xC54C;&#xAC8C; &#xB418;&#xBA74; &#xB098;&#xC911;&#xC5D0; 20&#xAC1C;&#xB85C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>The next important bit is the shotgun connection info down here.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xC911;&#xC694;&#xD55C; &#xAC83;&#xC740; &#xC0F7;&#xAC74; &#xC5F0;&#xACB0; &#xC815;&#xBCF4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Swapping your site and provide a script name and access key.
+&#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xC2A4;&#xC640;&#xD551;&#xD558;&#xACE0; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC774;&#xB984;&#xACFC; &#xC561;&#xC138;&#xC2A4; &#xD0A4;&#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>I&apos;ll create one for my site now and then pop it in here.
+&#xC0F7;&#xAC74; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xD0A4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xADF8; &#xD0A4;&#xAC12;&#xC744; &#xB123;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/2.png" alt="Local Image"></p>
+<p><img src="../../img/shotgun/12/3.png" alt="Local Image"></p>
+<pre><code class="lang-python">server: https://aiw.shotgunstudio.com
+key: **************************
+</code></pre>
+<p>Once that&apos;s done I&apos;ll set the path to the plugins folder.
+&#xC774; &#xC791;&#xC5C5;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xBA74; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xC758; &#xACBD;&#xB85C;&#xB97C; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python">paths: I:/WorkSpace/shotgun_projects/shotgunEventDaemon/plugins
+</code></pre>
+<p>In my case I&apos;ll also point that to my desktop but again you should take some time and decide where you want this folder to live.
+&#xC81C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBC14;&#xD0D5; &#xD654;&#xBA74;&#xC744; &#xAC00;&#xB9AC;&#xD0A4;&#xC9C0;&#xB9CC;, &#xC774; &#xD3F4;&#xB354;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC704;&#xCE58;&#xB97C; &#xACB0;&#xC815;&#xD558;&#xC2ED;&#xC2DC;&#xC624;.</p>
+<p>Some people put it inside the shotgun events repo folder but I normally tell people to keep it somewhere else.
+&#xC5B4;&#xB5A4; &#xC0AC;&#xB78C;&#xB4E4;&#xC740; &#xADF8;&#xAC83;&#xC744; &#xC0F7;&#xAC74;&#xC5D0; &#xB2E4;&#xC2DC; &#xB123;&#xC9C0;&#xB9CC; &#xB098;&#xB294; &#xBCF4;&#xD1B5; &#xC0AC;&#xB78C;&#xB4E4;&#xC5D0;&#xAC8C; &#xADF8;&#xAC83;&#xC744; &#xB2E4;&#xB978; &#xACF3;&#xC5D0; &#xB450;&#xB77C;&#xACE0; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>That way it won&apos;t interfere with git operations and shotgun events and your plug-in folder can become a git repo in its own right.
+&#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; Git &#xC791;&#xC5C5;&#xACFC; &#xC0E5;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xBC0F; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xAC00; Git Reo&#xAC00; &#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>So that&apos;s the bare minimum you need to get started.
+&#xC774;&#xAC83;&#xC774; &#xC2DC;&#xC791;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xCD5C;&#xC18C; &#xC694;&#xAD6C; &#xC0AC;&#xD56D;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>We&apos;ll come back and check out the other settings later but for now let&apos;s fire up the daemon and see what happens.
+&#xB098;&#xC911;&#xC5D0; &#xB3CC;&#xC544;&#xC640;&#xC11C; &#xB2E4;&#xB978; &#xC124;&#xC815;&#xC744; &#xD655;&#xC778;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC9C0;&#xAE08;&#xC740; &#xB370;&#xBAAC;&#xC744; &#xC791;&#xB3D9;&#xC2DC;&#xCF1C; &#xC5B4;&#xB5BB;&#xAC8C; &#xB418;&#xB294;&#xC9C0; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>To do that CD to the source folder and execute the <code>shotgunEventDaemon.py</code> file.
+&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD3F4;&#xB354;&#xB85C; &#xC774;&#xB3D9; &#xD55C;&#xD6C4; <code>shotgunEventDaemon.py</code>&#xB97C; &#xC2E4;&#xD589; &#xC2DC;&#xD0B5;&#xB2C8;&#xB2E4;.</p>
+<p>OK we&apos;ve got a few options here.
+&#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBA87; &#xAC00;&#xC9C0; &#xC635;&#xC158;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>If I go with the start the daemon will send output to log files but nothing to the terminal here.
+&#xC2DC;&#xC791; &#xBD80;&#xBD84;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD558;&#xBA74; &#xB370;&#xBAAC;&#xC740; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC5D0; &#xCD9C;&#xB825;&#xC744; &#xBCF4;&#xB0B4;&#xC9C0;&#xB9CC; &#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xB294; &#xC544;&#xBB34; &#xAC83;&#xB3C4; &#xBCF4;&#xB0B4;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Instead I recommend using the foreground option when developing.
+&#xB300;&#xC2E0; &#xAC1C;&#xBC1C;&#xD560; &#xB54C; &#xC804;&#xACBD; &#xC635;&#xC158;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Messages we&apos;ll still go to the logs but they&apos;ll also be sent to standard out and show up in the terminal.
+&#xC5EC;&#xC804;&#xD788; &#xB85C;&#xADF8;&#xB85C; &#xC774;&#xB3D9;&#xD558;&#xC9C0;&#xB9CC; &#xBA54;&#xC2DC;&#xC9C0;&#xB294; &#xD45C;&#xC900; &#xCD9C;&#xB825;&#xC73C;&#xB85C; &#xC804;&#xC1A1;&#xB418;&#xC5B4; &#xD130;&#xBBF8;&#xB110;&#xC5D0; &#xD45C;&#xC2DC;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>Ok first it looks like we need to create that plugins folder on the desktop.
+&#xBA3C;&#xC800; &#xBC14;&#xD0D5; &#xD654;&#xBA74;&#xC5D0; &#xD574;&#xB2F9; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s try again. Now it&apos;s complaining about the Python API.
+&#xB2E4;&#xC2DC; &#xD574; &#xBD05;&#xC2DC;&#xB2E4;. &#xC774;&#xC81C; Python API&#xC5D0; &#xB300;&#xD574; &#xBD88;&#xD3C9;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>If we go back to the github repo and head over to the wiki we can see that indeed the python api is required so.
+&#xB9CC;&#xC57D; &#xC6B0;&#xB9AC;&#xAC00; Github repo&#xB85C; &#xB3CC;&#xC544;&#xAC00;&#xC11C; Wiki&#xB85C; &#xAC04;&#xB2E4;&#xBA74;, &#xC6B0;&#xB9AC;&#xB294; &#xC815;&#xB9D0;&#xB85C; python api&#xAC00; &#xD544;&#xC694;&#xD55C; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>I&apos;ll create a new virtual environment for the shotgun event demon called SG daemon virtual environment activate it and install the Python API into it.
+SG &#xB370;&#xBAAC; &#xAC00;&#xC0C1; &#xD658;&#xACBD;&#xC774;&#xB77C;&#xACE0; &#xD558;&#xB294; &#xC0F7;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xB370;&#xBAAC;&#xC744; &#xC704;&#xD55C; &#xC0C8;&#xB85C;&#xC6B4; &#xAC00;&#xC0C1; &#xD658;&#xACBD;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; Python API&#xB97C; &#xC124;&#xCE58;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Now I&apos;ll try to start the daemon again.
+&#xC774;&#xC81C; &#xB370;&#xBAAC;&#xC744; &#xB2E4;&#xC2DC; &#xC2DC;&#xC791;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Great looks like we&apos;re getting a warning related to our empty plugins folder.
+&#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC758; &#xBE48; &#xD3F4;&#xB354;&#xC640; &#xAD00;&#xB828;&#xB41C; &#xACBD;&#xACE0;&#xAC00; &#xD45C;&#xC2DC;&#xB418;&#xB294; &#xAC83; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>So now we need a plug-in what else is in the shotgun events source folder here.
+&#xC790; &#xC774;&#xC81C; &#xC0F7;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xC6D0;&#xBCF8; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xB2E4;&#xB978; &#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>So far we&apos;ve looked at the configuration file and started up the daemon by running the <code>shotgunEventDaemon.py</code> file.
+&#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; &#xAD6C;&#xC131; &#xD30C;&#xC77C;&#xC744; &#xC0B4;&#xD3B4;&#xBCF4;&#xACE0; <code>shotgunEventDaemon.py</code> &#xD30C;&#xC77C;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xC5EC; &#xB370;&#xBAAC;&#xC744; &#xC2DC;&#xC791;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/shotgun/12/4.png" alt="Local Image"></p>
+<pre><code class="lang-python">(venv) python shotgunEventDaemon.py foreground
+</code></pre>
+<p>Look! We&apos;ve got some example plugins. That&apos;s helpful.
+&#xBCF4;&#xC138;&#xC694;! &#xBA87; &#xAC00;&#xC9C0; &#xC608;&#xC81C; &#xD50C;&#xB7EC;&#xADF8;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB3C4;&#xC6C0;&#xC774; &#xB418;&#xB124;&#xC694;.</p>
+<p>I&apos;m going to copy the <code>logArgh.py</code> stop py plug-in to the plugins folder on my desktop.
+&apos;logArg.py&apos;&#xB97C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xC5D0; &#xBCF5;&#xC0AC;&#xD560; &#xC608;&#xC815;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Now let&apos;s start up the daemon again.
+&#xC774;&#xC81C; &#xB370;&#xBAAC;&#xC744; &#xB2E4;&#xC2DC; &#xC2DC;&#xC791;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Cool looks like the plugin is loaded.
+&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xB85C;&#xB4DC;&#xB41C; &#xAC83;&#xCC98;&#xB7FC; &#xBCF4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>At this point we can consider the shotgun event daemon successfully installed.
+&#xC774; &#xC2DC;&#xC810;&#xC5D0;&#xC11C; &#xC0F7;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xB370;&#xBAAC;&#xC774; &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; &#xC124;&#xCE58;&#xB418;&#xC5C8;&#xC74C;&#xC744; &#xACE0;&#xB824;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s move on and learn how to write plug-ins for it.
+&#xC774;&#xC81C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC4F0;&#xB294; &#xBC29;&#xBC95;&#xC5D0; &#xB300;&#xD574; &#xC54C;&#xC544;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1_Daemon_Intro.html" class="navigation navigation-prev " aria-label="Previous page: 1. 이벤트 데몬 소개">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3_Logging_events.html" class="navigation navigation-next " aria-label="Next page: 3. 이벤트 로깅">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"next":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"previous":{"title":"1. 이벤트 데몬 소개","level":"1.5.1","depth":2,"path":"posts/4_daemon/1_Daemon_Intro.md","ref":"posts/4_daemon/1_Daemon_Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/2_Installing_the_daemon.md","mtime":"2018-11-19T08:57:49.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
