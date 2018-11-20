@@ -40,15 +40,15 @@ pip install git+git://github.com/shotgunsoftware/python-api.git@v3.0.26
 
 ## Use tk-multi-pythonconsole
 
-![Local Image](/img/5/1.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/1.png)
 
-![Local Image](/img/5/2.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/2.png)
 
-![Local Image](/img/5/3.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/3.png)
 
 ## Use the DCC console
 
-![Local Image](/img/5/4.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/4.png)
 
 ```python
 import sgtk
@@ -61,17 +61,17 @@ for shot in shots:
 
 ## Use tank shell
 
-![Local Image](/img/5/5.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/5.png)
 
-![Local Image](/img/5/6.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/6.png)
 
-![Local Image](/img/5/7.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/7.png)
 
-![Local Image](/img/5/8.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/8.png)
 
-![Local Image](/img/5/9.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/9.png)
 
-![Local Image](/img/5/10.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/10.png)
 
 만들어지 스토리지 서버로 이동 합니다.
 
@@ -79,7 +79,7 @@ for shot in shots:
 tank shell
 ```
 
-![Local Image](/img/5/11.png)
+![Local Image](/img/2_api/1_Shotgun_API_Basic/11.png)
 
 ## Documentation
 

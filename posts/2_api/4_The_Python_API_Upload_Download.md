@@ -2,19 +2,19 @@
 
 > 이 Shotgun Python API 동영상에서는 Shotgun으로 저장, 트랜스코딩 및 트래킹하는 미디어를 중심으로 API를 이용한 업로드 및 다운로드와 관련된 일반 명령들을 살펴봅니다.
 
-![Local Image](/img/10/1.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/1.png)
 
 ## GUI에서 파일 업로드
 
-![Local Image](/img/10/2.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/2.png)
 
-![Local Image](/img/10/3.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/3.png)
 
-![Local Image](/img/10/4.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/4.png)
 
 파일이 업로드되고 나면 파일 엔티티가 생성되고 해당 파일 필드가 업로드된 파일을 가리킵니다.
 
-![Local Image](/img/10/5.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/5.png)
 
 참고로, 업로드된 파일은 Shotgun의 "file_serve" 영역에 임시로 저장되어 있습니다.
 
@@ -47,7 +47,7 @@ print pprint.pformat(f)
 
 필드를 추가 합니다.
 
-![Local Image](/img/10/6.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/6.png)
 
 모두 쿼리해 두면 시간을 절약할 수 있는 좋은 정보입니다.
 파일 엔티티는 파일 자체가 아니라는 점도 짚어드리고 싶습니다.
@@ -76,9 +76,9 @@ Shotgun 개발 작업을 많이 수행하면 이 sg_uploaded_movie 필드에 아
 
 버전 엔티티를 이용해 파일을 업로드 해봅니다.
 
-![Local Image](/img/10/7.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/7.png)
 
-![Local Image](/img/10/8.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/8.png)
 
 자동으로 MOV(image) 필드에 프리뷰가 생성 됩니다.
 지원되는 파일 형식을 기록한 문서 입니다.
@@ -91,7 +91,7 @@ Shotgun 개발 작업을 많이 수행하면 이 sg_uploaded_movie 필드에 아
 
 하지만 미디어 복사본처럼 보이는 동일한 버전에 링크된 추가 파일 엔티티도 두 개 있습니다.
 
-![Local Image](/img/10/9.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/9.png)
 
 이 동영상 파일은 Shotgun 서버의 트랜스코딩 서비스에서 자동으로 생성되었으며 Shotgun 웹 GUI와 다른 위치의 오버레이 플레이어에서 사용합니다.
 RV에서는 mp4 파일이 webm 파일보다 우선하며 웹 기반 동영상 플레이어에서도 대체로 그렇습니다.
@@ -298,7 +298,7 @@ print download_img
 이러한 엔티티는 주로 툴킷 통합에서 사용되며 루트 저장소 폴더를 정의합니다.
 공유 파일 시스템의 위치로 "primary"를 가리키는 것이 좋습니다.
 
-![Local Image](/img/10/10.png)
+![Local Image](/img/2_api/4_The_Python_API_Upload_Download/10.png)
 
 작업을 마치면 기존 엔티티의 파일/링크 필드를 업데이트할 수 있습니다.
 로컬 파일 링크를 할때 파일의 경로가 프로젝트 로컬 파일 시스템에 등록된 하위 경로여야 만 링크를 할수 있습니다.

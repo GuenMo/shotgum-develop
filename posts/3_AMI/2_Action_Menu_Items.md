@@ -6,26 +6,26 @@
 
 ## 소개
 
-![Local Image](/img/8/1.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/1.png)
 
 AMI는 툴킷 액션 대신 사용할 수 있는 경량 옵션입니다.
 AMI를 사용하면 http 또는 https와 같은 특정 프로토콜이나 커스텀 프로토콜을 통해 Shotgun 페이지의 정보를 스크립트로 보낼 수 있습니다.
 
-![Local Image](/img/8/2.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/2.png)
 
 AMI에 대해 알아야 할 중요한 사항은 정보를 보내기는 하지만 받을 수는 없다는 점입니다.
 
 AMI가 데이터를 보내는 방법에는 POST와 GET, 두 가지가 있습니다.
 
-![Local Image](/img/8/3.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/3.png)
 
-![Local Image](/img/8/4.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/4.png)
 
 ## AMI 등록
 
-![Local Image](/img/8/5.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/5.png)
 
-![Local Image](/img/8/6.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/6.png)
 
 ## AMI와 Django
 
@@ -33,7 +33,7 @@ Django는 완벽한 기능을 갖춘 Python 기반의 오픈 소스 웹 프레�
 
 폴더와 가상환경을 만듭니다.
 
-![Local Image](/img/8/8.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/8.png)
 
 `Django` 와 `Shotgun Python API`를 설치 합니다.
 
@@ -57,7 +57,7 @@ python manage.py startapp ami
 python manage.py runserver
 ```
 
-![Local Image](/img/8/9.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/9.png)
 
 **설정 파일을 수정 합니다.**
 
@@ -140,7 +140,7 @@ python manage.py runserver
 
 <http://127.0.0.1:8000/ami/>
 
-![Local Image](/img/8/10.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/10.png)
 
 **POST GET 구현.**
 
@@ -177,7 +177,7 @@ class AmiView(ContextMixin, TemplateResponseMixin, View):
 
 <http://127.0.0.1:8000/ami/>
 
-![Local Image](/img/8/11.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/11.png)
 
 **Shotgun API 연동.**
 
@@ -232,7 +232,7 @@ class AmiView(ContextMixin, TemplateResponseMixin, View):
 
 <http://127.0.0.1:8000/ami/>
 
-![Local Image](/img/8/12.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/12.png)
 
 `demo` script key를 사용해서 사용자 인증을 하겠습니다.
 
@@ -290,7 +290,7 @@ class AmiView(ContextMixin, TemplateResponseMixin, CsrfExemptMixin, View):
         return JsonResponse(projects)
 ```
 
-![Local Image](/img/8/13.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/13.png)
 
 Shotgun AMI 클릭 한 데이터를 Django 에서 처리 하도록 합니다.
 
@@ -340,9 +340,9 @@ class AmiView(ContextMixin, TemplateResponseMixin, CsrfExemptMixin, View):
 Shotgun의 데이터를 사용하여 커스텀 뷰를 만들 수 있는 정말로 멋진 솔루션입니다.
 보고서를 실행하고, 그래프를 만들고, 통찰력 있는 정보를 아티스트, 프로듀서, 감독에게 제공하는 등 원하는 어떤 작업이든 가능합니다.
 
-![Local Image](/img/8/14.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/14.png)
 
-![Local Image](/img/8/15.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/15.png)
 
 두 번째 문제는 공유 파일 시스템의 Flask 또는 Django 웹 서버에서 수행하는 액션이 서버 사용자 및 권한 규칙 세트를 기반으로 수행된다는 점입니다.
 
@@ -357,7 +357,7 @@ Custom protocol handlers는 웹 앱에 의해 로컬 컴퓨터가 어떤 작업�
 간단한 예로, AMI를 설정하고 컴퓨터에 설치한 Skype를 가리키도록 할 경우
 AMI를 실행하면 Skype가 시작됩니다.
 
-![Local Image](/img/8/16.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/16.png)
 
 Skype는 설치시 OS에서 호출 가능 하도록 되어 있기 때문에 바로 호출이 가능 하지만 개발자가 만든 app이나 script는 호출 가능 하도록 설정을 해줘야 합니다.
 이는 각 OS마다 설정 방법이 다릅니다.
@@ -370,27 +370,27 @@ Skype는 설치시 OS에서 호출 가능 하도록 되어 있기 때문에 바�
 
 `Windows`키 + R 클릭한 후 그림과 같이 레지스트리 편집기를 엽니다.
 
-![Local Image](/img/8/17.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/17.png)
 
 `HKEY_CLASSES_ROOT`에 키를 생성 합니다. 키 값은 `shotgun_ami` 합니다.
 
-![Local Image](/img/8/18.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/18.png)
 
-![Local Image](/img/8/26.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/26.png)
 
 `shotgun`키에 문자열을 추가합니다. 문자열 값은 `URL_protocol` 입니다.
 
-![Local Image](/img/8/27.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/27.png)
 
-![Local Image](/img/8/28.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/28.png)
 
 같은 방법으로 `shell`, `open`, `command`를 그림과 같이 생성해 줍니다.
 
-![Local Image](/img/8/29.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/29.png)
 
 마지막으로 `command`키 값 안에 문자열 편집 합니다.
 
-![Local Image](/img/8/30.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/30.png)
 
 > `응용프로그램 경로` `%1`
 
@@ -432,7 +432,7 @@ Shotgun AMI를 등록 합니다.
 
 `URL`를 `shotgun://`로 수정 합니다.
 
-![Local Image](/img/8/31.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/31.png)
 
 스크립트 결과로 `result.txt` 파일이 생성 됩니다.
 
@@ -447,7 +447,7 @@ Shotgun AMI를 등록 합니다.
 | Launch Python1 | shotgun://ami_test1 |
 | Launch Python2 | shotgun://ami_test2 |
 
-![Local Image](/img/8/33.png)
+![Local Image](/img/3_AMI/2_Action_Menu_Items/33.png)
 
 **Python Script 수정.**
 

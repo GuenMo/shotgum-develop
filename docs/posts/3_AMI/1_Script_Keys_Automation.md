@@ -33,17 +33,17 @@ Shotgun 계정이 있는 모든 사용자에게 Shotgun 데이터베이스에 �
 프로젝트의 설명 필드를 변경할 수 있는 스크립트나 응용프로그램을 작성한다고 상상해 봅시다.
 이 앱이 관리자(Admin)에게는 잘 작동하겠지만 아티스트로 로그인한 경우에는 예외가 있을 수 있습니다.
 
-![Local Image](/img/7/1.png)
+![Local Image](/img/3_AMI/1_Script_Keys_Automation/1.png)
 
 스크립트 키를 사용하여 문제를 해결하는 더 나은 방법이 있습니다.
 
-![Local Image](/img/7/2.png)
+![Local Image](/img/3_AMI/1_Script_Keys_Automation/2.png)
 
 스크립트 키를 만듭니다.
 
-![Local Image](/img/7/3.png)
+![Local Image](/img/3_AMI/1_Script_Keys_Automation/3.png)
 
-![Local Image](/img/7/4.png)
+![Local Image](/img/3_AMI/1_Script_Keys_Automation/4.png)
 
 새 스크립트 키를 만들면 "API 관리자(API Admin)" 권한 그룹에 할당됩니다.
 사용자 권한 그룹은 스크립트 엔티티에 할당될 수 없습니다.
@@ -52,7 +52,7 @@ Shotgun 계정이 있는 모든 사용자에게 Shotgun 데이터베이스에 �
 
 `키 변경`을 클릭 합니다.
 
-![Local Image](/img/7/5.png)
+![Local Image](/img/3_AMI/1_Script_Keys_Automation/5.png)
 
 `api-key`를 복사 하고 demo.py에 적용 합니다.
 

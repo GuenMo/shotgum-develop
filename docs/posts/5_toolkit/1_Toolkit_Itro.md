@@ -1,12 +1,10 @@
-# 클라우드 구성 설치 및 관리
+# [클라우드 구성 설치 및 관리](https://www.youtube.com/watch?time_continue=1119&v=5nRZ5GgcOnk)
 
 > 툴킷 파이프라인 구성을 통해 툴킷 통합 앱, 엔진 및 프레임워크를 사용할 수 있습니다.
 > 이 동영상에서는 구성을 제어하는 방법, 즉 특정 버전으로 잠그는 방법, GitHub 또는 Perforce와 같은 버전 제어 환경에서 이를 변경하는 방법,
 > 그리고 스튜디오 또는 원격에서 작업하는 아티스트에게 변경 사항을 배포하는 방법에 대해 설명합니다.
 > 먼저 "기초" 툴킷 구성을 제거하고 고급 파일 관리 도구를 참조하는 "default2" 구성으로 전환할 것입니다.
 > 또한 툴킷 앱, 엔진, 프레임워크 생성 및 관리에 대해서도 간략하게 설명합니다.
-
-[Developer Training - Toolkit: Installing and Managing Cloud Configurations](https://www.youtube.com/watch?time_continue=1119&v=5nRZ5GgcOnk)
 
 ## 소개
 

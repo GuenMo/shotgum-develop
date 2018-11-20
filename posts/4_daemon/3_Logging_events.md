@@ -12,7 +12,7 @@ First I'll point out the two environment variables here.
 They expect another script key.
 또 다른 스크립트 키를 기대합니다.
 
-![Local Image](/img/shotgun/12/5.png)
+![Local Image](/img/4_daemon/3_Logging_events/5.png)
 
 Take a minute to grok the situation.
 잠시 시간을 내어 상황을 파악하십시오.
@@ -32,9 +32,9 @@ That way event log entries in shotgun can be attributed to specific plugins and 
 Now I need to create the script key in shotgun.
 이제 샷건 스크립트 키를 만들어야 겠어요.
 
-![Local Image](/img/shotgun/12/6.png)
+![Local Image](/img/4_daemon/3_Logging_events/6.png)
 
-![Local Image](/img/shotgun/12/7.png)
+![Local Image](/img/4_daemon/3_Logging_events/7.png)
 
 Then export the environment variable in my shell.
 그런 다음 환경 변수를 내 쉘로 내보냅니다.

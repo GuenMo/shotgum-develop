@@ -1,22 +1,10 @@
-# 개발자를 위한 Shotgun 소개
+# [개발자를 위한 Shotgun 소개](https://www.youtube.com/watch?v=HrTaYW69KgQ)
 
 > Shotgun이란 무엇입니까?라는 질문에 대한 대답으로 기본적인 Shotgun 컨셉, 에코시스템, 개발자와의 관계를 개괄적으로 살펴봅니다.
 
-[Developer Training - Shotgun: A Developer's Intro to Shotgun](https://www.youtube.com/watch?v=HrTaYW69KgQ)
-
-안녕하세요. 저는 Shotgun 소프트웨어 팀의 Raph입니다.
-Shotgun 개발자 교육 시리즈를 시청해 주셔서 감사합니다.
-저는 강의를 들으시는 여러분이 Shotgun을 처음 접하는 프로그래머로서,
-다음과 같은 것들을 궁금해 하실 것으로 생각하고 있습니다.
-"Shotgun을 위한 스크립트와 도구는 어떻게 빌드해야 합니까?"
-또는 "기존 워크플로우를 어떻게 Shotgun에 통합할 수 있습니까?"
-정말 좋은 질문이죠!
-이 동영상 교육에서는 이러한 질문에 대한 답을 얻고 Shotgun을 시작할 수 있도록 도와드리려고 합니다.
-본격적으로 진행하기에 앞서 좀 더 간단한 질문인 "Shotgun은 무엇인가?"에 대한 답부터 드리겠습니다.
-
 이 첫 번째 동영상에서는 Shotgun 에코시스템과 이 에코시스템의 각 요소가 어떤 식으로 프로덕션 환경에서 사용되며 확장될 수 있는지에 대해 살펴보겠습니다.
 
-![Local Image](/img/shotgun/1/1.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/1.png)
 
 Shotgun 웹 앱에 대해 알아보고 Shotgun 이벤트 데몬,
 액션 메뉴 항목, Python API를 통한 자동화에 대해 간단히 살펴볼 것입니다.
@@ -38,9 +26,9 @@ Shotgun에서는 영화, 게임, 모션 캡처, TV 시리즈 프로덕션을 위
 템플릿에 따라 기본적으로 샷 및 에셋과 같이 어떠한 데이터베이스 엔티티를 처음부터 사용할 수 있는지와 사용자가 해당 속성을 어떤 방식으로 보고 상호 작용하게 되는지가 결정됩니다.
 제 스튜디오에서는 "Hyperspace Madnesses"라는 영화 작업을 시작하고 있으므로 이 프로젝트를 시작하고 만드는 데 적합하게 기본 제공되는 영화 템플릿을 선택하겠습니다.
 
-![Local Image](/img/shotgun/1/2.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/2.png)
 
-![Local Image](/img/shotgun/1/3.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/3.png)
 
 영화 프로덕션에서는 프로듀서가 일반적으로 프로젝트 생성 단계를 맡지만 IT 또는 파이프라인 부서가 처리해야 하는 추가적인 인프라 프로세스가 있을 수 있습니다.
 이러한 부서에서 일하는 개발자는 "새 프로젝트" 액션에 몇 가지 자동화를 연결하고 싶을 수도 있을 것입니다. Shotgun 이벤트 데몬과 Shotgun Python API를 사용하면 쉽게 설정할 수 있습니다.
@@ -59,7 +47,7 @@ Shotgun 데스크톱은 Windows, OSX 및 Linux 기반의 모든 Shotgun 사용�
 자동화를 통해 설치한 커스텀 툴킷 구성을 기반으로 아티스트가 사용할 수 있는 Shotgun 관련 액션을 파악할 수 있습니다.
 Shotgun 데스크톱은 웹 브라우저에서 실행되지 않으므로 로컬 시스템에 대해 완전한 액세스 권한을 가지며, 이는 개발자에게 아주 반가운 소식입니다.
 
-![Local Image](/img/shotgun/1/4.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/4.png)
 
 여기서 제가 보여 드리는 스튜디오의 툴킷 구성은 Shotgun의 기본 "클래식" 구성과 유사합니다.
 제가 좋아하는 유연성이 뛰어난 독립 실행형 드래그 앤 드롭 퍼블리셔 앱과 스튜디오의 vfx 부서에서 작업하는 열정적인 개발자에게 도움이 되는 세 가지 도구를 추가했다는 점만 다릅니다.
@@ -107,32 +95,32 @@ Shotgun 에코시스템에는 툴킷 프레임워크를 사용하지 않는 개�
 엔티티는 작업자, 장소, 항목과 같은 몇 가지 인식 가능한 컨셉에 해당하는 데이터베이스 레코드의 유형에 불과하다는 것을 기억하시기 바랍니다.
 여기서는 에셋, 샷, 태스크, 예약, 카메라, 고객 사용자 등을 생성할 수 있습니다.
 
-![Local Image](/img/shotgun/1/5.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/5.png)
 
 모든 프로젝트 관련 엔티티가 여기 또는 이 풀다운 메뉴에 나열됩니다.
 Shotgun 엔티티는 템플릿을 선택하기 전과 후에 상세하게 커스터마이즈할 수 있으며 커스터마이제이션에 대해서는 이후에 제공되는 동영상에서 자세히 다룰 예정입니다.
 지금은 우리 영화의 스타가 될 "Sven"이라는 에셋을 만들겠습니다.
 
-![Local Image](/img/shotgun/1/6.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/6.png)
 
 아직 프로듀서의 입장에 있으므로 프로듀서 관점에서 프로젝트의 계층을 생각해 보면 다음과 같을 것입니다.
 
-![Local Image](/img/shotgun/1/8.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/8.png)
 
 하지만 Shotgun은 관계형 데이터베이스를 기반으로 작성되었으므로 개발자는 프로젝트 구조를 다음과 같이 생각할 것입니다.
 
-![Local Image](/img/shotgun/1/9.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/9.png)
 
 데이터베이스 작업을 하는 개발자는 프로듀서, 아티스트 및 감독이 생각하는 방식에 적합하며 프로덕션을 염두에 두고 데이터가 어떻게 구성되었는지를 파악할 수 있는 데이터 뷰를 만들어야 합니다.
 
-![Local Image](/img/shotgun/1/10.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/10.png)
 
 간단히 말해서 데이터 구조와 데이터가 모두 대상에게 드러나는 뷰를 염두에 두어야 합니다.
 Shotgun에서 우리는 또한 기본 페이지 뷰에 엔티티 레코드가 계층 구조로 구성되었음이 나타나도록 했습니다.
 엄밀히 말하면 이것은 사실이 아닙니다.
 예를 들어, 여기서 볼 수 있듯이 Sven은 "캐릭터(Character)" 에셋 유형 아래에 나열됩니다.
 
-![Local Image](/img/shotgun/1/7.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/7.png)
 
 이는 에셋을 구성하는 임의의 방식입니다.
 에셋 유형, 상태 등 에셋을 어떻게 구성하는지는 데이터베이스에서 중요하지 않으며 개발자는 필요한 경우 이 뷰를 변경할 수 있습니다.
@@ -144,11 +132,11 @@ Shotgun에서 우리는 또한 기본 페이지 뷰에 엔티티 레코드가 �
 하지만 툴킷에 커밋한 적이 없는 개발자나 스튜디오를 위한 더 가벼운 솔루션도 있습니다.
 바로 액션 메뉴 항목입니다.
 
-![Local Image](/img/shotgun/1/10.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/10.png)
 
-![Local Image](/img/shotgun/1/11.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/11.png)
 
-![Local Image](/img/shotgun/1/12.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/12.png)
 
 여기 보시듯이 "My command A"라는 액션 메뉴 항목을 추가해 두었습니다.
 이 항목을 선택하면 파일을 바탕 화면에 드롭하는 스크립트가 실행됩니다.
@@ -159,7 +147,7 @@ Shotgun에서 우리는 또한 기본 페이지 뷰에 엔티티 레코드가 �
 이 캐릭터는 아트 부서에서 설계되고 모델링, 리깅 그리고 텍스처 작업을 거쳐야 합니다.
 모든 에셋이 스튜디오에서 거치는 표준 단계이므로 태스크를 자동으로 설정하는 태스크 템플릿을 사용할 수도 있지만 데모를 간단하게 진행하기 위해 모델링 태스크를 직접 만들겠습니다.
 
-![Local Image](/img/shotgun/1/13.png)
+![Local Image](/img/1_shotgun/1_A_Developers_Intro_to_Shotgun/13.png)
 
 태스크가 만들어지면 일정에 추가할 수 있습니다.
 태스크가 일정에 추가된 후 스튜디오의 프로덕션 팀이 태스크를 "시작 준비(Ready to Start)"로 간주할 수 있다고 동의합니다.

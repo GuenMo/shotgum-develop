@@ -5,7 +5,7 @@
 A spreadsheet like this can help you decide if you should lock down a particular software package to a specific version instead of for example letting software auto update or letting your artists install software versions on their own.
 이와 같은 스프레드시트를 사용하면 특정 소프트웨어 패키지를 특정 버전으로 잠글지 여부를 결정할 수 있습니다. 예를 들어 소프트웨어 자동 업데이트를 허용하거나 사용자가 직접 소프트웨어 버전을 설치할 수 있습니다.
 
-![Local Image](/img/13/10.png)
+![Local Image](/img/5_toolkit/10.png)
 
 In the first column we've got DCC's like Maya nuke and Photoshop.
 첫 번째 칸에는 Maya Nuke와 Photoshop과 같은 DCC가 있습니다.

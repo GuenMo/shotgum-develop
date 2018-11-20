@@ -8,7 +8,7 @@ Let's begin by locking more of these versions down.
 It makes sense to start at the bottom of the list here.
 여기 목록의 맨 아래에서 시작하는 것이 좋습니다.
 
-![Local Image](/img/13/12.png)
+![Local Image](/img/5_toolkit/12.png)
 
 We can see that a specific version of the toolkit basic configuration is being used.
 툴킷 기본 구성의 특정 버전이 사용되고 있음을 알 수 있다.
@@ -29,7 +29,7 @@ And shotgun desktop will consult it to determine which versions of the engine an
 So it logically follows that if you lock down the basic configuration the core and engine versions will also be locked down.
 따라서 기본 구성을 잠그면 코어 및 엔진 버전도 잠깁니다.
 
-![Local Image](/img/13/13.png)
+![Local Image](/img/5_toolkit/13.png)
 
 Three birds with one stone great.
 일석이조 입니다.
@@ -43,14 +43,14 @@ Let's head over to shotgun.
 If you don't already have an all pipeline configurations page create one now.
 아직 모든 파이프라인 구성 페이지가 없으면 지금 페이지를 만듭니다.
 
-![Local Image](/img/13/14.png)
+![Local Image](/img/5_toolkit/14.png)
 
-![Local Image](/img/13/15.png)
+![Local Image](/img/5_toolkit/15.png)
 
 Next create a new pipeline configuration called primary and make sure the project field is empty.
 그런 다음 Primary라고 하는 새 파이프라인 구성을 생성하고 프로젝트 필드가 비어 있는지 확인합니다.
 
-![Local Image](/img/13/16.png)
+![Local Image](/img/5_toolkit/16.png)
 
 Next set the plug-in IDs field to basic dot star.
 
@@ -60,7 +60,7 @@ And set the descriptor field to the following string.
 Basic star tells toolkit to use this configuration for all quote basic plugins.
 `basic.*`는 툴킷에 모든 견적 기본 플러그인에 대해 이 구성을 사용하도록 지시합니다.
 
-![Local Image](/img/13/19.png)
+![Local Image](/img/5_toolkit/19.png)
 
 If you wanted to target the nuke engine plug-in specifically for example you type basic nuke.
 예를 들어, 특정 대상 엔진 플러그인을 지정하려면 기본 nuke를 입력합니다.
@@ -96,17 +96,17 @@ Next scroll around to discover info about the most recent version release.
 Great. So it looks like this here is the most recent version.
 좋습니다. 여기 보시는 것이 가장 최신 버전인 것 같습니다.
 
-![Local Image](/img/13/18.png)
+![Local Image](/img/5_toolkit/18.png)
 
 I'll drop that into our descriptor field in shotgun and relaunch shotgun desktop.
 이를 샷건의 `descriptor(설명자)` 필드에 넣고 샷건 데스크톱을 다시 시작할 것입니다.
 
-![Local Image](/img/13/20.png)
+![Local Image](/img/5_toolkit/20.png)
 
 Cool. We've successfully locked the basic config and thus the engine and core versions.
 좋습니다. 기본 구성을 성공적으로 잠궈 엔진과 코어 버전을 만들었습니다.
 
-![Local Image](/img/13/21.png)
+![Local Image](/img/5_toolkit/21.png)
 
 Now you can sit back relax and know that your Studios shotgun related tools aren't going to randomly explode for your whole site. Good job.
 이제 편히 앉아서 스튜디오와 관련된 도구가 전체 사이트에 대해 무작위로 폭발하지 않는다는 것을 알 수 있습니다.

@@ -14,7 +14,7 @@ In my case I'll just run it off my laptop here.
 git clone https://github.com/shotgunsoftware/shotgunEvents.git
 ```
 
-![Local Image](/img/shotgun/12/1.png)
+![Local Image](/img/4_daemon/2_Installing_the_daemon/1.png)
 
 But in production you'll want to choose a reliable server that you can access easily and that will fingers crossed be up all the time.
 하지만 프로덕션 환경에서는 쉽게 액세스할 수 있고 항상 서로 교차하는 신뢰할 수 있는 서버를 선택해야 합니다.
@@ -61,9 +61,9 @@ Swapping your site and provide a script name and access key.
 I'll create one for my site now and then pop it in here.
 샷건 스크립트 사이트에서 키를 생성하고 그 키값을 넣습니다.
 
-![Local Image](/img/shotgun/12/2.png)
+![Local Image](/img/4_daemon/2_Installing_the_daemon/2.png)
 
-![Local Image](/img/shotgun/12/3.png)
+![Local Image](/img/4_daemon/2_Installing_the_daemon/3.png)
 
 ```python
 server: https://aiw.shotgunstudio.com
@@ -131,7 +131,7 @@ So now we need a plug-in what else is in the shotgun events source folder here.
 So far we've looked at the configuration file and started up the daemon by running the `shotgunEventDaemon.py` file.
 지금까지 구성 파일을 살펴보고 `shotgunEventDaemon.py` 파일을 실행하여 데몬을 시작했습니다.
 
-![Local Image](/img/shotgun/12/4.png)
+![Local Image](/img/4_daemon/2_Installing_the_daemon/4.png)
 
 ```python
 (venv) python shotgunEventDaemon.py foreground

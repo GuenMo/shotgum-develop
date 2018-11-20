@@ -8,17 +8,17 @@ First let's talk about how to manage the shotgun desktop application version for
 Unfortunately there's a handy link up here than any artists can click on which lets them download the latest version.
 안타깝게도 여기 클릭할 수 있는 아티스트보다 더 편리한 링크가 있어 최신 버전을 다운로드할 수 있습니다.
 
-![Local Image](/img/13/1.png)
+![Local Image](/img/5_toolkit/1.png)
 
 The problem with that is artists can end up with different versions if they download the installer at different times.
 문제는 아티스트가 다른 시간에 설치 프로그램을 다운로드하면 다른 버전으로 끝날 수 있다는 것입니다.
 
-![Local Image](/img/13/2.png)
+![Local Image](/img/5_toolkit/2.png)
 
 Instead nominate an administrator who downloads the Installer once distributes it to everyone in the studio and handles installation.
 대신 설치 프로그램을 다운로드하면 스튜디오에 있는 모든 사용자에게 배포하고 설치를 처리하는 관리자를 지정합니다.
 
-![Local Image](/img/13/3.png)
+![Local Image](/img/5_toolkit/3.png)
 
 This is a common best practice with most desktop software installers but again you'll have to work against the easy discoverability of the download link here to make it happen.
 이는 대부분의 데스크톱 소프트웨어 설치 프로그램에서 일반적으로 사용하는 모범 사례이지만 다운로드 링크가 쉽게 검색될 수 있도록 하려면 여기에서 작업해야 합니다.
@@ -59,17 +59,17 @@ It great we're up and running.
 If you check the about link from the menu in the bottom right you'll see that we have indeed installed the specific app version we intended to.
 오른쪽 아래 메뉴에서 에 대한 링크를 선택하면 원하는 특정 앱 버전을 실제로 설치했음을 알 수 있습니다.
 
-![Local Image](/img/13/4.png)
+![Local Image](/img/5_toolkit/4.png)
 
 that's the part that won't auto update but we've also got a bunch of other stuff here start up version and engine version a core version and a toolkit basic configuration version.
 이 부분은 자동 업데이트되지 않지만, 시작 버전과 엔진 버전, 그리고 툴킷 기본 구성 버전도 여기에 있습니다.
 
-![Local Image](/img/13/5.png)
+![Local Image](/img/5_toolkit/5.png)
 
 These are all components the shotgun desktop application needs to load its site environment which is what we're looking at here and these will auto update to new versions by default or you can lock them down and manage them from a central location.
 이 모든 구성 요소는 숏건 데스크톱 애플리케이션이 현재 사용 중인 사이트 환경을 로드하는 데 필요한 구성 요소로, 기본적으로 새 버전으로 자동 업데이트되거나 새 버전을 잠그고 중앙 위치에서 관리할 수 있습니다.
 
-![Local Image](/img/13/6.png)
+![Local Image](/img/5_toolkit/6.png)
 
 Either way unlike the desktop installer you won't ever have to manually distribute updates to your artists computers. 데스크톱 설치 프로그램과 달리 수동으로 아티스트 컴퓨터에 업데이트를 배포 할 필요가 없습니다.
 
@@ -84,7 +84,7 @@ Desktops basic configuration also serves as the fallback configuration for all y
 For example if I visit the hyperspace madness projects project environment, desktop checks the App Store for updates to the basic configuration and if there is an update its downloaded along with any app engine and framework versions that config references that don't already exist on a local disk.
 예를 들어 하이퍼스페이스 광기 프로젝트 환경을 방문하는 경우 데스크톱은 App Store에서 기본 구성에 대한 업데이트를 확인하고, 아직 로컬에 없는 디스크를 구성하는 앱 엔진 및 프레임워크 버전과 함께 다운로드한 업데이트가 있는지 확인합니다.
 
-![Local Image](/img/13/11.png)
+![Local Image](/img/5_toolkit/11.png)
 
 After that I'm presented with a few apps if I visit another project I get the same thing.
 그 후 다른 프로젝트를 방문하면 똑같은 것을 얻을 수 있습니다.
@@ -121,7 +121,7 @@ Let's begin by locking more of these versions down.
 It makes sense to start at the bottom of the list here.
 여기 목록의 맨 아래에서 시작하는 것이 좋습니다.
 
-![Local Image](/img/13/12.png)
+![Local Image](/img/5_toolkit/12.png)
 
 We can see that a specific version of the toolkit basic configuration is being used.
 툴킷 기본 구성의 특정 버전이 사용되고 있음을 알 수 있다.
@@ -142,7 +142,7 @@ And shotgun desktop will consult it to determine which versions of the engine an
 So it logically follows that if you lock down the basic configuration the core and engine versions will also be locked down.
 따라서 기본 구성을 잠그면 코어 및 엔진 버전도 잠깁니다.
 
-![Local Image](/img/13/13.png)
+![Local Image](/img/5_toolkit/13.png)
 
 Three birds with one stone great.
 일석이조 입니다.
@@ -156,14 +156,14 @@ Let's head over to shotgun.
 If you don't already have an all pipeline configurations page create one now.
 아직 모든 파이프라인 구성 페이지가 없으면 지금 페이지를 만듭니다.
 
-![Local Image](/img/13/14.png)
+![Local Image](/img/5_toolkit/14.png)
 
-![Local Image](/img/13/15.png)
+![Local Image](/img/5_toolkit/15.png)
 
 Next create a new pipeline configuration called primary and make sure the project field is empty.
 그런 다음 Primary라고 하는 새 파이프라인 구성을 생성하고 프로젝트 필드가 비어 있는지 확인합니다.
 
-![Local Image](/img/13/16.png)
+![Local Image](/img/5_toolkit/16.png)
 
 Next set the plug-in IDs field to basic dot star.
 
@@ -173,7 +173,7 @@ And set the descriptor field to the following string.
 Basic star tells toolkit to use this configuration for all quote basic plugins.
 `basic.*`는 툴킷에 모든 견적 기본 플러그인에 대해 이 구성을 사용하도록 지시합니다.
 
-![Local Image](/img/13/19.png)
+![Local Image](/img/5_toolkit/19.png)
 
 If you wanted to target the nuke engine plug-in specifically for example you type basic nuke.
 예를 들어, 특정 대상 엔진 플러그인을 지정하려면 기본 nuke를 입력합니다.
@@ -209,17 +209,17 @@ Next scroll around to discover info about the most recent version release.
 Great. So it looks like this here is the most recent version.
 좋습니다. 여기 보시는 것이 가장 최신 버전인 것 같습니다.
 
-![Local Image](/img/13/18.png)
+![Local Image](/img/5_toolkit/18.png)
 
 I'll drop that into our descriptor field in shotgun and relaunch shotgun desktop.
 이를 샷건의 `descriptor(설명자)` 필드에 넣고 샷건 데스크톱을 다시 시작할 것입니다.
 
-![Local Image](/img/13/20.png)
+![Local Image](/img/5_toolkit/20.png)
 
 Cool. We've successfully locked the basic config and thus the engine and core versions.
 좋습니다. 기본 구성을 성공적으로 잠궈 엔진과 코어 버전을 만들었습니다.
 
-![Local Image](/img/13/21.png)
+![Local Image](/img/5_toolkit/21.png)
 
 Now you can sit back relax and know that your Studios shotgun related tools aren't going to randomly explode for your whole site. Good job.
 이제 편히 앉아서 스튜디오와 관련된 도구가 전체 사이트에 대해 무작위로 폭발하지 않는다는 것을 알 수 있습니다.
@@ -274,7 +274,7 @@ Shotgun 데스크톱은 기본 사이트 구성보다 프로젝트 링크가 포
 Here's another scenario.
 여기 또 다른 시나리오가 있습니다.
 
-![Local Image](/img/13/22.png)
+![Local Image](/img/5_toolkit/22.png)
 
 When a projects archived apulian field is set you could set up an event daemon trigger that creates a new primary config for the project unless one eye already exists based on the current primary site config.
 프로젝트 아카이브 부울 필드가 설정된 경우 현재 주 사이트 구성을 기반으로 한 눈이 이미 존재하지 않는 한 프로젝트의 새 기본 구성을 생성하는 이벤트 데몬 트리거를 설정할 수 있습니다.

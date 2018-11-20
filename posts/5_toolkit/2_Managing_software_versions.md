@@ -1,11 +1,9 @@
-# 소트웨어 버전 관리
-
-[Managing software versions](https://youtu.be/5nRZ5GgcOnk?t=4m11s)
+# [소트웨어 버전 관리](https://youtu.be/5nRZ5GgcOnk?t=4m11s)
 
 First let's talk a little about application and code versioning.
 먼저 응용 프로그램과 코드 버전에 대해 잠시 살펴보겠습니다.
 
-![Local Image](/img/13/7.png)
+![Local Image](/img/5_toolkit/7.png)
 
 It's generally good practice for all artists working on a project to use the same version of keyd CCS like Maya nuke in Photoshop.
 일반적으로 모든 아티스트가 프로젝트에서 같은 버젼의 포토샵, 마야, 뉴크를 사용하는 것이 좋습니다.
@@ -16,7 +14,7 @@ You wouldn't want one artist creating files in Maya 2018 that another artist can
 The responsible thing to do is install the same versions of Maya on all your artists computers and then configure shotgun to only use one agreed-upon version of Maya per project.
 담당할 일은 모든 아티스트 컴퓨터에 동일한 버전의 Maya를 설치한 다음 프로젝트당 하나의 합의된 버전의 Maya만 사용하도록 샷건을 구성하는 것입니다.
 
-![Local Image](/img/13/8.png)
+![Local Image](/img/5_toolkit/8.png)
 
 In the example here I can visit the software entity page and configure one project to use Maya 2016 and another to use my 2018.
 이 예에서는 소프트웨어 엔티티 페이지를 방문하여 Maya 2016을 사용하도록 한 프로젝트와 2018을 사용하도록 다른 프로젝트를 구성할 수 있습니다.
@@ -39,7 +37,7 @@ If I subtract the menu name which is Photoshop CC from the sub menu option name 
 Which is what I drop in the software entities version field.
 소프트웨어 엔티티 버전 필드에서 삭제되는 항목입니다.
 
-![Local Image](/img/13/9.png)
+![Local Image](/img/5_toolkit/9.png)
 
 There's a lot more information about how to manage software at your studio here.
 여기 스튜디오에서 소프트웨어를 관리하는 방법에 대한 많은 정보가 있습니다.

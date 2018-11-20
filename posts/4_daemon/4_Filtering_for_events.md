@@ -21,7 +21,7 @@ Well we can accomplish that by modifying the fourth argument here which is the e
 Before I do that why don't we make a copy of this plug-in and call it demo.py.
 그렇게 하기 전에 이 플러그인의 복사본을 만들어 데모 UI라고 부르는 게 어때요?
 
-![Local Image](/img/shotgun/12/8.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/8.png)
 
 Since we won't just be logging events anymore.
 더 이상 사건 기록만 하지 않을 테니까요.
@@ -29,7 +29,7 @@ Since we won't just be logging events anymore.
 And I'll grab a new script key from shotgun and drop it into my environment.
 샷건에서 새 스크립트 키를 가져와 환경에 놓을 것입니다.
 
-![Local Image](/img/shotgun/12/9.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/9.png)
 
 The event filter is a dictionary that contains key value pairs where the key is the type of event and the value is an entity's field or fields.
 이벤트 필터는 키와 값으로된 포함된 사전입니다. 여기서 키는 이벤트의 유형이고 값은 엔터티의 필드 또는 필드입니다.
@@ -76,7 +76,7 @@ To answer that question let's check out the all events page on our shotgun site.
 If you haven't already created an all events page you can do it by creating a new page setting the entity type to event log entry and leaving the project field blank.
 아직 모든 이벤트 페이지를 작성하지 않은 경우, 이벤트 로그 항목으로 엔티티 유형을 설정하고 프로젝트 필드를 비워 두면 됩니다.
 
-![Local Image](/img/shotgun/12/11.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/11.png)
 
 Cool! So now we're looking at a record of everything anyone has done on our shotgun site.
 멋지네요. 이제 우리는 누군가 샷건 내부에 했던 모든 일을 볼 수 있습니다.
@@ -99,7 +99,7 @@ And here it is event log entities have a bunch of useful fields.
 But for now I'll draw your attention to the event type field.
 하지만 지금은 이벤트 유형 필드에 주의를 기울이겠습니다.
 
-![Local Image](/img/shotgun/12/12.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/12.png)
 
 As you can see the name of the event type is right here so I can grab it and copy it into our plugin.
 보시다시피, 이벤트 유형의 이름은 바로 여기에 있습니다. 이를 가져와 플러그인에 복사할 수 있습니다.
@@ -119,7 +119,7 @@ Right you can see hrer that our `logArgs.py` plugin is still active. It reported
 Let's disable it by shutting the daemon down creating a disabled folder and moving log R is that pyn.
 데몬을 종료하고 `disabled` 폴더를 만들고 `logArgs.py`와 `logArgs.pyc`를 이동 시킵니다.
 
-![Local Image](/img/shotgun/12/13.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/13.png)
 
 Now we can start up the daemon with only the `demo.py` plugin loaded and make another change to the shot entity.
 이제 `demo.py` 플러그인만 로드한 데몬을 실행 시킵니다. 그리고 샷 엔티티를 다시 변경 합니다.
@@ -139,7 +139,7 @@ A quick fix is to delete the event ID file here.
 Of course that will blow away your event queue but that usually doesn't matter during development.
 물론 그것은 당신의 이벤트 큐를 날려버릴 것이지만 그것은 대개 개발 중에 문제가 되지 않는다.
 
-![Local Image](/img/shotgun/12/14.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/14.png)
 
 Let's get more specific if I only want the plug-in to run when an asset entity's status field changes I can add the internal code for that field here.
 어셋 엔티티의 상태 필드가 변경될 때만 플러그인이 실행되도록 하려면 여기에 해당 필드의 내부 코드를 추가할 수 있습니다.
@@ -183,7 +183,7 @@ Don't worry if you don't understand this bit yet.
 Cool! It works.
 잘 작동 합니다.
 
-![Local Image](/img/shotgun/12/15.png)
+![Local Image](/img/4_daemon/4_Filtering_for_events/15.png)
 
 And if I need to target multiple fields I can change this to a list.
 여러 개의 필드를 대상으로 지정하려면 이 필드를 목록으로 변경할 수 있습니다.

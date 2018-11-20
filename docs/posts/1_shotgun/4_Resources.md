@@ -4,7 +4,7 @@
 
 ## 소개
 
-![Local Image](/img/4/1.png)
+![Local Image](/img/1_shotgun/4_Resources/1.png)
 
 AMI
 

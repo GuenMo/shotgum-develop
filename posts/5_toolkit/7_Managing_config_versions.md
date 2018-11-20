@@ -41,7 +41,7 @@ Shotgun 데스크톱은 기본 사이트 구성보다 프로젝트 링크가 포
 Here's another scenario.
 여기 또 다른 시나리오가 있습니다.
 
-![Local Image](/img/13/22.png)
+![Local Image](/img/5_toolkit/22.png)
 
 When a projects archived apulian field is set you could set up an event daemon trigger that creates a new primary config for the project unless one eye already exists based on the current primary site config.
 프로젝트 아카이브 부울 필드가 설정된 경우 현재 주 사이트 구성을 기반으로 한 눈이 이미 존재하지 않는 한 프로젝트의 새 기본 구성을 생성하는 이벤트 데몬 트리거를 설정할 수 있습니다.

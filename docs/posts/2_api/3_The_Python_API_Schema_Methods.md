@@ -8,11 +8,11 @@
 Shotgun Python API에는 여러 메서드 세트가 있습니다.
 이번 동영상에서는 스키마 세트에서 가장 유용한 메서드에 대해 집중적으로 펴보겠습니다.
 
-![Local Image](/img/9/1.png)
+![Local Image](/img/2_api/3_The_Python_API_Schema_Methods/1.png)
 
 ## 스키마란 무엇인가
 
-![Local Image](/img/9/2.png)
+![Local Image](/img/2_api/3_The_Python_API_Schema_Methods/2.png)
 
 여기서 살펴보는 모든 항목이 스키마이지만 "샷 스키마"와 같은 특정 엔티티 스키마에 대해 얘기할 때도 있을 것입니다. 그럴 때 스키마는 샷을 정의하는 `필드와 필드 값으로 구성된 집합만 지칭`합니다.
 
@@ -45,7 +45,7 @@ files = sg.find_one('Field', [])
 
 대신 특수한 스키마의 CRUD 메소드가 필드 엔티티에 대해 존재하고 이러한 메서드는 Python API 문서에 상세히 설명되어 있습니다.
 
-![Local Image](/img/9/3.png)
+![Local Image](/img/2_api/3_The_Python_API_Schema_Methods/3.png)
 
 ## schema_entity_read
 
@@ -78,7 +78,7 @@ print pprint.pformat(shot)
 
 ## schema_field_read
 
-![Local Image](/img/9/4.png)
+![Local Image](/img/2_api/3_The_Python_API_Schema_Methods/4.png)
 
 schema_field_read 메서드는 엔티티 유형을 하나의 필수 인자로 받습니다.
 
@@ -161,7 +161,7 @@ print asset_schema["sg_asset_type"]["name"]
 
 Shotgun으로 돌아가서 필드 이름의 내부 이름을 확인하면 "name"이 아니라 "human_name"인 것을 볼 수 있습니다.
 
-![Local Image](/img/9/5.png)
+![Local Image](/img/2_api/3_The_Python_API_Schema_Methods/5.png)
 
 Shotgun의 데이터와 API에서 반환되는 데이터는 서로 유사하지만 구성 방식은 각각 다릅니다.
 

@@ -625,9 +625,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.md">
             
-                <a href="../toolkit/12_Manually_editing_the_config.html">
+                <span>
             
                     
                     12. 구성 직접 편집
@@ -776,7 +776,7 @@
 &#xC81C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC81C; &#xB178;&#xD2B8;&#xBD81;&#xC5D0;&#xC11C; &#xC124;&#xCE58; &#xD560; &#xAC70;&#xC5D0;&#xC694;.</p>
 <pre><code class="lang-console">git clone https://github.com/shotgunsoftware/shotgunEvents.git
 </code></pre>
-<p><img src="../../img/shotgun/12/1.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/2_Installing_the_daemon/1.png" alt="Local Image"></p>
 <p>But in production you&apos;ll want to choose a reliable server that you can access easily and that will fingers crossed be up all the time.
 &#xD558;&#xC9C0;&#xB9CC; &#xD504;&#xB85C;&#xB355;&#xC158; &#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; &#xC27D;&#xAC8C; &#xC561;&#xC138;&#xC2A4;&#xD560; &#xC218; &#xC788;&#xACE0; &#xD56D;&#xC0C1; &#xC11C;&#xB85C; &#xAD50;&#xCC28;&#xD558;&#xB294; &#xC2E0;&#xB8B0;&#xD560; &#xC218; &#xC788;&#xB294; &#xC11C;&#xBC84;&#xB97C; &#xC120;&#xD0DD;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>Okay let&apos;s take a look at the shotgun events contents here.
@@ -808,8 +808,8 @@ logging: <span class="hljs-number">10</span>
 &#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xC2A4;&#xC640;&#xD551;&#xD558;&#xACE0; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC774;&#xB984;&#xACFC; &#xC561;&#xC138;&#xC2A4; &#xD0A4;&#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>I&apos;ll create one for my site now and then pop it in here.
 &#xC0F7;&#xAC74; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xD0A4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xADF8; &#xD0A4;&#xAC12;&#xC744; &#xB123;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/2.png" alt="Local Image"></p>
-<p><img src="../../img/shotgun/12/3.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/2_Installing_the_daemon/2.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/2_Installing_the_daemon/3.png" alt="Local Image"></p>
 <pre><code class="lang-python">server: https://aiw.shotgunstudio.com
 key: **************************
 </code></pre>
@@ -853,7 +853,7 @@ SG &#xB370;&#xBAAC; &#xAC00;&#xC0C1; &#xD658;&#xACBD;&#xC774;&#xB77C;&#xACE0; &#
 &#xC790; &#xC774;&#xC81C; &#xC0F7;&#xAC74; &#xC774;&#xBCA4;&#xD2B8; &#xC6D0;&#xBCF8; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xB2E4;&#xB978; &#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC774; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>So far we&apos;ve looked at the configuration file and started up the daemon by running the <code>shotgunEventDaemon.py</code> file.
 &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; &#xAD6C;&#xC131; &#xD30C;&#xC77C;&#xC744; &#xC0B4;&#xD3B4;&#xBCF4;&#xACE0; <code>shotgunEventDaemon.py</code> &#xD30C;&#xC77C;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xC5EC; &#xB370;&#xBAAC;&#xC744; &#xC2DC;&#xC791;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/4.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/2_Installing_the_daemon/4.png" alt="Local Image"></p>
 <pre><code class="lang-python">(venv) python shotgunEventDaemon.py foreground
 </code></pre>
 <p>Look! We&apos;ve got some example plugins. That&apos;s helpful.
@@ -911,7 +911,7 @@ SG &#xB370;&#xBAAC; &#xAC00;&#xC0C1; &#xD658;&#xACBD;&#xC774;&#xB77C;&#xACE0; &#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"next":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"previous":{"title":"1. 이벤트 데몬 소개","level":"1.5.1","depth":2,"path":"posts/4_daemon/1_Daemon_Intro.md","ref":"posts/4_daemon/1_Daemon_Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/2_Installing_the_daemon.md","mtime":"2018-11-19T08:57:49.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T13:11:24.511Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"next":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"previous":{"title":"1. 이벤트 데몬 소개","level":"1.5.1","depth":2,"path":"posts/4_daemon/1_Daemon_Intro.md","ref":"posts/4_daemon/1_Daemon_Intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/2_Installing_the_daemon.md","mtime":"2018-11-20T13:56:39.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T14:01:48.505Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

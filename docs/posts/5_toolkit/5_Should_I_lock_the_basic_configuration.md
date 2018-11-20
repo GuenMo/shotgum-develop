@@ -11,7 +11,7 @@ Desktops basic configuration also serves as the fallback configuration for all y
 For example if I visit the hyperspace madness projects project environment, desktop checks the App Store for updates to the basic configuration and if there is an update its downloaded along with any app engine and framework versions that config references that don't already exist on a local disk.
 예를 들어 하이퍼스페이스 광기 프로젝트 환경을 방문하는 경우 데스크톱은 App Store에서 기본 구성에 대한 업데이트를 확인하고, 아직 로컬에 없는 디스크를 구성하는 앱 엔진 및 프레임워크 버전과 함께 다운로드한 업데이트가 있는지 확인합니다.
 
-![Local Image](/img/13/11.png)
+![Local Image](/img/5_toolkit/11.png)
 
 After that I'm presented with a few apps if I visit another project I get the same thing.
 그 후 다른 프로젝트를 방문하면 똑같은 것을 얻을 수 있습니다.

@@ -625,9 +625,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.html">
+        <li class="chapter " data-level="1.6.12" data-path="../toolkit/12_Manually_editing_the_config.md">
             
-                <a href="../toolkit/12_Manually_editing_the_config.html">
+                <span>
             
                     
                     12. 구성 직접 편집
@@ -781,12 +781,12 @@
 &#xC5EC;&#xAE30;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xC778; &#xB124; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB97C; &#xC218;&#xC815;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>Before I do that why don&apos;t we make a copy of this plug-in and call it demo.py.
 &#xADF8;&#xB807;&#xAC8C; &#xD558;&#xAE30; &#xC804;&#xC5D0; &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC758; &#xBCF5;&#xC0AC;&#xBCF8;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xB370;&#xBAA8; UI&#xB77C;&#xACE0; &#xBD80;&#xB974;&#xB294; &#xAC8C; &#xC5B4;&#xB54C;&#xC694;?</p>
-<p><img src="../../img/shotgun/12/8.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/8.png" alt="Local Image"></p>
 <p>Since we won&apos;t just be logging events anymore.
 &#xB354; &#xC774;&#xC0C1; &#xC0AC;&#xAC74; &#xAE30;&#xB85D;&#xB9CC; &#xD558;&#xC9C0; &#xC54A;&#xC744; &#xD14C;&#xB2C8;&#xAE4C;&#xC694;.</p>
 <p>And I&apos;ll grab a new script key from shotgun and drop it into my environment.
 &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC0C8; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xD658;&#xACBD;&#xC5D0; &#xB193;&#xC744; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/9.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/9.png" alt="Local Image"></p>
 <p>The event filter is a dictionary that contains key value pairs where the key is the type of event and the value is an entity&apos;s field or fields.
 &#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xB294; &#xD0A4;&#xC640; &#xAC12;&#xC73C;&#xB85C;&#xB41C; &#xD3EC;&#xD568;&#xB41C; &#xC0AC;&#xC804;&#xC785;&#xB2C8;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; &#xD0A4;&#xB294; &#xC774;&#xBCA4;&#xD2B8;&#xC758; &#xC720;&#xD615;&#xC774;&#xACE0; &#xAC12;&#xC740; &#xC5D4;&#xD130;&#xD2F0;&#xC758; &#xD544;&#xB4DC; &#xB610;&#xB294; &#xD544;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <p>Let&apos;s say we want the daemon to run every time anything happens to an existing asset entity.
@@ -823,7 +823,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
 &#xADF8; &#xC9C8;&#xBB38;&#xC5D0; &#xB2F5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC6B0;&#xB9AC; &#xC0F7;&#xAC74; &#xC0AC;&#xC774;&#xD2B8;&#xC758; &#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
 <p>If you haven&apos;t already created an all events page you can do it by creating a new page setting the entity type to event log entry and leaving the project field blank.
 &#xC544;&#xC9C1; &#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xC791;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;, &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC73C;&#xB85C; &#xC5D4;&#xD2F0;&#xD2F0; &#xC720;&#xD615;&#xC744; &#xC124;&#xC815;&#xD558;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD544;&#xB4DC;&#xB97C; &#xBE44;&#xC6CC; &#xB450;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/11.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/11.png" alt="Local Image"></p>
 <p>Cool! So now we&apos;re looking at a record of everything anyone has done on our shotgun site.
 &#xBA4B;&#xC9C0;&#xB124;&#xC694;. &#xC774;&#xC81C; &#xC6B0;&#xB9AC;&#xB294; &#xB204;&#xAD70;&#xAC00; &#xC0F7;&#xAC74; &#xB0B4;&#xBD80;&#xC5D0; &#xD588;&#xB358; &#xBAA8;&#xB4E0; &#xC77C;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>Each tiny change, users or scripts make is recorded here.
@@ -838,7 +838,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
 &#xC5EC;&#xAE30; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xC720;&#xC6A9;&#xD55C; &#xD544;&#xB4DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>But for now I&apos;ll draw your attention to the event type field.
 &#xD558;&#xC9C0;&#xB9CC; &#xC9C0;&#xAE08;&#xC740; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615; &#xD544;&#xB4DC;&#xC5D0; &#xC8FC;&#xC758;&#xB97C; &#xAE30;&#xC6B8;&#xC774;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/12.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/12.png" alt="Local Image"></p>
 <p>As you can see the name of the event type is right here so I can grab it and copy it into our plugin.
 &#xBCF4;&#xC2DC;&#xB2E4;&#xC2DC;&#xD53C;, &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615;&#xC758; &#xC774;&#xB984;&#xC740; &#xBC14;&#xB85C; &#xC5EC;&#xAE30;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xBCF5;&#xC0AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>Let&apos;s test this I&apos;ll open the shots page in my project and make a change.
@@ -851,7 +851,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
 &#xC9C0;&#xAE08; &#xBCF4;&#xC2DC;&#xB294; &#xBC14;&#xC640; &#xAC19;&#xC774; &#xB2F9;&#xC0AC;&#xC758; <code>logArgs.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC5EC;&#xC804;&#xD788; &#xD65C;&#xC131; &#xC0C1;&#xD0DC;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xAC83;&#xC740; &#xBCC0;&#xD654;&#xB97C; &#xBCF4;&#xACE0;&#xD588;&#xB2E4;.</p>
 <p>Let&apos;s disable it by shutting the daemon down creating a disabled folder and moving log R is that pyn.
 &#xB370;&#xBAAC;&#xC744; &#xC885;&#xB8CC;&#xD558;&#xACE0; <code>disabled</code> &#xD3F4;&#xB354;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; <code>logArgs.py</code>&#xC640; <code>logArgs.pyc</code>&#xB97C; &#xC774;&#xB3D9; &#xC2DC;&#xD0B5;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/13.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/13.png" alt="Local Image"></p>
 <p>Now we can start up the daemon with only the <code>demo.py</code> plugin loaded and make another change to the shot entity.
 &#xC774;&#xC81C; <code>demo.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xB9CC; &#xB85C;&#xB4DC;&#xD55C; &#xB370;&#xBAAC;&#xC744; &#xC2E4;&#xD589; &#xC2DC;&#xD0B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC0F7; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xB2E4;&#xC2DC; &#xBCC0;&#xACBD; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>Great nothing happens Now but if I make a change to an asset entity.
@@ -864,7 +864,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
 &#xC5EC;&#xAE30;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; ID &#xD30C;&#xC77C;&#xC744; &#xBE68;&#xB9AC; &#xC0AD;&#xC81C;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>Of course that will blow away your event queue but that usually doesn&apos;t matter during development.
 &#xBB3C;&#xB860; &#xADF8;&#xAC83;&#xC740; &#xB2F9;&#xC2E0;&#xC758; &#xC774;&#xBCA4;&#xD2B8; &#xD050;&#xB97C; &#xB0A0;&#xB824;&#xBC84;&#xB9B4; &#xAC83;&#xC774;&#xC9C0;&#xB9CC; &#xADF8;&#xAC83;&#xC740; &#xB300;&#xAC1C; &#xAC1C;&#xBC1C; &#xC911;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/14.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/14.png" alt="Local Image"></p>
 <p>Let&apos;s get more specific if I only want the plug-in to run when an asset entity&apos;s status field changes I can add the internal code for that field here.
 &#xC5B4;&#xC14B; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xBCC0;&#xACBD;&#xB420; &#xB54C;&#xB9CC; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC2E4;&#xD589;&#xB418;&#xB3C4;&#xB85D; &#xD558;&#xB824;&#xBA74; &#xC5EC;&#xAE30;&#xC5D0; &#xD574;&#xB2F9; &#xD544;&#xB4DC;&#xC758; &#xB0B4;&#xBD80; &#xCF54;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 I&apos;ll change the logger message to give us a bit more info about what&apos;s happening.
@@ -902,7 +902,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
 &#xC544;&#xC9C1; &#xC774; &#xC810;&#xC744; &#xC774;&#xD574;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;.</p>
 <p>Cool! It works.
 &#xC798; &#xC791;&#xB3D9; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<p><img src="../../img/shotgun/12/15.png" alt="Local Image"></p>
+<p><img src="../../img/4_daemon/4_Filtering_for_events/15.png" alt="Local Image"></p>
 <p>And if I need to target multiple fields I can change this to a list.
 &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xD544;&#xB4DC;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xC774; &#xD544;&#xB4DC;&#xB97C; &#xBAA9;&#xB85D;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python">eventFilter = {
@@ -1021,7 +1021,7 @@ SGDAEMON_LOGARGS_KEY = <span class="hljs-string">&quot;************&quot;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"next":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},"previous":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/4_Filtering_for_events.md","mtime":"2018-11-19T08:57:59.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T13:11:24.511Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"next":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},"previous":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"path":"posts/4_daemon/3_Logging_events.md","ref":"posts/4_daemon/3_Logging_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/4_Filtering_for_events.md","mtime":"2018-11-20T13:53:09.255Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T14:01:48.505Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
