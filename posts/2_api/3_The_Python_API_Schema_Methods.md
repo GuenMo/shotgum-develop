@@ -1,9 +1,7 @@
-# Python API—스키마 메서드
+# [Python API—스키마 메서드](https://www.youtube.com/watch?v=pjnaIHKzX8k)
 
 > Shotgun의 Python API를 스키마 메서드에 중점을 두고 보다 자세히 살펴봅니다.
 > 이 동영상에서는 스키마 정의, 스키마가 Shotgun과 작동하는 방식, 알려진 한계 등의 주제를 다룹니다.
-
-[Developer Training - Shotgun: The Python API—Schema Methods](https://www.youtube.com/watch?v=pjnaIHKzX8k)
 
 ## 소개
 
@@ -25,11 +23,11 @@ Shotgun Python API에는 여러 메서드 세트가 있습니다.
 
 참고로, Shotgun 에코시스템에서 "스키마"라는 용어는 Shotgun 툴킷에서 템플릿과 상호 작용하는 파일 시스템 폴더의 계층을 나타낼 수도 있습니다.
 
-## 스키마의 비밀
-
 ## 커넥션 엔티티
 
 두 엔티티가 연결될 때 자동으로 생기는 엔티티 이다.
+
+<https://support.shotgunsoftware.com/hc/ko/articles/114094036254-%EC%97%B0%EA%B2%B0-%EC%97%94%ED%8B%B0%ED%8B%B0-%EC%82%AC%EC%9A%A9>
 
 ## API 스키마 메서드를 이용한 CRUD
 
@@ -51,7 +49,7 @@ files = sg.find_one('Field', [])
 
 ## schema_entity_read
 
-이 메서드는 모든 활성화된 에티티와 두가지 정보 요소를 제공하며, 이 둘 모두 API에서는 변경할 수 없습니다.
+이 메서드는 모든 활성화된 에티티와 두가지 정보(visible, name) 요소를 제공하며, 이 둘 모두 API에서는 변경할 수 없습니다.
 
 ```python
 # coding:utf-8
@@ -92,27 +90,78 @@ from config import URL, USER, PASSWORD
 import pprint
 
 sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
-project = sg.find_one('Project', [['name', 'is', 'crud']])
+project = sg.find_one('Project', [['name', 'is', 'project X']])
 
-# 모든 활성화된 entity_types
-asset_schema = sg.schema_field_read('Asset')
+asset_schema = sg.schema_field_read('Asset', project_entity=project)
 
-# for field in sorted(asset_schema):
-#     print field
+# Asset 엔티티의 모든 필드 스키마
+print "--All Fields of Asset--"
+for field in sorted(asset_schema.keys()):
+    print field
+```
 
-# for field in sorted(asset_schema['sg_asset_type'].keys()):
-#     print field
+모든 에셋 엔티티 필드의 내부 코드를 파악했으므로 이러한 필드의 스키마 중 하나를 더 자세히 살펴볼 수 있습니다.
 
-print asset_schema['sg_asset_type']['name']
+에셋 엔티티의 "type" 필드 스키마는 어떨까요?
 
-for k, v in asset_schema['sg_asset_type'].iteritems():
-    print '{}: {}'.format(k, v)
+```python
+# coding:utf-8
 
-for value in asset_schema['sg_asset_type']['properties']['valid_values']['value']:
-    print value
+import shotgun_api3
+from config import URL, USER, PASSWORD
+import pprint
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+project = sg.find_one('Project', [['name', 'is', 'project X']])
+
+asset_schema = sg.schema_field_read('Asset', project_entity=project)
+
+# Asset 엔티티의 Type(sg_asset_type) 필드 스키마
+print "--Asset 엔티티의 Type(sg_asset_type) 필드 스키마--"
+for k, v in enumerate(sorted(asset_schema["sg_asset_type"].items())):
+    print k, v
+
+'''
+--Asset 엔티티의 Type(sg_asset_type) 필드 스키마--
+0 ('data_type', {'editable': False, 'value': 'list'})
+1 ('description', {'editable': True, 'value': ''})
+2 ('editable', {'editable': False, 'value': True})
+3 ('entity_type', {'editable': False, 'value': 'Asset'})
+4 ('mandatory', {'editable': False, 'value': False})
+5 ('name', {'editable': True, 'value': 'Type'})
+6 ('properties', {'default_value': {'editable': True, 'value': None}, 'valid_values': {'editable': True, 'value': ['Character', 'Set/Env', 'Prop', 'FX_Asset', 'In House Tool', 'Outsourcing Tool', 'Format', 'Guide', 'Poster', 'Character Design', 'Research', 'Plan', 'Matte']}, 'summary_default': {'editable': True, 'value': 'none'}})
+7 ('ui_value_displayable', {'editable': False, 'value': True})
+8 ('unique', {'editable': False, 'value': False})
+9 ('visible', {'editable': False, 'value': True})
+'''
+```
+
+이제 sg_asset_type 필드 엔티티, 실제로 Shotgun의 모든 필드 엔티티를 설명하는 필드 목록이 반환되었습니다.
+
+더 깊이 들어가서 이러한 필드 중 하나인 "name" 필드가 어떤지 살펴보겠습니다.
+
+```python
+# coding:utf-8
+
+import shotgun_api3
+from config import URL, USER, PASSWORD
+import pprint
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+project = sg.find_one('Project', [['name', 'is', 'project X']])
+
+asset_schema = sg.schema_field_read('Asset', project_entity=project)
+
+# Asset 엔티티의 Type(sg_asset_type) 필드의 name 스키마
+print "--Asset 엔티티의 Type(sg_asset_type) 필드의 name 스키마--"
+print asset_schema["sg_asset_type"]["name"]
+
+#{'editable': True, 'value': 'Type'}
 ```
 
 Shotgun으로 돌아가서 필드 이름의 내부 이름을 확인하면 "name"이 아니라 "human_name"인 것을 볼 수 있습니다.
+
+![Local Image](/img/9/5.png)
 
 Shotgun의 데이터와 API에서 반환되는 데이터는 서로 유사하지만 구성 방식은 각각 다릅니다.
 
@@ -125,6 +174,55 @@ API에서는 "editable", "mandatory", "properties", "unique", "visible" 키가 �
 여기서 반환되는 데이터를 살펴보는 것은 여러분 몫입니다.
 
 하지만 각 필드 엔티티에서 가장 흥미로운 사항은 "properties" 키입니다.
+
+```python
+# coding:utf-8
+
+import shotgun_api3
+from config import URL, USER, PASSWORD
+import pprint
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+project = sg.find_one('Project', [['name', 'is', 'project X']])
+
+asset_schema = sg.schema_field_read('Asset', project_entity=project)
+
+print '--["sg_asset_type"]["properties"]--'
+for k, v in enumerate(sorted(asset_schema["sg_asset_type"]["properties"].iteritems())):
+    print k, v
+
+print '--["sg_asset_type"]["properties"]["valid_values"]--'
+for k, v in enumerate(sorted(asset_schema["sg_asset_type"]["properties"]["valid_values"].iteritems())):
+    print k, v
+
+print '--["sg_asset_type"]["properties"]["valid_values"]["value"]--'
+for k, v in enumerate(sorted(asset_schema["sg_asset_type"]["properties"]["valid_values"]["value"])):
+    print k, v
+
+'''
+--["sg_asset_type"]["properties"]--
+0 ('default_value', {'editable': True, 'value': None})
+1 ('summary_default', {'editable': True, 'value': 'none'})
+2 ('valid_values', {'editable': True, 'value': ['Character', 'Set/Env', 'Prop', 'FX_Asset', 'In House Tool', 'Outsourcing Tool', 'Format', 'Guide', 'Poster', 'Character Design', 'Research', 'Plan', 'Matte']})
+--["sg_asset_type"]["properties"]["valid_values"]--
+0 ('editable', True)
+1 ('value', ['Character', 'Set/Env', 'Prop', 'FX_Asset', 'In House Tool', 'Outsourcing Tool', 'Format', 'Guide', 'Poster', 'Character Design', 'Research', 'Plan', 'Matte'])
+--["sg_asset_type"]["properties"]["valid_values"]["value"]--
+0 Character
+1 Character Design
+2 FX_Asset
+3 Format
+4 Guide
+5 In House Tool
+6 Matte
+7 Outsourcing Tool
+8 Plan
+9 Poster
+10 Prop
+11 Research
+12 Set/Env
+'''
+```
 
 이 경우 "유형(Type)" 목록 필드에 Character, Environment, FX 등의 값이 미리 입력되어 있는 것을 볼 수 있습니다.
 
@@ -154,7 +252,7 @@ from config import URL, USER, PASSWORD
 import pprint
 
 sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
-project = sg.find_one('Project', [['name', 'is', 'SG_Intigration']])
+project = sg.find_one('Project', [['name', 'is', 'project X']])
 
 entity_types = ['Asset', 'Shot', 'Camera']
 entity_schema = sg.schema_entity_read(project_entity=project)

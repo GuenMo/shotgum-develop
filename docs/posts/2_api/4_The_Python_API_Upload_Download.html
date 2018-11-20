@@ -766,11 +766,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="python-api&#x2014;&#xC5C5;&#xB85C;&#xB4DC;&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">Python API&#x2014;&#xC5C5;&#xB85C;&#xB4DC;/&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h1>
+                                <h1 id="python-api&#x2014;&#xC5C5;&#xB85C;&#xB4DC;&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;"><a href="https://youtu.be/oNGbOzksVtI?t=1" target="_blank">Python API&#x2014;&#xC5C5;&#xB85C;&#xB4DC;/&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</a></h1>
 <blockquote>
 <p>&#xC774; Shotgun Python API &#xB3D9;&#xC601;&#xC0C1;&#xC5D0;&#xC11C;&#xB294; Shotgun&#xC73C;&#xB85C; &#xC800;&#xC7A5;, &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529; &#xBC0F; &#xD2B8;&#xB798;&#xD0B9;&#xD558;&#xB294; &#xBBF8;&#xB514;&#xC5B4;&#xB97C; &#xC911;&#xC2EC;&#xC73C;&#xB85C; API&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xC5C5;&#xB85C;&#xB4DC; &#xBC0F; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xC640; &#xAD00;&#xB828;&#xB41C; &#xC77C;&#xBC18; &#xBA85;&#xB839;&#xB4E4;&#xC744; &#xC0B4;&#xD3B4;&#xBD05;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
-<p><a href="https://www.youtube.com/watch?time_continue=354&amp;v=oNGbOzksVtI" target="_blank">Developer Training - Shotgun: The Python API&#x2014;Upload/Download</a></p>
 <p><img src="../../img/10/1.png" alt="Local Image"></p>
 <h2 id="gui&#xC5D0;&#xC11C;-&#xD30C;&#xC77C;-&#xC5C5;&#xB85C;&#xB4DC;">GUI&#xC5D0;&#xC11C; &#xD30C;&#xC77C; &#xC5C5;&#xB85C;&#xB4DC;</h2>
 <p><img src="../../img/10/2.png" alt="Local Image"></p>
@@ -785,9 +784,23 @@
 <span class="hljs-keyword">import</span> pprint
 
 sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
-f = sg.find_one(<span class="hljs-string">&quot;Attachment&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">111258</span>]], [<span class="hljs-string">&quot;this_file&quot;</span>])
+f = sg.find_one(<span class="hljs-string">&quot;Attachment&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">111339</span>]], [<span class="hljs-string">&quot;this_file&quot;</span>, <span class="hljs-string">&quot;file_size&quot;</span>, <span class="hljs-string">&quot;filename&quot;</span>, <span class="hljs-string">&quot;file_extension&quot;</span>])
 
 <span class="hljs-keyword">print</span> pprint.pformat(f)
+
+<span class="hljs-string">&apos;&apos;&apos;
+{&apos;file_extension&apos;: &apos;png&apos;,
+ &apos;file_size&apos;: 94714,
+ &apos;filename&apos;: &apos;1_j_f-fL9EHgaFn4IRi7NZ7g.png&apos;,
+ &apos;id&apos;: 111339,
+ &apos;this_file&apos;: {&apos;content_type&apos;: &apos;image/png&apos;,
+               &apos;id&apos;: 111339,
+               &apos;link_type&apos;: &apos;upload&apos;,
+               &apos;name&apos;: &apos;1_j_f-fL9EHgaFn4IRi7NZ7g.png&apos;,
+               &apos;type&apos;: &apos;Attachment&apos;,
+               &apos;url&apos;: &apos;https://sg-media-tokyo.s3-accelerate.amazonaws.com/5b02f17a4d270281fa3a569116e4482cf329ee73/a7c938afa67c9374c74f758c3acee119ad75db2b/1_j_f-fL9EHgaFn4IRi7NZ7g.png?AWSAccessKeyId=AKIAI3ABMYXRXQDDDLYQ&amp;Expires=1542664054&amp;Signature=P0Zz5YXPfCtUl7QxEXMdTqcnLA8%3D&amp;response-content-disposition=filename%3D%221_j_f-fL9EHgaFn4IRi7NZ7g.png%22&amp;x-amz-meta-user-id=169&amp;x-amz-meta-user-type=HumanUser&apos;},
+ &apos;type&apos;: &apos;Attachment&apos;}
+&apos;&apos;&apos;</span>
 </code></pre>
 <p>&#xD544;&#xB4DC;&#xB97C; &#xCD94;&#xAC00; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/10/6.png" alt="Local Image"></p>
@@ -797,12 +810,55 @@ f = sg.find_one(<span class="hljs-string">&quot;Attachment&quot;</span>, [[<span
 <p>&#xC989;, Shotgun&#xC5D0; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xD56D;&#xBAA9;&#xC740; &#xC0AD;&#xC81C;&#xD560; &#xC218; &#xC5C6;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB97C; &#xC704;&#xD574;, Shotgun &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xB294; &#xC800;&#xC7A5;&#xC18C; &#xC81C;&#xD55C;&#xC774; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h2 id="&#xD30C;&#xC77C;&#xC744;-&#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0;-&#xB9C1;&#xD06C;">&#xD30C;&#xC77C;&#xC744; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0; &#xB9C1;&#xD06C;</h2>
-<p>&#xC774; &#xC5D4;&#xD2F0;&#xD2F0;&#xB294; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xC81C;&#xC678;&#xD558;&#xACE0;&#xB294; Shotgun&#xC758; &#xC5B4;&#xB290; &#xD56D;&#xBAA9;&#xACFC;&#xB3C4; &#xB9C1;&#xD06C;&#xB418;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+<p>&#xBC29;&#xAE08; &#xC5C5;&#xB85C;&#xB4DC;&#xD55C; &#xD30C;&#xC77C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB294; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xC81C;&#xC678;&#xD558;&#xACE0;&#xB294; Shotgun&#xC758; &#xC5B4;&#xB290; &#xD56D;&#xBAA9;&#xACFC;&#xB3C4; &#xB9C1;&#xD06C;&#xB418;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xD30C;&#xC77C;&#xC744; &#xC5D4;&#xD2F0;&#xD2F0;&#xC640; &#xC5F0;&#xACB0;&#xD558;&#xB294; &#xAC83;&#xC774; &#xB354; &#xC77C;&#xBC18;&#xC801;&#xC785;&#xB2C8;&#xB2E4;.
 &#xC5D0;&#xC14B;&#xC5D0; &#xB300;&#xD55C; &#xCC38;&#xC870; &#xC544;&#xD2B8;&#xB97C; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xAC70;&#xB098; &#xC0F7; &#xB610;&#xB294; &#xBC84;&#xC804;&#xACFC; &#xAD00;&#xB828;&#xB41C; &#xB3D9;&#xC601;&#xC0C1;&#xC744; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xD6E8;&#xC52C; &#xB354; &#xC720;&#xC6A9;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.
 &#xC774;&#xB7EC;&#xD55C; &#xC5F0;&#xACB0;&#xC740; &quot;&#xB9C1;&#xD06C;(Links)&quot; &#xD544;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB9C1;&#xD06C;(Links) &#xB2E4;&#xC911; &#xC5D4;&#xD2F0;&#xD2F0; &#xD544;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; &#xC774; &#xD544;&#xB4DC;&#xAC00; &#xD2B9;&#xC815; &#xC5D4;&#xD2F0;&#xD2F0; &#xC720;&#xD615; &#xC989; &#xC5D0;&#xC14B;(Asset), &#xB178;&#xD2B8;(Note), &#xB9AC;&#xBE44;&#xC804;(Revision), &#xC2DC;&#xD000;&#xC2A4;(Sequence) &#xB9CC; &#xBC1B;&#xB3C4;&#xB85D; &#xAD6C;&#xC131;&#xB41C; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h2 id="&#xC774;&#xBBF8;&#xC9C0;-&#xBC0F;-&#xB3D9;&#xC601;&#xC0C1;-&#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;">&#xC774;&#xBBF8;&#xC9C0; &#xBC0F; &#xB3D9;&#xC601;&#xC0C1; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;</h2>
+<p>&#xBC84;&#xC804; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; &quot;&#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xC601;&#xC0C1;(Uploaded Movie)&quot; &#xD544;&#xB4DC;&#xC5D0;&#xC11C;&#xB3C4; &#xBA4B;&#xC9C4; &#xB3D9;&#xC791;&#xC774; &#xC218;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.
+&#xBC84;&#xC804; &#xC5D4;&#xD2F0;&#xD2F0;&#xB294; &#xC6F9; &#xC571;, RV &#xBC0F; &#xD1B5;&#xD569; &#xC81C;&#xD488;&#xC5D0;&#xC11C; &#xB9AC;&#xBDF0; &#xC6CC;&#xD06C;&#xD50C;&#xB85C;&#xC6B0;&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xD2B9;&#xC218;&#xD55C; &#xC5D4;&#xD2F0;&#xD2F0;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD574;&#xB2F9; &#xD544;&#xB4DC;&#xB294; &#xBCF4;&#xAE30; &#xBC0F; &#xC7AC;&#xC0DD; &#xAC00;&#xB2A5;&#xD55C; &#xBBF8;&#xB514;&#xC5B4;&#xB97C; &#xC124;&#xBA85;&#xD558;&#xBA70; S3&#xC758; &#xBBF8;&#xB514;&#xC5B4; &#xD30C;&#xC77C;&#xC740; &#xD30C;&#xC77C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xD1B5;&#xD574; &quot;sg_uploaded_movie&quot;&#xB77C;&#xB294; &#xD30C;&#xC77C;/&#xB9C1;&#xD06C; &#xD544;&#xB4DC;&#xB97C; &#xAC70;&#xCCD0; &#xB9C1;&#xD06C;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>Shotgun &#xAC1C;&#xBC1C; &#xC791;&#xC5C5;&#xC744; &#xB9CE;&#xC774; &#xC218;&#xD589;&#xD558;&#xBA74; &#xC774; sg_uploaded_movie &#xD544;&#xB4DC;&#xC5D0; &#xC544;&#xC8FC; &#xC775;&#xC219;&#xD574;&#xC9C8; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xBC84;&#xC804; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xD30C;&#xC77C;&#xC744; &#xC5C5;&#xB85C;&#xB4DC; &#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/10/7.png" alt="Local Image"></p>
+<p><img src="../../img/10/8.png" alt="Local Image"></p>
+<p>&#xC790;&#xB3D9;&#xC73C;&#xB85C; MOV(image) &#xD544;&#xB4DC;&#xC5D0; &#xD504;&#xB9AC;&#xBDF0;&#xAC00; &#xC0DD;&#xC131; &#xB429;&#xB2C8;&#xB2E4;.
+&#xC9C0;&#xC6D0;&#xB418;&#xB294; &#xD30C;&#xC77C; &#xD615;&#xC2DD;&#xC744; &#xAE30;&#xB85D;&#xD55C; &#xBB38;&#xC11C; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><a href="https://support.shotgunsoftware.com/hc/ko/articles/115000067353-%ED%8A%B8%EB%9E%9C%EC%8A%A4%EC%BD%94%EB%94%A9-%EC%84%9C%EB%B9%84%EC%8A%A4" target="_blank">https://support.shotgunsoftware.com/hc/ko/articles/115000067353-%ED%8A%B8%EB%9E%9C%EC%8A%A4%EC%BD%94%EB%94%A9-%EC%84%9C%EB%B9%84%EC%8A%A4</a></p>
+<p>&#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD504;&#xB9AC;&#xBDF0; &#xC601;&#xC0C1;&#xC740; &#xC6F9;&#xC5D0;&#xC11C; &#xC7AC;&#xC0DD;&#xB420; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;&#xB418;&#xACE0; &#xCD5C;&#xC801;&#xD654;&#xB41C; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD30C;&#xC77C; &#xC5D4;&#xD2F0;&#xD2F0; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778; &#xD574;&#xBCF4;&#xBA74; &#xC0C8;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xC5D4;&#xD2F0;&#xD2F0;&#xB4E4;&#xC774; &#xBCF4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xBBF8;&#xB514;&#xC5B4; &#xBCF5;&#xC0AC;&#xBCF8;&#xCC98;&#xB7FC; &#xBCF4;&#xC774;&#xB294; &#xB3D9;&#xC77C;&#xD55C; &#xBC84;&#xC804;&#xC5D0; &#xB9C1;&#xD06C;&#xB41C; &#xCD94;&#xAC00; &#xD30C;&#xC77C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB3C4; &#xB450; &#xAC1C; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/10/9.png" alt="Local Image"></p>
+<p>&#xC774; &#xB3D9;&#xC601;&#xC0C1; &#xD30C;&#xC77C;&#xC740; Shotgun &#xC11C;&#xBC84;&#xC758; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529; &#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xC5C8;&#xC73C;&#xBA70; Shotgun &#xC6F9; GUI&#xC640; &#xB2E4;&#xB978; &#xC704;&#xCE58;&#xC758; &#xC624;&#xBC84;&#xB808;&#xC774; &#xD50C;&#xB808;&#xC774;&#xC5B4;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.
+RV&#xC5D0;&#xC11C;&#xB294; mp4 &#xD30C;&#xC77C;&#xC774; webm &#xD30C;&#xC77C;&#xBCF4;&#xB2E4; &#xC6B0;&#xC120;&#xD558;&#xBA70; &#xC6F9; &#xAE30;&#xBC18; &#xB3D9;&#xC601;&#xC0C1; &#xD50C;&#xB808;&#xC774;&#xC5B4;&#xC5D0;&#xC11C;&#xB3C4; &#xB300;&#xCCB4;&#xB85C; &#xADF8;&#xB807;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7F0;&#xB370; &#xC815;&#xC801; &#xC774;&#xBBF8;&#xC9C0;&#xAC00; sg_uploaded_movie &#xD544;&#xB4DC;&#xC5D0; &#xC5C5;&#xB85C;&#xB4DC;&#xB418;&#xBA74;
+&#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB354;&#xAC00; Shotgun &#xC6F9; &#xD50C;&#xB808;&#xC774;&#xC5B4;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; jpeg&#xB3C4; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC815;&#xB9AC;&#xD558;&#xC790;&#xBA74; &#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xBBF8;&#xB514;&#xC5B4; &#xD30C;&#xC77C;&#xC774; &#xC774;&#xCC98;&#xB7FC; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;&#xB418;&#xACE0; &#xBCF5;&#xC81C;&#xB418;&#xB294; &#xC720;&#xC77C;&#xD55C; &#xACBD;&#xC6B0;&#xB294; &#xBC84;&#xC804;&#xC758; sg_uploaded_movie &#xD544;&#xB4DC;&#xAC00; &#xB300;&#xC0C1;&#xC778; &#xACBD;&#xC6B0;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>API&#xC5D0;&#xC11C; &#xBC84;&#xC804;&#xC758; &#xD544;&#xB4DC;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xACE0; &#xC774;&#xB984;&#xC5D0; &quot;upload&quot;&#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xBAA8;&#xB4E0; &#xD544;&#xB4DC;&#xB97C; &#xAC80;&#xC0C9;&#xD558;&#xBA74; &#xC6F9; GUI&#xC5D0;&#xC11C;&#xB294; &#xBCFC; &#xC218; &#xC5C6;&#xB294; &#xB9CE;&#xC740; &#xD544;&#xB4DC;&#xAC00; &#xAC80;&#xC0C9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> config <span class="hljs-keyword">import</span> *
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
+
+version_schema = sg.schema_field_read(<span class="hljs-string">&quot;Version&quot;</span>, project_entity=project)
+
+<span class="hljs-keyword">for</span> field <span class="hljs-keyword">in</span> version_schema.keys():
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;uploaded&quot;</span> <span class="hljs-keyword">in</span> field.lower():
+        <span class="hljs-keyword">print</span> field
+
+<span class="hljs-string">&apos;&apos;&apos;
+sg_uploaded_movie_webm
+sg_uploaded_movie_mp4
+sg_uploaded_movie
+sg_uploaded_movie_frame_rate
+sg_uploaded_movie_image
+sg_uploaded_movie_transcoding_status
+uploaded_movie_duration
+&apos;&apos;&apos;</span>
+</code></pre>
+<p>Shotgun&#xC5D0;&#xC11C; &#xC601;&#xC0C1; &#xC5C5;&#xB85C;&#xB4DC; &#xBC0F; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;&#xACFC; &#xAD00;&#xB828;&#xD558;&#xC5EC; &#xBAA8;&#xB4E0; &#xD544;&#xB4DC;&#xB97C; &#xBCF4;&#xC5EC; &#xC8FC;&#xB294; &#xAC83;&#xC774; &#xB108;&#xBB34; &#xD63C;&#xB780;&#xC2A4;&#xB7EC;&#xC6B8; &#xAC70;&#xB77C; &#xC0DD;&#xAC01;&#xB418;&#xC5B4; &#xC77C;&#xBD80;&#xB97C; &#xC228;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h2 id="api&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xC5C5;&#xB85C;&#xB4DC;">API&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xC5C5;&#xB85C;&#xB4DC;</h2>
 <p>&#xC5C5;&#xB85C;&#xB4DC; &#xBA54;&#xC11C;&#xB4DC;&#xC5D0;&#xB294; &#xB124; &#xAC00;&#xC9C0; &#xC778;&#xC790;, &#xC989; &#xC720;&#xD615;&#xACFC; &#xB9C1;&#xD06C;&#xD560; &#xB300;&#xC0C1; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; ID, &#xC5C5;&#xB85C;&#xB4DC;&#xD560; &#xD30C;&#xC77C; &#xACBD;&#xB85C; &#xADF8;&#xB9AC;&#xACE0; field_name &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> shotgun_api3
@@ -811,10 +867,10 @@ f = sg.find_one(<span class="hljs-string">&quot;Attachment&quot;</span>, [[<span
 
 sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
 
-project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;sg_integrations&quot;</span>]])
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
 <span class="hljs-keyword">print</span> pprint.pformat(project)
 
-<span class="hljs-comment"># Create Version</span>
+<span class="hljs-comment"># &#xBC84;&#xC804; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;</span>
 <span class="hljs-comment"># version = sg.create(&quot;Version&quot;, {&quot;project&quot;: project})</span>
 <span class="hljs-comment"># print pprint.pformat(version)</span>
 
@@ -827,19 +883,154 @@ version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>,
 <span class="hljs-keyword">print</span> pprint.pformat(version)
 
 <span class="hljs-comment"># Upload File</span>
-attachment_id = sg.upload(<span class="hljs-string">&quot;Version&quot;</span>,
-                          version[<span class="hljs-string">&quot;id&quot;</span>],
-                          <span class="hljs-string">&quot;C:/Users/geunmo_kim/Pictures/1_j_f-fL9EHgaFn4IRi7NZ7g.png&quot;</span>,
-                          field_name=<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>
-                          )
+file_path = <span class="hljs-string">&quot;C:/Users/geunmo_kim/Pictures/1_j_f-fL9EHgaFn4IRi7NZ7g.png&quot;</span>
+attachment_id = sg.upload(<span class="hljs-string">&quot;Version&quot;</span>, version[<span class="hljs-string">&quot;id&quot;</span>], file_path, field_name=<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>)
+<span class="hljs-keyword">print</span> attachment_id
+
+<span class="hljs-comment"># &#xD30C;&#xC77C; &#xD655;&#xC778;</span>
+my_file = sg.find_one(<span class="hljs-string">&quot;Attachment&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, attachment_id]], [<span class="hljs-string">&quot;this_file&quot;</span>])
+<span class="hljs-keyword">print</span> my_file[<span class="hljs-string">&quot;this_file&quot;</span>][<span class="hljs-string">&quot;url&quot;</span>]
 </code></pre>
 <h2 id="api&#xB97C;-&#xC774;&#xC6A9;&#xD55C;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">API&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h2>
+<p>&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBA54;&#xC11C;&#xB4DC;&#xC5D0;&#xB294; &#xB450; &#xAC00;&#xC9C0; &#xC778;&#xC790;, &#xD30C;&#xC77C; &#xC5D4;&#xD2F0;&#xD2F0;(Attachment)&#xC758; id&#xC640; &#xD30C;&#xC77C;&#xACBD;&#xB85C;&#xAC00; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> config <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> pprint
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
+
+version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">23426</span>]], [<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>])
+attachment = version[<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>]
+<span class="hljs-keyword">print</span> pprint.pformat(attachment)
+
+download_file = sg.download_attachment(attachment[<span class="hljs-string">&quot;id&quot;</span>], file_path=<span class="hljs-string">&quot;d:/{}&quot;</span>.format(attachment[<span class="hljs-string">&quot;name&quot;</span>]))
+<span class="hljs-keyword">print</span> download_file
+</code></pre>
 <h2 id="&#xBBF8;&#xB514;&#xC5B4;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">&#xBBF8;&#xB514;&#xC5B4; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h2>
+<p>&#xC704;&#xC758; &#xBC29;&#xBC95;&#xC740; &#xC6D0;&#xBCF8; &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC6B4; &#xD569;&#xB2C8;&#xB2E4;.
+&#xD558;&#xC9C0;&#xB9CC; &#xD2B8;&#xB79C;&#xC2A4;&#xCF54;&#xB529;&#xB41C; mp4 &#xD30C;&#xC77C;&#xC774; &#xD544;&#xC694;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xACA0;&#xC8E0;.
+&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xC18D;&#xB3C4;&#xB97C; &#xB192;&#xC774;&#xAC70;&#xB098; &#xB85C;&#xCEEC; &#xB514;&#xC2A4;&#xD06C; &#xACF5;&#xAC04; &#xC0AC;&#xC6A9;&#xB7C9;&#xC744; &#xC904;&#xC774;&#xAC70;&#xB098; &#xB85C;&#xCEEC; &#xB3C4;&#xAD6C;&#xC758; &#xC7AC;&#xC0DD; &#xC131;&#xB2A5;&#xC744; &#xD5A5;&#xC0C1;&#xC2DC;&#xD0A4;&#xB824;&#xB294; &#xACBD;&#xC6B0;&#xC5D0; &#xADF8;&#xB807;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB7F0; &#xACBD;&#xC6B0; sg_uploaded_movie_mp4 &#xD544;&#xB4DC;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xC9C0;&#xC815; &#xD569;&#xB2C8;&#xB2E4;.
+&#xC5EC;&#xAE30;&#xC11C; &#xC8FC;&#xC758;&#xD560; &#xC0AC;&#xD56D;&#xC740; &#xD30C;&#xC77C; &#xC774;&#xB984; &#xC55E;&#xC5D0; &#xD574;&#xC2DC;&#xAC00; &#xCD94;&#xAC00;&#xB418;&#xC5B4; &#xC788;&#xB2E4;&#xB294; &#xC810;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> config <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> pprint
+<span class="hljs-keyword">import</span> re
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
+
+<span class="hljs-comment"># &#xC6D0;&#xBCF8;&#xD30C;&#xC77C;</span>
+version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">23425</span>]], [<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>])
+attachment = version[<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>]
+<span class="hljs-keyword">print</span> pprint.pformat(attachment)
+
+download_file = sg.download_attachment(attachment[<span class="hljs-string">&quot;id&quot;</span>], file_path=<span class="hljs-string">&quot;d:/{}&quot;</span>.format(attachment[<span class="hljs-string">&quot;name&quot;</span>]))
+<span class="hljs-keyword">print</span> download_file
+
+<span class="hljs-comment"># &#xD2B8;&#xB80C;&#xC2A4;&#xCF54;&#xB529;&#xB41C; &#xD30C;&#xC77C;</span>
+version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">23425</span>]], [<span class="hljs-string">&quot;sg_uploaded_movie_mp4&quot;</span>])
+attachment = version[<span class="hljs-string">&quot;sg_uploaded_movie_mp4&quot;</span>]
+<span class="hljs-keyword">print</span> pprint.pformat(attachment)
+
+download_file = sg.download_attachment(
+    attachment[<span class="hljs-string">&quot;id&quot;</span>],
+    file_path=<span class="hljs-string">&quot;d:/{}&quot;</span>.format(
+        re.sub(<span class="hljs-string">&quot;^[0-9a-z]+_&quot;</span>, <span class="hljs-string">&quot;transcoded_&quot;</span>, attachment[<span class="hljs-string">&quot;name&quot;</span>])
+    )
+)
+<span class="hljs-keyword">print</span> download_file
+</code></pre>
 <h2 id="&#xC378;&#xB124;&#xC77C;-&#xBC0F;-&#xC601;&#xC0AC;-&#xC2AC;&#xB77C;&#xC774;&#xB4DC;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">&#xC378;&#xB124;&#xC77C; &#xBC0F; &#xC601;&#xC0AC; &#xC2AC;&#xB77C;&#xC774;&#xB4DC; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h2>
+<p>&#xBA3C;&#xC800;, &#xC378;&#xB124;&#xC77C; &#xC774;&#xBBF8;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; URL&#xC744; &#xAC00;&#xC838;&#xC624;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xC774;&#xC81C; &#xC774; URL&#xC744; download_attachment &#xBA54;&#xC11C;&#xB4DC;&#xC5D0; &#xB4DC;&#xB86D;&#xD558;&#xB418; &#xC774;&#xCC98;&#xB7FC; &quot;url&quot; &#xD0A4;&#xAC00; &#xC788;&#xB294; &#xC791;&#xC740; &#xC0AC;&#xC804; &#xB0B4;&#xBD80;&#xC5D0; &#xB4DC;&#xB86D;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C;, &#xC774;&#xC804;&#xACFC; &#xAC19;&#xC774; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB7F0;&#xB370; &#xC774;&#xBC88;&#xC5D0;&#xB294; &#xD30C;&#xC77C;&#xC758; &#xC774;&#xB984;&#xC744; &#xBB34;&#xC5C7;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD560;&#xAE4C;&#xC694;?
+image &#xD0A4;&#xC5D0; &#xBA4B;&#xC9C4; name &#xD0A4;&#xAC00; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC774;&#xB984;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xC640; &#xAC19;&#xC774; &#xB9D0;&#xC774;&#xC8E0;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># coding:utf-8</span>
+
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> config <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> pprint
+<span class="hljs-keyword">import</span> re
+
+sg = shotgun_api3.Shotgun(URL, login=USER, password=PASSWORD)
+
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
+
+<span class="hljs-comment"># &#xC378;&#xB124;&#xC77C;</span>
+version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">23425</span>]], [<span class="hljs-string">&quot;image&quot;</span>])
+url = version[<span class="hljs-string">&quot;image&quot;</span>]
+file_path = re.search(<span class="hljs-string">&quot;.*\/(\w+_t.jpg)\?AWSAccessKeyId.*&quot;</span>, url).group(<span class="hljs-number">1</span>)
+thumbnail = sg.download_attachment(
+    {<span class="hljs-string">&quot;url&quot;</span>: url},
+    file_path=<span class="hljs-string">&quot;d:/{}&quot;</span>.format(file_path)
+)
+<span class="hljs-keyword">print</span> thumbnail
+</code></pre>
+<p>&#xC378;&#xB124;&#xC77C; &#xACE0;&#xD574;&#xC0C1;&#xB3C4; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#xC6D0;&#xBCF8; &#xC774;&#xBBF8;&#xC9C0;</span>
+<span class="hljs-keyword">import</span> shotgun_api3
+<span class="hljs-keyword">from</span> config <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> imghdr
+<span class="hljs-keyword">import</span> os
+
+version = sg.find_one(<span class="hljs-string">&quot;Version&quot;</span>, [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-number">23425</span>]], [<span class="hljs-string">&quot;image&quot;</span>])
+downloaded_file = sg.download_attachment(
+    {<span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;{}/thumbnail/full/Version/{}&quot;</span>.format(sg.base_url, version[<span class="hljs-string">&quot;id&quot;</span>])},
+    file_path=<span class="hljs-string">&quot;d:/{}_thumb_orig&quot;</span>.format(version[<span class="hljs-string">&quot;id&quot;</span>])
+)
+
+new_file_path = <span class="hljs-string">&quot;&quot;</span>.join([downloaded_file, <span class="hljs-string">&quot;.&quot;</span>, imghdr.what(downloaded_file)])
+os.rename(downloaded_file, new_file_path)
+<span class="hljs-keyword">print</span> new_file_path
+</code></pre>
 <h2 id="shotgun-&#xC678;&#xBD80;-&#xD30C;&#xC77C;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">Shotgun &#xC678;&#xBD80; &#xD30C;&#xC77C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h2>
-<h2 id="&#xC804;&#xC1A1;-&#xC548;-&#xD568;-&#xC120;&#xD0DD;">&#xC804;&#xC1A1; &#xC548; &#xD568; &#xC120;&#xD0DD;</h2>
+<pre><code class="lang-python">download_img = sg.download_attachment(
+    {<span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://upload.wikimedia.org/wikipedia/commons/5/53/Wikipedia-logo-en-big.png&quot;</span>},
+    file_path=<span class="hljs-string">&quot;d:/wiki.png&quot;</span>
+)
+
+<span class="hljs-keyword">print</span> download_img
+`
+</code></pre>
 <h2 id="&#xB85C;&#xCEEC;-&#xD30C;&#xC77C;-&#xB9C1;&#xD06C;">&#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xB9C1;&#xD06C;</h2>
+<p>&#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xB9C1;&#xD06C;&#xAC00; &#xC791;&#xB3D9;&#xD558;&#xB824;&#xBA74; &#xD558;&#xB098; &#xC774;&#xC0C1;&#xC758; &#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xC800;&#xC7A5;&#xC18C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB7EC;&#xD55C; &#xC5D4;&#xD2F0;&#xD2F0;&#xB294; &#xC8FC;&#xB85C; &#xD234;&#xD0B7; &#xD1B5;&#xD569;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xBA70; &#xB8E8;&#xD2B8; &#xC800;&#xC7A5;&#xC18C; &#xD3F4;&#xB354;&#xB97C; &#xC815;&#xC758;&#xD569;&#xB2C8;&#xB2E4;.
+&#xACF5;&#xC720; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC758; &#xC704;&#xCE58;&#xB85C; &quot;primary&quot;&#xB97C; &#xAC00;&#xB9AC;&#xD0A4;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../img/10/10.png" alt="Local Image"></p>
+<p>&#xC791;&#xC5C5;&#xC744; &#xB9C8;&#xCE58;&#xBA74; &#xAE30;&#xC874; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; &#xD30C;&#xC77C;/&#xB9C1;&#xD06C; &#xD544;&#xB4DC;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+&#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xB9C1;&#xD06C;&#xB97C; &#xD560;&#xB54C; &#xD30C;&#xC77C;&#xC758; &#xACBD;&#xB85C;&#xAC00; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xB4F1;&#xB85D;&#xB41C; &#xD558;&#xC704; &#xACBD;&#xB85C;&#xC5EC;&#xC57C; &#xB9CC; &#xB9C1;&#xD06C;&#xB97C; &#xD560;&#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python">sg = shotgun
+
+project = sg.find_one(<span class="hljs-string">&quot;Project&quot;</span>, [[<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, <span class="hljs-string">&quot;project X&quot;</span>]])
+
+<span class="hljs-comment"># &#xBC84;&#xC804; &#xC5D4;&#xD2F0;&#xD2F0;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;</span>
+version = sg.create(<span class="hljs-string">&quot;Version&quot;</span>, {<span class="hljs-string">&quot;project&quot;</span>: project})
+version[<span class="hljs-string">&quot;id&quot;</span>]
+
+sg.update(<span class="hljs-string">&quot;Version&quot;</span>, version[<span class="hljs-string">&quot;id&quot;</span>], {<span class="hljs-string">&quot;sg_uploaded_movie&quot;</span>: {<span class="hljs-string">&quot;local_path&quot;</span>: <span class="hljs-string">&quot;\\\\ISSAC\\Project\\Shotgun\\projects\\project_x\\athena.mp4&quot;</span>}})
+</code></pre>
 <h2 id="&#xB3D9;&#xC601;&#xC0C1;&#xD504;&#xB808;&#xC784;-&#xACBD;&#xB85C;">&#xB3D9;&#xC601;&#xC0C1;/&#xD504;&#xB808;&#xC784; &#xACBD;&#xB85C;</h2>
+<p>&#xC544;&#xC27D;&#xC9C0;&#xB9CC; &#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xB9C1;&#xD06C;&#xB294; &#xBB18;&#xCC45;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.
+&#xD2B9;&#xD788;, Shotgun RV &#xD1B5;&#xD569;&#xC5D0;&#xC11C;&#xB294; &#xD604;&#xC7AC; &#xC791;&#xB3D9;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+RV&#xB294; &#xC5EC;&#xB7EC; &#xB2E4;&#xB978; &#xD544;&#xB4DC;, &#xC989; sg_path_to_frames, sg_path_to_movie, sg_uploaded_movie_mp4&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC38;&#xC870;&#xD569;&#xB2C8;&#xB2E4;.
+&#xADF8;&#xB807;&#xB2E4;&#xBA74; RV&#xAC00; &#xB514;&#xC2A4;&#xD06C;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xC6D0;&#xB798; &#xB3D9;&#xC601;&#xC0C1; &#xD30C;&#xC77C;&#xC744; &#xC7AC;&#xC0DD;&#xD558;&#xAC8C; &#xD558;&#xB824;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xD558;&#xBA74; &#xB420;&#xAE4C;&#xC694;?
+&#xADF8;&#xB7F4; &#xACBD;&#xC6B0; <strong>sg_path_to_movie</strong> &#xD544;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.
+&#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xB9C1;&#xD06C;&#xC640; &#xB2EC;&#xB9AC; path_to_movie &#xD544;&#xB4DC;&#xC640; &#xAD00;&#xB828;&#xD55C; &#xD55C; &#xAC00;&#xC9C0; &#xBA4B;&#xC9C4; &#xAE30;&#xB2A5;&#xC740; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xC5D0;&#xC11C; &#xC5B4;&#xB290; &#xC704;&#xCE58;&#xB098; &#xAC00;&#xB9AC;&#xD0AC; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xB85C;&#xCEEC; &#xD30C;&#xC77C; &#xC800;&#xC7A5;&#xC18C; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0; &#xC758;&#xD574; &#xC815;&#xC758;&#xB41C; &#xC800;&#xC7A5;&#xC18C; &#xC601;&#xC5ED; &#xC544;&#xB798;&#xC5D0; &#xC788;&#xC744; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>mp4 &#xD30C;&#xC77C;&#xC744; &#xC88B;&#xC544;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74; <strong>sg_path_to_frames</strong> &#xD544;&#xB4DC;&#xC5D0; &#xC6D0;&#xB798; &#xB85C;&#xCEEC; &#xD504;&#xB808;&#xC784; &#xACBD;&#xB85C;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.
+&#xC81C;&#xAC00; &#xC7AC;&#xC0DD;&#xD558;&#xB294; &#xB3D9;&#xC601;&#xC0C1; &#xD30C;&#xC77C;&#xC740; Nuke&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xB41C; &#xC774; &#xC774;&#xBBF8;&#xC9C0; &#xC2DC;&#xD000;&#xC2A4;&#xB97C; &#xBC14;&#xD0D5;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Windows &#xBC0F; Linux &#xACBD;&#xB85C;&#xB294; &#xC5B4;&#xB5BB;&#xAC8C; &#xCC98;&#xB9AC;&#xD558;&#xB294;&#xC9C0; &#xAD81;&#xAE08;&#xD558;&#xC2DC;&#xB2E4;&#xBA74; &#xC774; RV &#xBB38;&#xC11C;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<p><a href="https://support.shotgunsoftware.com/hc/ko/articles/219042298-RV-OS-PATH-%EB%98%90%EB%8A%94-RV-PATHSWAP%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%AF%B8%EB%94%94%EC%96%B4-%EA%B2%BD%EB%A1%9C-%ED%98%84%EC%A7%80%ED%99%94" target="_blank">https://support.shotgunsoftware.com/hc/ko/articles/219042298-RV-OS-PATH-%EB%98%90%EB%8A%94-RV-PATHSWAP%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%AF%B8%EB%94%94%EC%96%B4-%EA%B2%BD%EB%A1%9C-%ED%98%84%EC%A7%80%ED%99%94</a></p>
+<p>&#xC2A4;&#xD14C;&#xB808;&#xC624; &#xACBD;&#xB85C;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xAD81;&#xAE08;&#xD558;&#xACE0; &#xC9C0;&#xC6D0;&#xB418;&#xB294; &#xACBD;&#xB85C; &#xC720;&#xD615;&#xC5D0; &#xB300;&#xD55C; &#xC804;&#xCCB4; &#xBAA9;&#xB85D;&#xC744; &#xBCF4;&#xB824;&#xBA74; &#xC774; &#xBB38;&#xC11C;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<p><a href="http://www.tweaksoftware.com/static/documentation/rv/current/html/rv_manual.html#Command_Line_Options_Image_Sequence_Notation" target="_blank">http://www.tweaksoftware.com/static/documentation/rv/current/html/rv_manual.html#Command_Line_Options_Image_Sequence_Notation</a></p>
 
                                 
                                 </section>
@@ -883,7 +1074,7 @@ attachment_id = sg.upload(<span class="hljs-string">&quot;Version&quot;</span>,
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4. 업로드/다운로드","level":"1.3.4","depth":2,"next":{"title":"5. 모범 사례","level":"1.3.5","depth":2,"path":"posts/2_api/5_The_Python_API_Best_Practices.md","ref":"posts/2_api/5_The_Python_API_Best_Practices.md","articles":[]},"previous":{"title":"3. 스키마 메서드","level":"1.3.3","depth":2,"path":"posts/2_api/3_The_Python_API_Schema_Methods.md","ref":"posts/2_api/3_The_Python_API_Schema_Methods.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/2_api/4_The_Python_API_Upload_Download.md","mtime":"2018-11-19T08:55:21.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T11:46:26.202Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4. 업로드/다운로드","level":"1.3.4","depth":2,"next":{"title":"5. 모범 사례","level":"1.3.5","depth":2,"path":"posts/2_api/5_The_Python_API_Best_Practices.md","ref":"posts/2_api/5_The_Python_API_Best_Practices.md","articles":[]},"previous":{"title":"3. 스키마 메서드","level":"1.3.3","depth":2,"path":"posts/2_api/3_The_Python_API_Schema_Methods.md","ref":"posts/2_api/3_The_Python_API_Schema_Methods.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/2_api/4_The_Python_API_Upload_Download.md","mtime":"2018-11-20T13:10:36.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T13:11:24.511Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
