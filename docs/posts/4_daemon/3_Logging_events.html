@@ -767,36 +767,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="logging-events-&#xC774;&#xBCA4;&#xD2B8;-&#xB85C;&#xAE45;"><a href="https://youtu.be/YPZ1FWvhf7k?t=5m11s" target="_blank">Logging Events (&#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xAE45;)</a></h1>
-<p>Now that our log our top UI plug-in is loaded.
-&#xC774;&#xC81C; &#xB85C;&#xADF8;&#xC544;&#xC6C3; &#xCD5C;&#xC0C1;&#xC704; UI &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xB85C;&#xB4DC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xC81C; <code>logArgs.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xB85C;&#xB4DC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>Let&apos;s pop it open and take a look.
-&#xADF8;&#xAC83;&#xC744; &#xD391; &#xD558;&#xACE0; &#xC5F4;&#xC5B4; &#xBCF4;&#xC790;.</p>
-<p>First I&apos;ll point out the two environment variables here.
-&#xBA3C;&#xC800; &#xB450; &#xAC00;&#xC9C0; &#xD658;&#xACBD; &#xBCC0;&#xC218;&#xB97C; &#xC9DA;&#xC5B4; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>They expect another script key.
-&#xB610; &#xB2E4;&#xB978; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xAE30;&#xB300;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<code>logArgs.py</code>&#xC744; &#xC5F4;&#xC5B4; &#xBD05;&#xB2C8;&#xB2E4;.</p>
+<p>&#xBA3C;&#xC800; &#xB450; &#xAC00;&#xC9C0; &#xD658;&#xACBD; &#xBCC0;&#xC218;&#xB97C; &#xC9DA;&#xC5B4; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/4_daemon/3_Logging_events/5.png" alt="Local Image"></p>
-<p>Take a minute to grok the situation.
-&#xC7A0;&#xC2DC; &#xC2DC;&#xAC04;&#xC744; &#xB0B4;&#xC5B4; &#xC0C1;&#xD669;&#xC744; &#xD30C;&#xC545;&#xD558;&#xC2ED;&#xC2DC;&#xC624;.</p>
-<p>The daemon itself means the script key so it can query shotgun for changes to the event log.
-&#xB370;&#xBAAC; &#xC790;&#xCCB4;&#xB294; event log &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC744; &#xCFFC;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>But the individual plugins it fires off as a result of those events don&apos;t have to use the same script key.
-&#xD558;&#xC9C0;&#xB9CC; &#xAC1C;&#xBCC4; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC774;&#xB7EC;&#xD55C; &#xC774;&#xBCA4;&#xD2B8;&#xC758; &#xACB0;&#xACFC;&#xB85C; &#xB3D9;&#xC77C;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>In fact it&apos;s important that each plug-in references its own script key.
-&#xC2E4;&#xC81C;&#xB85C; &#xAC01; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC790;&#xCCB4; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xCC38;&#xC870;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>That way event log entries in shotgun can be attributed to specific plugins and bad actors can be a sidelined and debugged.
-&#xC774;&#xB7EC;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC0F7;&#xAC74;&#xC758; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC740; &#xD2B9;&#xC815; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xAE30;&#xC778;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xBD88;&#xB7C9; &#xD589;&#xC704;&#xC790;&#xB294; &#xC81C;&#xC678;&#xB418;&#xACE0; &#xB514;&#xBC84;&#xADF8;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>Now I need to create the script key in shotgun.
-&#xC774;&#xC81C; &#xC0F7;&#xAC74; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xACA0;&#xC5B4;&#xC694;.</p>
+<p>&#xB370;&#xBAAC; &#xC790;&#xCCB4;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB294; <code>EventLog</code> &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC744; &#xCFFC;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xAC1C;&#xBCC4; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC774;&#xB7EC;&#xD55C; &#xC774;&#xBCA4;&#xD2B8;&#xC758; &#xACB0;&#xACFC;&#xB85C; &#xB3D9;&#xC77C;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC2E4;&#xC81C;&#xB85C; &#xAC01; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC790;&#xCCB4; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xCC38;&#xC870;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xB7EC;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC0F7;&#xAC74;&#xC758; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC740; &#xD2B9;&#xC815; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xAE30;&#xC778;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xBD88;&#xB7C9; &#xD589;&#xC704;&#xC790;&#xB294; &#xC81C;&#xC678;&#xB418;&#xACE0; &#xB514;&#xBC84;&#xADF8;&#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xC81C; &#xC0F7;&#xAC74; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xACA0;&#xC5B4;&#xC694;.</p>
 <p><img src="../../img/4_daemon/3_Logging_events/6.png" alt="Local Image"></p>
 <p><img src="../../img/4_daemon/3_Logging_events/7.png" alt="Local Image"></p>
-<p>Then export the environment variable in my shell.
-&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; &#xD658;&#xACBD; &#xBCC0;&#xC218;&#xB97C; &#xB0B4; &#xC258;&#xB85C; &#xB0B4;&#xBCF4;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; &#xD658;&#xACBD; &#xBCC0;&#xC218;&#xB97C; &#xB0B4; &#xC258;&#xB85C; &#xB0B4;&#xBCF4;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-console">setx /m SGDAEMON_LOGARGS_NAME &quot;logArgs.py&quot;
 setx /m SGDAEMON_LOGARGS_KEY &quot;#Onslgpcxmfop3kbsuvmioduf&quot;
 </code></pre>
-<p>Cool. Let&apos;s make this easier to read.
-&#xC88B;&#xC544;. &#xC774;&#xAC78; &#xC77D;&#xAE30; &#xC27D;&#xAC8C; &#xD558;&#xC790;.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">import</span> os
 <span class="hljs-keyword">import</span> logging
 
@@ -817,50 +803,30 @@ setx /m SGDAEMON_LOGARGS_KEY &quot;#Onslgpcxmfop3kbsuvmioduf&quot;
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">logArgs</span><span class="hljs-params">(sg, logger, event, args)</span>:</span>
     logger.info(<span class="hljs-string">&quot;%s&quot;</span> % str(event))
 </code></pre>
-<p>For the demo I&apos;ll pair down the code by removing the comments.
-&#xB370;&#xBAA8;&#xC5D0;&#xC11C;&#xB294; &#xC8FC;&#xC11D;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xC5EC; &#xCF54;&#xB4DC;&#xB97C; &#xC30D;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>Okay. So what&apos;s going on here.
-&#xB124;, &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xACE0; &#xC788;&#xC8E0;?</p>
-<p>Well the daemon looks at  all kite-line files in specified plug-in folders which as you remember we defined in our configuration file.
-&#xB370;&#xBAAC;&#xC740; &#xC9C0;&#xC815;&#xB41C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xD30C;&#xC77C;&#xC744; &#xD655;&#xC778;&#xD558;&#xB294;&#xB370;, &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC6B0;&#xB9AC;&#xAC00; config &#xD30C;&#xC77C;&#xC5D0; &#xC815;&#xC758;&#xD55C; &#xAC83; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>And if one of those files contains a register callbacks function like we&apos;ve got here it will run that function.
-&#xADF8;&#xB9AC;&#xACE0; &#xB9CC;&#xC57D; &#xADF8; &#xD30C;&#xC77C;&#xB4E4; &#xC911; &#xD558;&#xB098;&#xC5D0;  <code>registerCallbacks(reg)</code> &#xD568;&#xC218;&#xB97C; &#xAD6C;&#xD604; &#xD588;&#xB2E4;&#xBA74;, &#xADF8; &#xAE30;&#xB2A5;&#xC744; &#xC2E4;&#xD589;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>So what does that function do.
-&#xADF8;&#xB798;&#xC11C; &#xADF8; &#xAE30;&#xB2A5;&#xC740; &#xBB58;&#xAE4C;&#xC694;?</p>
-<p>Well its main purpose is to run the register callback method that lives in the reg object.
-&#xC74C;, &#xADF8;&#xAC83;&#xC758; &#xC8FC;&#xB41C; &#xBAA9;&#xC801;&#xC740; reg &#xBAA9;&#xC801;&#xC9C0;&#xC5D0; &#xC0AC;&#xB294; &#xCF5C;&#xBC31; &#xAE30;&#xB85D; &#xBC29;&#xBC95;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>Reg stands for Registrar ie the official thing that registers stuff with the daemon.</p>
-<p>In our example here were passing in one a set of authentication credentials.
-Two, the name of a function.
-Three an event filter that&apos;s currently set to none
-And four optional additional arguments.
-&#xC6B0;&#xB9AC;&#xC758; &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, 4&#xAC1C;&#xC758; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB370;&#xBAA8;&#xC5D0;&#xC11C;&#xB294; &#xC8FC;&#xC11D;&#xC744; &#xC81C;&#xAC70; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB370;&#xBAAC;&#xC740; &#xC9C0;&#xC815;&#xB41C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xD30C;&#xC77C;&#xC744; &#xD655;&#xC778;&#xD558;&#xB294;&#xB370;, &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xC6B0;&#xB9AC;&#xAC00; config &#xD30C;&#xC77C;&#xC5D0; &#xC815;&#xC758;&#xD55C; &#xAC83; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xB9CC;&#xC57D; &#xADF8; &#xD30C;&#xC77C;&#xB4E4; &#xC911; &#xD558;&#xB098;&#xC5D0;  <code>registerCallbacks(reg)</code> &#xD568;&#xC218;&#xAC00; &#xC788;&#xB2E4;&#xBA74;, &#xADF8; &#xAE30;&#xB2A5;&#xC744; &#xC2E4;&#xD589;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xADF8; &#xAE30;&#xB2A5;&#xC740; &#xBB58;&#xAE4C;&#xC694;?</p>
+<p>&#xC74C;, &#xADF8;&#xAC83;&#xC758; &#xC8FC;&#xB41C; &#xBAA9;&#xC801;&#xC740; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xAC83; &#xBFD0;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><code>reg.registerCallback</code> &#xD568;&#xC218;&#xB97C; &#xBCF4;&#xBA74; 4&#xAC1C;&#xC758; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9; &#xB410;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <ol>
 <li>&#xC778;&#xC99D; &#xC790;&#xACA9; &#xC99D;&#xBA85; &#xC9D1;&#xD569;(&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4; &#xC774;&#xB984;, &#xD0A4;&#xAC12;)</li>
 <li>function &#xC774;&#xB984;(&#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xC774;&#xB984;)</li>
 <li>&#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;(eventFilter = None)</li>
 <li>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xCD94;&#xAC00; &#xC778;&#xC218;(&#xC120;&#xD0DD; &#xC0AC;&#xD56D;)&#xC785;&#xB2C8;&#xB2E4;.</li>
 </ol>
-<p>A little further down in the plugin you can see the log args function referenced in the register callback call.
-&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0;&#xC11C; &#xC870;&#xAE08; &#xB354; &#xC544;&#xB798;&#xCABD;&#xC5D0; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xD638;&#xCD9C;&#xC5D0;&#xC11C; &#xCC38;&#xC870;&#xB41C; &#xB85C;&#xADF8; args &#xAE30;&#xB2A5;&#xC774; &#xD45C;&#xC2DC;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>So in essence this plugins register callbacks function is saying &quot;Hey Damon. I&apos;ve got this function called log args that prints out some stuff and I want you to run it with a specific set of authentication credentials whenever anything happens in Shotgun&quot;.
-&#xB530;&#xB77C;&#xC11C; &#xBCF8;&#xC9C8;&#xC801;&#xC73C;&#xB85C; &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xAE30;&#xB2A5;&#xC740; &quot;&#xC57C; &#xB370;&#xBAAC; &#xB0B4;&#xAC00; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xAC00; &#xC788;&#xB294;&#xB370; &#xC774; &#xAD8C;&#xD55C;&#xC73C;&#xB85C; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC774;&#xC5B4;&#xB098;&#xACE0; &#xC788;&#xB294;&#xC9C0; &#xB85C;&#xACE0;&#xB85C; &#xB0A8;&#xACA8;&#xC918;&quot; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>And I mean anything because the event filter is none. And that&apos;s it.
-&#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xAC00; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xADF8;&#xAC8C; &#xC804;&#xBD80; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>So, I&apos;ll check the terminal to make sure my plugin was reloaded and do something in shotgun to see what happens.
-&#xD130;&#xBBF8;&#xB110;&#xC744; &#xD655;&#xC778;&#xD558;&#xC5EC; &#xD50C;&#xB7EC;&#xADF8;&#xAC00; &#xB2E4;&#xC2DC; &#xB85C;&#xB4DC;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xACE0; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xB294;&#xC9C0; &#xC54C;&#xC544;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>There we go.
-&#xB610; &#xC2DC;&#xC791;&#xC774;&#xAD70;.</p>
-<p>As an aside. Let&apos;s go check out our logs directory.
-&#xB85C;&#xADF8; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC788;&#xB294; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC744; &#xD655;&#xC778; &#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
-<p>Remember this is the directory we specified in the config file.
-&#xC774; &#xB514;&#xB809;&#xD130;&#xB9AC;&#xB294; conf &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xC9C0;&#xC815;&#xD55C; &#xB514;&#xB809;&#xD130;&#xB9AC;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>Here you can see that the daemon created to log files.
-&#xC5EC;&#xAE30;&#xC11C; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC744; &#xC704;&#xD574; &#xC0DD;&#xC131;&#xB41C; &#xB370;&#xBAAC;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>One for messages originating from our logArg&apos;s plugin and one for messages coming from the daemon.
-&#xD558;&#xB098;&#xB294; logArg &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xB41C; &#xBA54;&#xC2DC;&#xC9C0;&#xC640; &#xB2E4;&#xB978; &#xD558;&#xB098;&#xB294; &#xB370;&#xBAAC;&#xC5D0;&#xC11C; &#xC624;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>In practice i rarely check these logs when using the daemon in foreground mode like we&apos;re doing now but later when we launch the daemon in start mode these logs will be the only place messages our output to.
-&#xC2E4;&#xC81C;&#xB85C; &#xC9C0;&#xAE08;&#xCC98;&#xB7FC; &#xC804;&#xACBD; &#xBAA8;&#xB4DC;&#xC5D0;&#xC11C; &#xB370;&#xBAAC;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xB85C;&#xADF8;&#xB97C; &#xAC70;&#xC758; &#xD655;&#xC778;&#xD558;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC; &#xB098;&#xC911;&#xC5D0; &#xB370;&#xBAAC;&#xC744; &#xC2DC;&#xC791; &#xBAA8;&#xB4DC;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xBA74; &#xC774; &#xB85C;&#xADF8;&#xB9CC;&#xC774; &#xCD9C;&#xB825;&#xB418;&#xB294; &#xC720;&#xC77C;&#xD55C; &#xC7A5;&#xC18C; &#xBA54;&#xC2DC;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0;&#xC11C; &#xC870;&#xAE08; &#xB354; &#xC544;&#xB798;&#xCABD;&#xC5D0; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xD638;&#xCD9C;&#xC5D0;&#xC11C; &#xCC38;&#xC870;&#xB41C; &#xB85C;&#xADF8; args &#xAE30;&#xB2A5;&#xC774; &#xD45C;&#xC2DC;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB530;&#xB77C;&#xC11C; &#xBCF8;&#xC9C8;&#xC801;&#xC73C;&#xB85C; &#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xAE30;&#xB2A5;&#xC740; &quot;&#xC57C; &#xB370;&#xBAAC; &#xB0B4;&#xAC00; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD0A4;&#xAC00; &#xC788;&#xB294;&#xB370; &#xC774; &#xAD8C;&#xD55C;&#xC73C;&#xB85C; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC774;&#xC5B4;&#xB098;&#xACE0; &#xC788;&#xB294;&#xC9C0; &#xB85C;&#xACE0;&#xB85C; &#xB0A8;&#xACA8;&#xC918;&quot; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; &#xD544;&#xD130;&#xAC00; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xADF8;&#xAC8C; &#xC804;&#xBD80; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB370;&#xBAAC;&#xC744; &#xB2E4;&#xC2DC; &#xC2E4;&#xD589; &#xD558;&#xACE0; &#xC0F7;&#xAC74; &#xC6F9;&#xC5D0;&#xC11C; &#xC5B4;&#xC14B;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xBCC0;&#xACBD;&#xD574; &#xBD05;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python">python shotgunEventDaemon.py foreground
+</code></pre>
+<p>&#xD130;&#xBBF8;&#xB110;&#xC744; &#xD655;&#xC778;&#xD558;&#xC5EC; &#xD50C;&#xB7EC;&#xADF8;&#xAC00; &#xB2E4;&#xC2DC; &#xB85C;&#xB4DC;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xACE0; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xBB34;&#xC2A8; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xB294;&#xC9C0; &#xC54C;&#xC544;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB85C;&#xADF8; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC788;&#xB294; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC744; &#xD655;&#xC778; &#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774; &#xB514;&#xB809;&#xD130;&#xB9AC;&#xB294; conf &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xC9C0;&#xC815;&#xD55C; &#xB514;&#xB809;&#xD130;&#xB9AC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC5EC;&#xAE30;&#xC11C; &#xB370;&#xBAAC;&#xC774; &#xB9CC;&#xB4E0; &#xB85C;&#xADF8; &#xD30C;&#xC77C;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xB098;&#xB294; logArg &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xB41C; &#xBA54;&#xC2DC;&#xC9C0;&#xC640; &#xB2E4;&#xB978; &#xD558;&#xB098;&#xB294; &#xB370;&#xBAAC;&#xC5D0;&#xC11C; &#xC624;&#xB294; &#xBA54;&#xC2DC;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC2E4;&#xC81C;&#xB85C; &#xC9C0;&#xAE08;&#xCC98;&#xB7FC; &#xC804;&#xACBD; &#xBAA8;&#xB4DC;&#xC5D0;&#xC11C; &#xB370;&#xBAAC;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xC774;&#xB7EC;&#xD55C; &#xB85C;&#xADF8;&#xB97C; &#xAC70;&#xC758; &#xD655;&#xC778;&#xD558;&#xC9C0; &#xC54A;&#xC9C0;&#xB9CC; &#xB098;&#xC911;&#xC5D0; &#xB370;&#xBAAC;&#xC744; &#xC2DC;&#xC791; &#xBAA8;&#xB4DC;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xBA74; &#xC774; &#xB85C;&#xADF8;&#xB9CC;&#xC774; &#xCD9C;&#xB825;&#xB418;&#xB294; &#xC720;&#xC77C;&#xD55C; &#xC7A5;&#xC18C; &#xBA54;&#xC2DC;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -904,7 +870,7 @@ And four optional additional arguments.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"next":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"path":"posts/4_daemon/4_Filtering_for_events.md","ref":"posts/4_daemon/4_Filtering_for_events.md","articles":[]},"previous":{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"path":"posts/4_daemon/2_Installing_the_daemon.md","ref":"posts/4_daemon/2_Installing_the_daemon.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/3_Logging_events.md","mtime":"2018-11-20T13:54:56.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-21T12:47:24.543Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3. 이벤트 로깅","level":"1.5.3","depth":2,"next":{"title":"4. 이벤트 필터링","level":"1.5.4","depth":2,"path":"posts/4_daemon/4_Filtering_for_events.md","ref":"posts/4_daemon/4_Filtering_for_events.md","articles":[]},"previous":{"title":"2. 데몬 설치","level":"1.5.2","depth":2,"path":"posts/4_daemon/2_Installing_the_daemon.md","ref":"posts/4_daemon/2_Installing_the_daemon.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/3_Logging_events.md","mtime":"2018-11-22T12:50:44.924Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T12:56:24.417Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
