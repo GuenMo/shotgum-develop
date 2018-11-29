@@ -513,7 +513,7 @@
                 <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
             
                     
-                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+                    3. Shotgun 데스크톱 설치 및 배포
             
                 </a>
             
@@ -526,7 +526,7 @@
                 <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
             
                     
-                    4. Shotgun 데스크톱 설치 및 배포
+                    4. 어떤 소프트웨어 버전을 잠가야 합니까?
             
                 </a>
             
@@ -767,173 +767,50 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="example-plugins"><a href="https://youtu.be/YPZ1FWvhf7k?t=32m14s" target="_blank">Example plugins</a></h1>
-<p>over the years employees at
-32:18
-shotgun have built a variety of general
-32:20
-use plug-ins for the shotgun event
-32:22
-daemon many were donated to clients and
-32:24
-have enjoyed a long life doing battle
-32:26
-and productions at some of the largest
-32:28
-studios in the world that is to say many
-32:31
-of the plugins in the example plugins
-32:33
-directory here have been code reviewed
-32:35
-battle tested and proven in production
-32:37
-and may be of use to you out of the box
-32:39
-I want to note however that they are not
-32:42
-part of any shotgun product and should
-32:45
-indeed be considered examples we may not
-32:47
-offer support related to them even if
-32:49
-there are bugs so if you use one or more
-32:52
-of these plugins it&apos;s up to you to
-32:53
-maintain and modify them as needed let&apos;s
-32:55
-take a quick look at how to install one
-32:57
-of them and change its settings first
-32:59
-I&apos;ll browse to the plugin Docs and
-33:00
-github most have a little animated gif
-33:03
-that will give you a quick idea of what
-33:04
-the plug-in does this one is pretty
-33:06
-useful
-33:06
-it sets a field to a value when another
-33:09
-field actually it could be the same
-33:10
-field it&apos;s set to a value for this demo
-33:17
-though I&apos;m going to grab the date stamp
-33:19
-plug-in I&apos;ve got a little description of
-33:23
-its input parameters here that I can use
-33:25
-for reference cool so now all I have to
-33:28
-do is copy it from the examples folder
-33:29
-to the plugins folder that I specified
-33:32
-in the config file
-33:43
-now let&apos;s pop it open and take a look at
-33:45
-the arguments
-33:53
-okay it looks like by default plugging
-33:56
-the axe on shot entities when the status
-33:58
-field is set to Finn the SG final on
-34:01
-field is stamped with the current date
-34:02
-and time
-34:03
-converted Pacific time and it looks like
-34:06
-once the date is set it won&apos;t be
-34:08
-overwritten let&apos;s change this up a bit
-34:10
-I&apos;ll expand the trigger to work on
-34:12
-assets since they also have an SG status
-34:14
-field change the status we&apos;re looking
-34:16
-forward to omit and change the field to
-34:19
-USG amended on I&apos;m on the East Coast so
-34:21
-how do I get correct time zone syntax
-34:23
-for that I&apos;ll head back to the dock to
-34:26
-see if there&apos;s a clue there ah
-34:27
-it wants AP ytz time zone so if I google
-34:31
-a bit I can quickly track down what I&apos;m
-34:33
-after all set now let&apos;s try it out
-34:51
-hmm I&apos;m getting a key error related to
-34:53
-our authentication right I forgot to add
-34:56
-a script key for date stamped up py to
-34:58
-my shotgun site
-35:15
-all set let&apos;s try again oops looks like
-35:18
-our validator is saying omen isn&apos;t a
-35:19
-valid status I just need to change it to
-35:22
-om T now what it looks like I need to
-35:26
-add an S geo mettaton field to the shot
-35:28
-entity that&apos;s probably also true of the
-35:30
-asset entity so I&apos;ll add those fields
-35:32
-now
-35:44
-lucky those validators were there to
-35:46
-help fix my arguments great the plugin
-35:52
-loaded let&apos;s test it out on shots
-36:00
-and now assets
-36:04
-very cool you can see how flexible this
-36:07
-plugin is how the plug-in file could be
-36:09
-duplicated given a different name and
-36:11
-different arguments of course the same
-36:13
-is true of most of the plugins in the
-36:15
-examples folder although there are only
-36:17
-25 or so plugins here their arguments
-36:20
-could be configured to handle hundreds
-36:21
-or thousands of use cases of course
-36:24
-there are also a great reference for
-36:25
-building your own unique daemon plugins
-36:27
-from scratch</p>
+<p>Over the years employees at shotgun have built a variety of general use plug-ins for the shotgun event daemon.</p>
+<p>Many were donated to clients and have enjoyed a long life doing battle and productions at some of the largest studios in the world.</p>
+<p>That is to say many of the plugins in the example plugins directory here have been code reviewed battle tested and proven in production.</p>
+<p>And may be of use to you out of the box.</p>
+<p>I want to note however that they are not part of any shotgun product and should indeed be considered examples.</p>
+<p>We may not offer support related to them even if there are bugs.</p>
+<p>So if you use one or more of these plugins it&apos;s up to you to maintain and modify them as needed.</p>
+<p>Let&apos;s take a quick look at how to install one of them and change its settings.</p>
+<p>First I&apos;ll browse to the plugin Docs and github.</p>
+<p>Most have a little animated gif that will give you a quick idea of what the plug-in does.</p>
+<p>This one is pretty useful.</p>
+<p>It sets a field to a value when another field actually it could be the same field it&apos;s set to a value.</p>
+<p>For this demo though I&apos;m going to grab the date stamp plug-in.</p>
+<p>I&apos;ve got a little description of its input parameters here that I can use for reference.</p>
+<p>Cool.</p>
+<p>So now all I have to do is copy it from the examples folder to the plugins folder that I specified in the config file.</p>
+<p>Now let&apos;s pop it open and take a look at the arguments.</p>
+<p>Okay it looks like by default plugging the axe on shot entities.</p>
+<p>When the status field is set to Finn the SG final on field is stamped with the current date and time converted Pacific time.</p>
+<p>And it looks like once the date is set it won&apos;t be overwritten.</p>
+<p>Let&apos;s change this up a bit.</p>
+<p>I&apos;ll expand the trigger to work on assets since they also have an SG status field change the status we&apos;re looking forward to omit and change the field to USG amended on.</p>
+<p>I&apos;m on the East Coast.</p>
+<p>So how do I get correct time zone syntax for that.</p>
+<p>I&apos;ll head back to the dock to see if there&apos;s a clue there.</p>
+<p>Iit wants AP ytz time zone.</p>
+<p>So if I google a bit I can quickly track down what I&apos;m after.</p>
+<p>All set n</p>
+<p>ow let&apos;s try it out.</p>
+<p>Hmm. I&apos;m getting a key error related to our authentication.</p>
+<p>Right I forgot to add a script key for date stamped up py to my shotgun site.</p>
+<p>All set let&apos;s try again.</p>
+<p>Oops looks like our validator is saying omen isn&apos;t a valid status.</p>
+<p>I just need to change it to om T now what.</p>
+<p>It looks like I need to add an S geo mettaton field to the shot entity.</p>
+<p>That&apos;s probably also true of the asset entity so I&apos;ll add those fields now.</p>
+<p>Lucky those validators were there to help fix my arguments.</p>
+<p>Great the plugin loaded let&apos;s test it out on shots.</p>
+<p>And now assets.</p>
+<p>Very cool.</p>
+<p>You can see how flexible this.</p>
+<p>Plugin is how the plug-in file could be duplicated given a different name and different arguments.</p>
+<p>Of course the same is true of most of the plugins in the examples folder although  there are only 25 or so plugins here their arguments could be configured to handle hundreds or thousands of use cases.</p>
+<p>Of course there are also a great reference for building your own unique daemon  plugins from scratch.</p>
 
                                 
                                 </section>
@@ -977,7 +854,7 @@ from scratch</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10. 예시 플러그인","level":"1.5.10","depth":2,"next":{"title":"11. 설명서","level":"1.5.11","depth":2,"path":"posts/4_daemon/11_Documentation.md","ref":"posts/4_daemon/11_Documentation.md","articles":[]},"previous":{"title":"9. 이벤트 백로그 관리","level":"1.5.9","depth":2,"path":"posts/4_daemon/9_Managing_the_event_backlog.md","ref":"posts/4_daemon/9_Managing_the_event_backlog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/10_Example_plugins.md","mtime":"2018-11-19T08:58:32.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T21:53:14.074Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10. 예시 플러그인","level":"1.5.10","depth":2,"next":{"title":"11. 설명서","level":"1.5.11","depth":2,"path":"posts/4_daemon/11_Documentation.md","ref":"posts/4_daemon/11_Documentation.md","articles":[]},"previous":{"title":"9. 이벤트 백로그 관리","level":"1.5.9","depth":2,"path":"posts/4_daemon/9_Managing_the_event_backlog.md","ref":"posts/4_daemon/9_Managing_the_event_backlog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/10_Example_plugins.md","mtime":"2018-11-23T01:14:10.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T03:46:27.423Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

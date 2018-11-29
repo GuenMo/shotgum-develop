@@ -2,28 +2,17 @@
 
 [Installing and distributing Shotgun Desktop](https://youtu.be/5nRZ5GgcOnk?t=10m32s)
 
-A spreadsheet like this can help you decide if you should lock down a particular software package to a specific version instead of for example letting software auto update or letting your artists install software versions on their own.
 이와 같은 스프레드시트를 사용하면 특정 소프트웨어 패키지를 특정 버전으로 잠글지 여부를 결정할 수 있습니다. 예를 들어 소프트웨어 자동 업데이트를 허용하거나 사용자가 직접 소프트웨어 버전을 설치할 수 있습니다.
 
 ![Local Image](/img/5_toolkit/10.png)
 
-In the first column we've got DCC's like Maya nuke and Photoshop.
 첫 번째 칸에는 Maya Nuke와 Photoshop과 같은 DCC가 있습니다.
 
-Earlier I demonstrated how via software entities you can control which DCC version is launched on a per project basis.
 이전에 나는 소프트웨어 엔터티를 통해 프로젝트별로 실행되는 DCC 버전을 제어 할 수있는 방법을 보여주었습니다.
 
-That makes it very easy to quarantine old software versions to old projects and move to new software versions when new projects begin.
 따라서 이전 소프트웨어 버전을 이전 프로젝트로 격리하고 새 프로젝트가 시작되면 새 소프트웨어 버전으로 쉽게 이동할 수 있습니다.
 
-There's rarely security issues with old DCC versions.
 이전 DCC 버전에서는 보안 문제가 거의 없습니다.
-
-And if there are it's usually easy to patch them.
-그리고 만약 있다면, 보통 그것들을 패치하는 것은 쉽습니다.
-
-For these reasons it makes sense to lock down your DCC version numbers.
-이러한 이유로 DCC 버전 번호를 잠그는 것이 좋습니다.
 
 But what about the shotgun web app and for that matter what about web browsers shouldn't we chase that responsible adult feeling all the way to a happy place where nothing ever changes.
 하지만 샷건 웹 앱과 웹 브라우저는 어떻게 해야 할까요? 우리는 그 책임감 있는 어른의 느낌을 아무 변화도 없는 행복한 곳까지 추구해서는 안됩니다.
@@ -31,30 +20,20 @@ But what about the shotgun web app and for that matter what about web browsers s
 Yeah shouldn't we lock down our shotgun site and browsers to versions that we know play nice together.
 네, 샷건 사이트와 브라우저를 함께 잘 작동하는 버전으로 잠궈서는 안 됩니다.
 
-Well first I want to acknowledge that you can do that.
-우선 먼저 그 일을 할 수 있음을 인정하고 싶습니다.
-
 If you want to lock down the shotgun web app to a specific version all you have to do is email support.
 샷건 웹 응용 프로그램을 특정 버전으로 잠그려면 이메일 지원만 하면 됩니다.
 
-And you can lock down the browser version for all the artists in your studio by turning off auto updates and distributing specific versions of installers.
 또한 자동 업데이트를 끄고 특정 버전의 설치 프로그램을 배포하여 스튜디오에 있는 모든 아티스트의 브라우저 버전을 잠글 수 있습니다.
 
-Here's a product that helps you manage Chrome on Windows and here's some info on installing old Firefox versions.
 다음은 Windows에서 Chrome을 관리하는 데 도움이 되는 제품으로, 이전 Firefox 버전을 설치하는 방법에 대한 몇 가지 정보를 제공합니다.
 
 But before you dance off to that happy place let's take a look at some of the downsides.
 하지만 여러분이 그 행복한 곳으로 춤추기 전에 몇 가지 단점을 살펴봅시다.
 
-First there's really no good way to use different versions of a browser for different projects.
 먼저, 다른 프로젝트에 다른 버전의 브라우저를 사용하는 방법은 없습니다.
 
-That means there's no good time to upgrade browser versions.
 즉, 브라우저 버전을 업그레이드 할 여유가 없습니다.
 
-You could upgrade everyone in your studio at the end of project A but what if you're also in the middle of project B.
-
-Situations like that create what some of us call upgrade paralysis.
 프로젝트 A가 끝나면 스튜디오에 있는 모든 사람을 업그레이드할 수 있습니다. 하지만 프로젝트 B도 진행 중이라면 어떨까요?
 
 And studios can get stuck on antiquated software riddled with security and compatibility issues.
@@ -63,13 +42,8 @@ And studios can get stuck on antiquated software riddled with security and compa
 It's also a royal pain in the Kiester to reliably source old browser versions across OS platforms distribute them turn everyone's auto-updates off and stay on top of patches.
 또한 모든 OS 플랫폼에서 이전 브라우저 버전을 안정적으로 소스화하고 배포하여 모든 사용자의 자동 업데이트를 해제하고 패치 위에 유지하는 것은 Kiester의 큰 고민거리입니다.
 
-All of which honestly you won't be able to do.
-솔직히 말해서 넌 할 수 없을 거야
-
-There will always be some horrible internet security issue that the good folks working on Chrome and Firefox instantly distribute a patch for via Auto updates and you'll be scrambling to catch up.
 Chrome과 Firefox에서 일하는 좋은 사람들이 Auto 업데이트를 통해 패치를 즉시 배포하고, 당신은 따라잡기 위해 서두르는 몇 가지 끔찍한 인터넷 보안 문제가 항상 있을 것이다.
 
-So if it were me I'd avoid locking down the browser version unless there was a pretty compelling reason.
 그래서 만약 나였다면, 나는 브라우저 버전을 잠그는 것을 피할 것이다.
 
 Maybe you're only supporting Linux at a giant studio behind a firewall with super strict software policies and IT folks with extra time on their hands if that's the case then by all means do your thing.

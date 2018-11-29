@@ -1,12 +1,10 @@
-# 구성 인계받기
+# [구성 인계받기](https://youtu.be/5nRZ5GgcOnk?t=21m3s)
 
-[Taking over the config](https://youtu.be/5nRZ5GgcOnk?t=21m3s)
-
-So far we've been using the app store descriptor type to instruct chalk and desktop to download and load specific versions of TK config basic from the shotgun app store.
+So far we've been using the `app store descriptor` type to instruct chalk and desktop to download and load specific versions of TK config basic from the shotgun app store.
 지금까지 저희는 앱 스토어 설명자 유형을 사용하여 분필과 데스크톱이 산탄 애플리케이션 스토어에서 기본 TK 구성의 특정 버전을 다운로드하고 로드하도록 지시했습니다.
 
 Now the shotgun app store is actually just a shotgun site that we here at shotgun manage internally it's where we store the configs engines apps and frameworks that you as our clients.
-사실 산탄총 앱 스토어는 산탄총에서 내부적으로 관리하는 산탄총 사이트입니다. 고객으로서 구성 엔진 앱과 프레임워크를 저장하는 곳입니다.
+사실 샷건 앱 스토어는 샷건에서 내부적으로 관리하는 샷건 사이트입니다. 고객으로서 구성 엔진 앱과 프레임워크를 저장하는 곳입니다.
 
 But you can't upload anything to the App Store.
 하지만 앱스토어에 아무것도 업로드할 수 없습니다.

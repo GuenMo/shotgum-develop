@@ -513,7 +513,7 @@
                 <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
             
                     
-                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+                    3. Shotgun 데스크톱 설치 및 배포
             
                 </a>
             
@@ -526,7 +526,7 @@
                 <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
             
                     
-                    4. Shotgun 데스크톱 설치 및 배포
+                    4. 어떤 소프트웨어 버전을 잠가야 합니까?
             
                 </a>
             
@@ -767,20 +767,29 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="validation-&#xC720;&#xD6A8;&#xC131;-&#xD655;&#xC778;"><a href="https://youtu.be/YPZ1FWvhf7k?t=16m10s" target="_blank">Validation (&#xC720;&#xD6A8;&#xC131; &#xD655;&#xC778;)</a></h1>
-<p>Let&apos;s take a closer look at the event dictionary.
-&#xC774;&#xBCA4;&#xD2B8; &#xC0AC;&#xC804;&#xC744; &#xC880; &#xB354; &#xC790;&#xC138;&#xD788; &#xC0B4;&#xD3B4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
-<p>We&apos;ve got the field that the user changed.
-&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xBCC0;&#xACBD;&#xD55C; &#xD544;&#xB4DC;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>The event type when the event happened the entity and project.
-&#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; &#xACBD;&#xC6B0;&#xC758; &#xC774;&#xBCA4;&#xD2B8; &#xC720;&#xD615;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>The event is linked to some super useful albeit somewhat redundant metadata info the user responsible for the event a session UUID and the ID of the event log entry entity.
-&#xC774; &#xC774;&#xBCA4;&#xD2B8;&#xB294; &#xC138;&#xC158; UUID &#xBC0F; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9; &#xC5D4;&#xD2F0;&#xD2F0;&#xC758; ID&#xB97C; &#xB2F4;&#xB2F9;&#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB2E4;&#xC18C; &#xC911;&#xBCF5;&#xB418;&#xC9C0;&#xB9CC; &#xB9E4;&#xC6B0; &#xC720;&#xC6A9;&#xD55C; &#xBA54;&#xD0C0;&#xB370;&#xC774;&#xD130; &#xC815;&#xBCF4;&#xC5D0; &#xC5F0;&#xACB0;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>Pretty much everything we could possibly want to know about event.
-&#xC6B0;&#xB9AC;&#xAC00; &#xC0AC;&#xAC74;&#xC5D0; &#xB300;&#xD574; &#xC54C;&#xACE0; &#xC2F6;&#xC5B4;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC70;&#xC758; &#xBAA8;&#xB4E0; &#xAC83;.</p>
-<p>But there is one bit of missing info.
-&#xD558;&#xC9C0;&#xB9CC; &#xD55C; &#xAC00;&#xC9C0; &#xBD80;&#xC871;&#xD55C; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>The <code>EventLogEntity</code> description which we can pull down easily enough by querying the event.
-&#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xC5D4;&#xD2F0;&#xD2F0; &#xC124;&#xBA85;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; &#xC0AC;&#xC804;&#xC744; &#xC880; &#xB354; &#xC790;&#xC138;&#xD788; &#xC0B4;&#xD3B4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-string">&apos;attribute_name&apos;</span>: <span class="hljs-string">&apos;sg_status_list&apos;</span>
+<span class="hljs-string">&apos;created_at&apos;</span>: datetime.datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">6</span>, <span class="hljs-number">35</span>, <span class="hljs-number">23</span>)
+<span class="hljs-string">&apos;entity&apos;</span>: {<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-number">3302</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;test_asset&apos;</span>, <span class="hljs-string">&apos;type&apos;</span>: <span class="hljs-string">&apos;Asset&apos;</span>}
+<span class="hljs-string">&apos;event_type&apos;</span>: <span class="hljs-string">&apos;Shotgun_Asset_Change&apos;</span>
+<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-number">2461595</span>
+<span class="hljs-string">&apos;meta&apos;</span>: {<span class="hljs-string">&apos;attribute_name&apos;</span>: <span class="hljs-string">&apos;sg_status_list&apos;</span>,
+            <span class="hljs-string">&apos;entity_id&apos;</span>: <span class="hljs-number">3302</span>,
+            <span class="hljs-string">&apos;entity_type&apos;</span>: <span class="hljs-string">&apos;Asset&apos;</span>,
+            <span class="hljs-string">&apos;field_data_type&apos;</span>: <span class="hljs-string">&apos;status_list&apos;</span>,
+            <span class="hljs-string">&apos;new_value&apos;</span>: <span class="hljs-string">&apos;wtg&apos;</span>,
+            <span class="hljs-string">&apos;old_value&apos;</span>: <span class="hljs-string">&apos;ip&apos;</span>,
+            <span class="hljs-string">&apos;type&apos;</span>: <span class="hljs-string">&apos;attribute_change&apos;</span>},
+<span class="hljs-string">&apos;project&apos;</span>: {<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-number">336</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Project X&apos;</span>, <span class="hljs-string">&apos;type&apos;</span>: <span class="hljs-string">&apos;Project&apos;</span>},
+<span class="hljs-string">&apos;session_uuid&apos;</span>: <span class="hljs-string">&apos;0b672a96-ee9e-11e8-b79d-0242ac110004&apos;</span>,
+<span class="hljs-string">&apos;type&apos;</span>: <span class="hljs-string">&apos;EventLogEntry&apos;</span>,
+<span class="hljs-string">&apos;user&apos;</span>: {<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-number">169</span>,
+         <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;\xea\xb9\x80 \xea\xb7\xbc\xeb\xaa\xa8&apos;</span>,
+         <span class="hljs-string">&apos;type&apos;</span>: <span class="hljs-string">&apos;HumanUser&apos;</span>},
+</code></pre>
+<p>&#xC6B0;&#xB9AC;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; &#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xB300;&#xD574; &#xC54C;&#xACE0; &#xC2F6;&#xC5B4;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC70;&#xC758; &#xBAA8;&#xB4E0; &#xAC83;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xD55C; &#xAC00;&#xC9C0; &#xBD80;&#xC871;&#xD55C; &#xC815;&#xBCF4;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xC5D4;&#xD2F0;&#xD2F0; &#xC124;&#xBA85;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python">sg_event = sg.fine_one(
         <span class="hljs-string">&quot;EventLogEntry&quot;</span>,
         [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, event[<span class="hljs-string">&quot;id&quot;</span>]]],
@@ -788,47 +797,28 @@
     )
 </code></pre>
 <p>There&apos;s an added bonus to doing that.
-&#xADF8;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xBCF4;&#xB108;&#xC2A4;&#xAC00; &#xB354; &#xC0DD;&#xAE34;&#xB2E4;.</p>
+&#xADF8;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xBCF4;&#xB108;&#xC2A4;&#xAC00; <code>EventLogEntry</code>&#xC758; <code>description</code> &#xD544;&#xB4DC; &#xAC12;&#xC744; &#xC5BB;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>We can verify that the <code>EventLogEntry</code> entity still exists in shotgun and not just in the daemon&apos;s cached event backlog.
 <code>EventLogEntry</code> &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xB370;&#xBAAC;&#xC758; &#xCE90;&#xC2DC;&#xB41C; &#xC774;&#xBCA4;&#xD2B8; &#xBC31;&#xB85C;&#xADF8;&#xC5D0;&#xC11C;  &#xC874;&#xC7AC; &#xD558;&#xB294;&#xC9C0; &#xC544;&#xB2CC;&#xC9C0; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>So I&apos;ll do that here and bail if the event doesn&apos;t exist in shotgun.
-&#xADF8;&#xB798;&#xC11C; &#xB9CC;&#xC57D; &#xADF8; &#xC0AC;&#xAC74;&#xC774; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74; &#xB098;&#xB294; &#xC5EC;&#xAE30;&#xC11C; &#xBCF4;&#xC11D;&#xC73C;&#xB85C; &#xD480;&#xB824;&#xB0A0; &#xAC83;&#xC774;&#xB2E4;.</p>
+<p>&#xB9CC;&#xC57D; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74; &#xB098;&#xB294; &#xC5EC;&#xAE30;&#xC11C; &#xC791;&#xC5C5;&#xC744; &#xC911;&#xC9C0; &#xD569;&#xB2C8;&#xB2E4;(return).</p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sg_event:
     logger.warning(<span class="hljs-string">&quot;Could not find event with id {}, skipping&quot;</span>.format(envet_id))
     <span class="hljs-keyword">return</span>
 </code></pre>
-<p>But how would that happen.
-&#xD558;&#xC9C0;&#xB9CC; &#xC5B4;&#xB5BB;&#xAC8C; &#xADF8;&#xB7F0; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB0A0;&#xAE4C;&#xC694;.</p>
-<p>Shouldn&apos;t the event log entry always exist?
-&#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC774; &#xD56D;&#xC0C1; &#xC874;&#xC7AC;&#xD574;&#xC57C; &#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xAE4C;?</p>
-<p>Well the event may not exist in shotgun in rare cases.
-&#xC74C;, &#xADF8; &#xC0AC;&#xAC74;&#xC740; &#xB4DC;&#xBB38; &#xACBD;&#xC6B0;&#xC5D0; &#xC0B0;&#xD0C4;&#xCD1D;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>If the site is restored from a backup for example or if an admin goes out of their way its blow away event log entry entity records.
-&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xBC31;&#xC5C5;&#xBCF8;&#xC774; &#xBCF5;&#xC6D0;&#xB418;&#xAC70;&#xB098; &#xAD00;&#xB9AC;&#xC790;&#xAC00; &#xC0AD;&#xC81C; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xAE30;&#xB85D;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>What I&apos;m doing here might seem overly cautious to you.
-&#xB0B4;&#xAC00; &#xC5EC;&#xAE30;&#xC11C; &#xD558;&#xB294; &#xC77C;&#xC740; &#xB108;&#xC5D0;&#xAC8C; &#xC9C0;&#xB098;&#xCE58;&#xAC8C; &#xC2E0;&#xC911;&#xD55C; &#xAC83; &#xAC19;&#xB2E4;.</p>
-<p>But since the daemon literally scans for everything that happens in shotgun every day forever into the future.
-&#xD558;&#xC9C0;&#xB9CC; &#xB370;&#xBAAC;&#xC740; &#xBB38;&#xC790; &#xADF8;&#xB300;&#xB85C; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xBAA8;&#xB4E0; &#xC77C;&#xC744; &#xC55E;&#xC73C;&#xB85C; &#xC601;&#xC6D0;&#xD788; &#xC2A4;&#xCE94;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>It does a pretty good job of running into any and every bad Apple edge case.
-&#xC560;&#xD50C;&#xC0AC;&#xC758; &#xBAA8;&#xB4E0; &#xB098;&#xC05C; &#xC0C1;&#xD669;&#xC5D0; &#xB9DE;&#xC11C;&#xB294; &#xAC83;&#xC740; &#xAF64; &#xC798;&#xD55C; &#xC77C;&#xC774;&#xB2E4;.</p>
-<p>So we should try to account for them.
-&#xADF8;&#xB798;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xADF8;&#xB4E4;&#xC744; &#xC124;&#xBA85;&#xD558;&#xB824;&#xACE0; &#xB178;&#xB825;&#xD574;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xC5B4;&#xB5BB;&#xAC8C; &#xADF8;&#xB7F0; &#xC77C;&#xC774; &#xC77C;&#xC5B4;&#xB0A0;&#xAE4C;&#xC694;?.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9;&#xC774; &#xD56D;&#xC0C1; &#xC874;&#xC7AC;&#xD574;&#xC57C; &#xD558;&#xC9C0; &#xC54A;&#xC744;&#xAE4C;&#xC694;?</p>
+<p>&#xC74C;, &#xADF8; &#xC0AC;&#xAC74;&#xC740; &#xB4DC;&#xBB38; &#xACBD;&#xC6B0;&#xC5D0; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xBC31;&#xC5C5;&#xBCF8;&#xC774; &#xBCF5;&#xC6D0;&#xB418;&#xAC70;&#xB098; &#xAD00;&#xB9AC;&#xC790;&#xAC00; &#xC0AD;&#xC81C; &#xC774;&#xBCA4;&#xD2B8; &#xB85C;&#xADF8; &#xD56D;&#xBAA9; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xAE30;&#xB85D;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB108;&#xBB34; &#xC2E0;&#xC911;&#xD558;&#xB2E4;&#xACE0; &#xC0DD;&#xAC01; &#xD560;&#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xB370;&#xBAAC;&#xC740; &#xBB38;&#xC790; &#xADF8;&#xB300;&#xB85C; &#xC0F7;&#xAC74;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xBAA8;&#xB4E0; &#xC77C;&#xC744; &#xC601;&#xC6D0;&#xD788; &#xC2A4;&#xCE94;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB798;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xC774;&#xB7F0; &#xC0C1;&#xD669;&#xB3C4; &#xC900;&#xBE44;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>You might want to think of this extra layer of paranoia as the first rule of event club.
 &#xC774;&#xBCA4;&#xD2B8; &#xD074;&#xB7FD;&#xC758; &#xCCAB; &#xBC88;&#xC9F8; &#xADDC;&#xCE59;&#xC73C;&#xB85C; &#xD3B8;&#xC9D1;&#xC99D;&#xC758; &#xCD94;&#xAC00; &#xB808;&#xC774;&#xC5B4;&#xB97C; &#xC0DD;&#xAC01;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>Don&apos;t take anything for granted.
-&#xB2F9;&#xC5F0;&#xD558;&#xAC8C; &#xC5EC;&#xACA8;&#xC11C;&#xB294; &#xC548;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>Just because the event dictionary came back nice and clean when we tested the name in earlier that doesn&apos;t mean and will come back clean each and every time the daemon processes an event.
-&#xC774;&#xBCA4;&#xD2B8; &#xC0AC;&#xC804;&#xC774; &#xD6CC;&#xB96D;&#xD558;&#xACE0; &#xAE68;&#xB057;&#xD574; &#xC84C;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774;&#xC804;&#xC5D0; &#xC774;&#xB984;&#xC744; &#xD14C;&#xC2A4;&#xD2B8;&#xD588;&#xC744; &#xB54C; &#xB370;&#xBAAC;&#xC774; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xCC98;&#xB9AC; &#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xD56D;&#xC0C1; &#xAE68;&#xB057;&#xD558;&#xAC8C; &#xB3CC;&#xC544;&#xC62C; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>Thousands, hundreds of thousands and potentially millions of events are processed monthly.
-&#xC218;&#xCC9C;, &#xC218;&#xB9CC; &#xAC74;&#xC758; &#xC774;&#xBCA4;&#xD2B8;&#xB4E4;&#xC774; &#xB9E4;&#xB2EC; &#xCC98;&#xB9AC;&#xB41C;&#xB2E4;.</p>
-<p>Fan can hit the paddle without a creak.
-&#xD32C;&#xC740; &#xC090;&#xAC71;&#xAC70;&#xB9AC;&#xC9C0; &#xC54A;&#xACE0; &#xB178;&#xB97C; &#xCE60; &#xC218; &#xC788;&#xB2E4;.</p>
-<p>In the spirit of event club you can see that I&apos;ve used at the dictionary <code>get</code> method to query for event keys in case they&apos;re missing.
-&#xC774;&#xBCA4;&#xD2B8; &#xD074;&#xB7FD;&#xC758; &#xC815;&#xC2E0;&#xC5D0;&#xC11C; &#xC5EC;&#xB7EC;&#xBD84;&#xC740; &#xC81C;&#xAC00; &quot;Dictionary Get&quot; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC774;&#xBCA4;&#xD2B8; &#xD0A4;&#xB97C; &#xCFFC;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>And I&apos;ve also made sure that if event ID ends up being none that there will be no repercussions in the code.
-&#xB610;&#xD55C; &#xC774;&#xBCA4;&#xD2B8; ID&#xAC00; <code>None</code>&#xC774;&#xB77C;&#xB3C4; &#xCF54;&#xB4DC;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE58;&#xC9C0; &#xC54A;&#xC744; &#xAC83;&#xC774;&#xB77C;&#xACE0; &#xD655;&#xC2E0;&#xD569;&#xB2C8;&#xB2E4;. &#xC2E4;&#xC885;&#xB418;&#xC5C8;&#xC744; &#xACBD;&#xC6B0;&#xB97C; &#xB300;&#xBE44;&#xD574;&#xC11C;&#xC694;</p>
+<p>&#xC218;&#xCC9C;, &#xC218;&#xB9CC; &#xAC74;&#xC758; &#xC774;&#xBCA4;&#xD2B8;&#xB4E4;&#xC774; &#xB9E4;&#xB2EC; &#xCC98;&#xB9AC;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; &#xD074;&#xB7FD;&#xC758; &#xC815;&#xC2E0;&#xC5D0;&#xC11C; &#xC5EC;&#xB7EC;&#xBD84;&#xC740; &#xC81C;&#xAC00; &quot;Dictionary Get&quot; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC774;&#xBCA4;&#xD2B8; &#xD0A4;&#xB97C; &#xCFFC;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xBCA4;&#xD2B8; ID&#xAC12;&#xC744; &#xAC00;&#xC838;&#xC62C;&#xB54C; &#xD0A4;&#xAC12;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xACE0; <code>get</code>&#xC744; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xAC12;&#xC774; &#xC5C6;&#xC744; &#xACBD;&#xC5B4; &#xC5D0;&#xB7EC;&#xAC00; &#xC544;&#xB2C8;&#xB77C; <code>None</code> &#xAC12;&#xC744; &#xBC18;&#xD658; &#xD558;&#xAE30; &#xB54C;&#xBB38; &#xC785;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python">event_id = event.get(<span class="hljs-string">&quot;id&quot;</span>)
-sg_event = sg.fine_one(
+sg_event = sg.find_one(
     <span class="hljs-string">&quot;EventLogEntry&quot;</span>,
     [[<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, event_id]],
     [<span class="hljs-string">&quot;description&quot;</span>]
@@ -840,20 +830,11 @@ sg_event = sg.fine_one(
 
 logger.info(<span class="hljs-string">&quot;Running this plugin because {}&quot;</span>.format(sg_event[<span class="hljs-string">&quot;description&quot;</span>]))
 </code></pre>
-<p>For example here if the ID is none the API will simply return none and in that case if the SG event variable ends up being none then we bail.
-&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC5EC;&#xAE30;&#xC11C; <code>event_id</code>&#xAC00; none&#xC774;&#xBA74; <code>sg_event</code>&#xB294; none&#xC744; &#xBC18;&#xD658;&#xD558;&#xACE0;, <code>sg_event</code> &#xBCC0;&#xC218;&#xAC00; none&#xC774; &#xB418;&#xBA74; &#xC9C4;&#xD589;&#xC740; &#xBA48;&#xCDA5;&#xB2C8;&#xB2E4;.</p>
-<p>Any ideas about other info and the event dictionary we should be paranoid about?
-&#xC6B0;&#xB9AC;&#xAC00; &#xD3B8;&#xC9D1;&#xC99D;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xAC01;&#xD574;&#xC57C; &#xD560; &#xB2E4;&#xB978; &#xC815;&#xBCF4;&#xC640; &#xC0AC;&#xAC74; &#xC0AC;&#xC804;&#xC5D0; &#xB300;&#xD55C; &#xC0DD;&#xAC01;&#xC740; &#xC5C6;&#xB098;&#xC694;?</p>
-<p>Let&apos;s go down the list.
-&#xBAA9;&#xB85D;&#xC744; &#xC0B4;&#xD3B4; &#xBD05;&#xC2DC;&#xB2E4;.</p>
-<p>First are we sure all the keys were expecting exist.
-&#xCCAB;&#xC9F8;, &#xBAA8;&#xB4E0; &#xD0A4;&#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xACE0; &#xD655;&#xC2E0;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>Let&apos;s check anything we might use.
-&#xC6B0;&#xB9AC;&#xAC00; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC83;&#xC740; &#xBAA8;&#xB450; &#xD655;&#xC778;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
-<p>And make some convenient variables while we&apos;re at it.
-&#xC6B0;&#xB9AC;&#xAC00; &#xD558;&#xB294; &#xB3D9;&#xC548; &#xD3B8;&#xB9AC;&#xD55C; &#xBCC0;&#xC218;&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
-<p>Okay those are bits of data I want to use. If any of them come back as none we bail.
-&#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xB4E4;&#xC740; &#xC81C;&#xAC00; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xB4E4;&#xC911; <code>None</code>&#xC774; &#xC788;&#xC73C;&#xBA74; &#xC9C4;&#xD589;&#xC740; &#xBA48;&#xCDA5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC5EC;&#xAE30;&#xC11C; <code>event_id</code>&#xAC00; none&#xC774;&#xBA74; <code>sg_event</code>&#xB294; none&#xC744; &#xBC18;&#xD658;&#xD558;&#xACE0;, <code>sg_event</code> &#xBCC0;&#xC218;&#xAC00; none&#xC774; &#xB418;&#xBA74; &#xC9C4;&#xD589;&#xC740; &#xBA48;&#xCDA5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC6B0;&#xB9AC;&#xAC00; &#xD3B8;&#xC9D1;&#xC99D;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xAC01;&#xD574;&#xC57C; &#xD560; &#xB2E4;&#xB978; &#xC815;&#xBCF4;&#xC640; &#xC0AC;&#xAC74; &#xC0AC;&#xC804;&#xC5D0; &#xB300;&#xD55C; &#xC0DD;&#xAC01;&#xC740; &#xC5C6;&#xB098;&#xC694;?</p>
+<p>&#xBAA9;&#xB85D;&#xC744; &#xC0B4;&#xD3B4; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>&#xCCAB;&#xC9F8;, &#xBAA8;&#xB4E0; &#xD0A4;&#xAC00; &#xC874;&#xC7AC; &#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xD3B8;&#xB9AC;&#xD55C; &#xBCC0;&#xC218;&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xB4E4;&#xC740; &#xC81C;&#xAC00; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xB4E4;&#xC911; <code>None</code>&#xC774; &#xC788;&#xC73C;&#xBA74; &#xC9C4;&#xD589;&#xC740; &#xBA48;&#xCDA5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python">event_id = event.get(<span class="hljs-string">&quot;id&quot;</span>)
 field_name = event.get(<span class="hljs-string">&quot;attribute_name&quot;</span>)
 entity = event.get(<span class="hljs-string">&quot;entity&quot;</span>)
@@ -865,14 +846,8 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
     logger.warning(<span class="hljs-string">&quot;Missing info in event dictionary, skipping.&quot;</span>)
     <span class="hljs-keyword">return</span>
 </code></pre>
-<p>Next are we sure the <code>sg_status_list</code> field is still in the asset schema.
-&#xB2E4;&#xC74C;&#xC73C;&#xB85C; SG &#xC0C1;&#xD0DC; &#xBAA9;&#xB85D; &#xD544;&#xB4DC;&#xAC00; &#xC5EC;&#xC804;&#xD788; &#xC790;&#xC0B0; &#xC2A4;&#xD0A4;&#xB9C8;&#xC5D0; &#xC788;&#xC74C;&#xC744; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>Surely I&apos;m joking. Right? Yes.
-&#xBB3C;&#xB860; &#xB18D;&#xB2F4;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC8E0;? &#xB9DE;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>That&apos;s a pretty extreme example of paranoia.
-&#xADF8;&#xAC83;&#xC740; &#xD3B8;&#xC9D1;&#xC99D;&#xC758; &#xB9E4;&#xC6B0; &#xADF9;&#xB2E8;&#xC801;&#xC778; &#xC608;&#xC774;&#xB2E4;.</p>
-<p>But all added in a check. Anyway for kicks.
-&#xADF8;&#xB807;&#xC9C0;&#xB9CC; &#xBAA8;&#xB450; &#xCCB5;&#xD06C;&#xB9AC;&#xD2B8;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xC138;&#xC694;.</p>
+<p>&#xB2E4;&#xC74C;&#xC73C;&#xB85C; <code>sg_status_list</code> &#xD544;&#xB4DC;&#xAC00; &#xC5D0;&#xC14B; &#xC2A4;&#xD0A4;&#xB9C8;&#xC5D0; &#xC788;&#xC74C;&#xC744; &#xD655;&#xC778; &#xD558;&#xB294;&#xAC83; &#xC785;&#xB2C8;&#xB2E4;..</p>
+<p>&#xADF8;&#xAC83;&#xC740; &#xD3B8;&#xC9D1;&#xC99D;&#xC758; &#xB9E4;&#xC6B0; &#xADF9;&#xB2E8;&#xC801;&#xC778; &#xC608;&#xC774;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0;&#xB9CC; &#xBAA8;&#xB450; &#xCCB5;&#xD06C;&#xB9AC;&#xD2B8;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xC138;&#xC694;.</p>
 <p>The schema check can be especially useful if your plugin acts on a custom field across multiple entities.
 &#xC2A4;&#xD0A4;&#xB9C8; &#xAC80;&#xC0AC;&#xB294; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC5EC;&#xB7EC; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xC790; &#xC9C0;&#xC815; &#xD544;&#xB4DC;&#xC5D0;&#xC11C; &#xC791;&#xB3D9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0; &#xD2B9;&#xD788; &#xC720;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>It&apos;s quite possible an issue with the schema will crop up.
@@ -905,18 +880,13 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
     )
     <span class="hljs-keyword">return</span>
 </code></pre>
-<p>Cool.</p>
-<p>Next are we sure our entity still exists.
-&#xB2E4;&#xC74C;&#xC740; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xD655;&#xC778; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>It may have been trashed.
-&#xADF8;&#xAC83;&#xC740; &#xD3D0;&#xAE30;&#xB418;&#xC5C8;&#xC744;&#xC9C0;&#xB3C4; &#xBAA8;&#xB978;&#xB2E4;.</p>
-<p>So let&apos;s query that again and bail if it&apos;s missing.
-&#xADF8;&#xB7EC;&#xB2C8; &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xBB3C;&#xC5B4;&#xBCF4;&#xACE0; &#xB9CC;&#xC57D; &#xC5C6;&#xB2E4;&#xBA74; &#xC885;&#xB8CC; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>We could also check whether or not it&apos;s been moved to a different project if that matters.
-&#xB9CC;&#xC57D; &#xADF8;&#xAC83;&#xC774; &#xC911;&#xC694;&#xD558;&#xB2E4;&#xBA74; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB85C; &#xC62E;&#xACA8;&#xC84C;&#xB294;&#xC9C0;&#xB3C4; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>But I&apos;ll skip that one got to draw the line somewhere.
-&#xD558;&#xC9C0;&#xB9CC; &#xC5B4;&#xB514;&#xC120;&#xAC00; &#xC120;&#xC744; &#xADF8;&#xC5B4;&#xC57C; &#xD560; &#xC0AC;&#xB78C;&#xC740; &#xAC74;&#xB108;&#xB6F0;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-python"><span class="hljs-comment"># Bail if our entity doesn&apos;t exist.</span>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC5D4;&#xD2F0;&#xD2F0;&#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xD655;&#xC778; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xAC83;&#xC740; &#xD3D0;&#xAE30;&#xB418;&#xC5C8;&#xC744;&#xC9C0;&#xB3C4; &#xBAA8;&#xB978;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7EC;&#xB2C8; &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xBB3C;&#xC5B4;&#xBCF4;&#xACE0; &#xB9CC;&#xC57D; &#xC5C6;&#xB2E4;&#xBA74; &#xC885;&#xB8CC; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Re-query our entity for updated filed values.</span>
+entity = sg.find_one(entity[<span class="hljs-string">&quot;type&quot;</span>], entity[<span class="hljs-string">&quot;id&quot;</span>], [field_name])
+
+<span class="hljs-comment"># Bail if our entity doesn&apos;t exist.</span>
 <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> entity:
     logger.warning(
         <span class="hljs-string">&quot;{} with id {} does not exits, skipping.&quot;</span>.format(
@@ -926,20 +896,15 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
     )
     <span class="hljs-keyword">return</span>
 </code></pre>
-<p>Next what about the current value of the attribute for example this events metadata tells us that the status field was changed from ready to waiting.
-&#xB2E4;&#xC74C;&#xC73C;&#xB85C;, &#xC774; &#xC774;&#xBCA4;&#xD2B8; &#xBA54;&#xD0C0;&#xB370;&#xC774;&#xD130;&#xC640; &#xAC19;&#xC740; &#xC18D;&#xC131;&#xC758; &#xD604;&#xC7AC; &#xAC12;&#xC740; &#xC5B4;&#xB5BB;&#xAC8C; &#xB429;&#xB2C8;&#xAE4C;? &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xC900;&#xBE44; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xC74C;&#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
-<p>But that happened at a specific time in the past and things may have changed since then seconds minutes or even hours can pass if a backlog of events builds up.
-&#xD558;&#xC9C0;&#xB9CC; &#xADF8;&#xAC83;&#xC740; &#xACFC;&#xAC70;&#xC5D0; &#xD2B9;&#xC815;&#xD55C; &#xC2DC;&#xAC04;&#xC5D0; &#xC77C;&#xC5B4;&#xB0AC;&#xACE0; &#xADF8; &#xC774;&#xD6C4;&#xB85C; &#xC0C1;&#xD669;&#xC774; &#xBC14;&#xB00C;&#xC5C8;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xACE0; &#xC2EC;&#xC9C0;&#xC5B4; &#xC0AC;&#xAC74;&#xC758; &#xC794;&#xACE0;&#xAC00; &#xC313;&#xC774;&#xBA74; &#xBA87; &#xCD08;&#xAC00; &#xC9C0;&#xB098;&#xAC70;&#xB098; &#xC2EC;&#xC9C0;&#xC5B4; &#xBA87; &#xC2DC;&#xAC04;&#xC774; &#xC9C0;&#xB098;&#xB3C4; &#xBC14;&#xB014; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
-<p>Remember the daemon processes events sequentially.
-&#xB370;&#xBAAC;&#xC740; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xC21C;&#xCC28;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC73C;&#xB85C;, &#xC774;&#xBCA4;&#xD2B8; &#xBA54;&#xD0C0;&#xB370;&#xC774;&#xD130; &#xC548;&#xC5D0; &#xC18D;&#xC131;&#xC758; &#xAC12;&#xC740; &#xC5B4;&#xB5BB;&#xAC8C; &#xB429;&#xB2C8;&#xAE4C;? &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xC900;&#xBE44; &#xC0C1;&#xD0DC;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xC74C;&#xC744; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xADF8;&#xAC83;&#xC740; &#xACFC;&#xAC70;&#xC5D0; &#xD2B9;&#xC815;&#xD55C; &#xC2DC;&#xAC04;&#xC5D0; &#xC77C;&#xC5B4;&#xB0AC;&#xACE0; &#xADF8; &#xC774;&#xD6C4;&#xB85C; &#xC0C1;&#xD669;&#xC774; &#xBC14;&#xB00C;&#xC5C8;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xACE0; &#xC2EC;&#xC9C0;&#xC5B4; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xB9CE;&#xC774; &#xC313;&#xC774;&#xBA74; &#xBA87; &#xCD08;&#xAC00; &#xC9C0;&#xB098;&#xAC70;&#xB098; &#xC2EC;&#xC9C0;&#xC5B4; &#xBA87; &#xC2DC;&#xAC04;&#xC774; &#xC9C0;&#xB098;&#xB3C4; &#xBC14;&#xB014; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<p>&#xB370;&#xBAAC;&#xC740; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xC21C;&#xCC28;&#xC801;&#xC73C;&#xB85C; &#xCC98;&#xB9AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>And if the daemon was accidentally shut down we could be talking days.
 &#xADF8;&#xB9AC;&#xACE0; &#xB9CC;&#xC57D; &#xB370;&#xBAAC;&#xC774; &#xC2E4;&#xC218;&#xB85C; &#xC167;&#xB2E4;&#xC6B4;&#xB418;&#xC5C8;&#xB2E4;&#xBA74; &#xC6B0;&#xB9AC;&#xB294; &#xBA70;&#xCE60; &#xB3D9;&#xC548; &#xC774;&#xC57C;&#xAE30;&#xB97C; &#xD558;&#xACE0; &#xC788;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>In any of those cases the value of the status field might not be waiting anymore.
-&#xC774;&#xB7EC;&#xD55C; &#xACBD;&#xC6B0; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xC758; &#xAC12;&#xC774; &#xB354; &#xC774;&#xC0C1; &#xB300;&#xAE30; &#xC911;&#xC774; &#xC544;&#xB2D0; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xB7EC;&#xD55C; &#xACBD;&#xC6B0; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xC758; &#xAC12;&#xC774; &#xB354; &#xC774;&#xC0C1; &#xB300;&#xAE30; &#xC911;&#xC774; &#xC544;&#xB2D0; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>So our code should not assume it is and we should require a shotgun and verify any info we plan to act on.
 &#xADF8;&#xB7EC;&#xBBC0;&#xB85C; &#xC6B0;&#xB9AC;&#xC758; &#xCF54;&#xB4DC;&#xB294; &#xADF8;&#xAC83;&#xC744; &#xAC00;&#xC815;&#xD574;&#xC11C;&#xB294; &#xC548; &#xB418;&#xBA70; &#xC6B0;&#xB9AC;&#xB294; &#xC0F7;&#xAC74;&#xC744; &#xD544;&#xC694;&#xB85C; &#xD558;&#xACE0; &#xC6B0;&#xB9AC;&#xAC00; &#xD589;&#xB3D9;&#xD558;&#xB824;&#xB294; &#xC5B4;&#xB5A4; &#xC815;&#xBCF4;&#xB77C;&#xB3C4; &#xD655;&#xC778;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
-<p>So I&apos;ll add a check for that here.
-&#xCCB5;&#xD06C; &#xAE30;&#xB2A5;&#xC744; &#xCD94;&#xAC00; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCCB5;&#xD06C; &#xAE30;&#xB2A5;&#xC744; &#xCD94;&#xAC00; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-python"><span class="hljs-comment"># Bail if our entity&apos;s field value has changed (is not new_value).</span>
 <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> entity[field_name] == new_value:
     logger.warning(
@@ -957,12 +922,9 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
     logger.debug(<span class="hljs-string">&quot;new_value is not {}, skipping.&quot;</span>.format(args[<span class="hljs-string">&quot;target_status&quot;</span>]))
     <span class="hljs-keyword">return</span>
 </code></pre>
-<p>Okay. I&apos;m starting to feel a little better.
-&#xC88B;&#xC544;, &#xC880; &#xB098;&#xC544;&#xC9C0;&#xAE30; &#xC2DC;&#xC791;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>We&apos;ve built a little paranoid rampart to protect us from the uncouth maelstrom of events boiling in our shotgun sights database.
-&#xC6B0;&#xB9AC;&#xB294; &#xC6B0;&#xB9AC;&#xB97C; &#xBCF4;&#xD638;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD3B8;&#xC9D1;&#xC99D;&#xC801;&#xC778; &#xACBD;&#xC801;&#xC744; &#xB9CC;&#xB4E4;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xC6B0;&#xB9AC;&#xB97C; &#xBCF4;&#xD638;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD3B8;&#xC9D1;&#xC99D;&#xC801;&#xC778; &#xAC80;&#xC0AC; &#xCF54;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>Might as well clean up our original call to update the assets description field.
-<code>assets description field</code>&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC6D0;&#xB798; &#xD638;&#xCD9C;&#xB97C; &#xC815;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+&#xC5D0;&#xC14B;&#xC758; <code>description</code> &#xD544;&#xB4DC; &#xC5D0; &#xB0B4;&#xC6A9;&#xC774; &#xC5C6;&#xC744; &#xB54C;&#xB9CC; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD558;&#xAC8C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;. </p>
 <pre><code class="lang-python"><span class="hljs-comment"># Add a description if our entity&apos;s new_value is &quot;hld&quot; and description is None.</span>
 <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> entity[<span class="hljs-string">&quot;description&quot;</span>]:
     <span class="hljs-keyword">if</span> event[<span class="hljs-string">&quot;meta&quot;</span>][<span class="hljs-string">&quot;new_value&quot;</span>] == args[<span class="hljs-string">&quot;target_status&quot;</span>]:
@@ -978,48 +940,17 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
             )}
         )
 </code></pre>
-<p>I&apos;ll point out a couple strategies in the code here before we move on.
-&#xC774; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xBA87; &#xAC00;&#xC9C0; &#xC804;&#xB7B5;&#xC744; &#xC9DA;&#xACE0; &#xB118;&#xC5B4;&#xAC00;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xBA87; &#xAC00;&#xC9C0; &#xC804;&#xB7B5;&#xC744; &#xC9DA;&#xACE0; &#xB118;&#xC5B4;&#xAC00;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>You will remember my copious use of the get method up here to avoid key errors.
 &#xB2F9;&#xC2E0;&#xC740; &#xB0B4;&#xAC00; &#xD575;&#xC2EC; &#xC624;&#xB958;&#xB97C; &#xD53C;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC5EC;&#xAE30;&#xC11C; &#xC5BB;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD55C; &#xAC83;&#xC744; &#xAE30;&#xC5B5;&#xD560; &#xAC83;&#xC774;&#xB2E4;.</p>
-<p>Take a look at the way we used it with <code>new_value</code>.
-<code>new_value</code>&#xC640; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD55C; &#xBC29;&#xC2DD;&#xC744; &#xC0B4;&#xD3B4;&#xBCF4;&#xC2ED;&#xC2DC;&#xC624;.</p>
-<p>If you&apos;re going after nested keys remember to default the parent keys to an empty dictionary or you&apos;ll get an attribute error.
-&#xC911;&#xCCA9;&#xB41C; &#xD0A4;&#xB97C; &#xCC3E;&#xB294; &#xACBD;&#xC6B0; &#xC0C1;&#xC704; &#xD0A4;&#xB97C; &#xBE48; &#xC0AC;&#xC804;&#xC73C;&#xB85C; &#xAE30;&#xBCF8; &#xC124;&#xC815;&#xD560; &#xAC83;&#xC744; &#xAE30;&#xC5B5;&#xD558;&#xAC70;&#xB098; &#xD2B9;&#xC131; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>Finally you may wonder what the performance impact of these validators is.
-&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xC774;&#xB7EC;&#xD55C; &#xAC80;&#xC99D;&#xC790;&#xAC00; &#xC131;&#xB2A5;&#xC5D0; &#xBBF8;&#xCE58;&#xB294; &#xC601;&#xD5A5;&#xC774; &#xAD81;&#xAE08;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>I encourage you to test and time your plugin to make sure the benefits of the validators aren&apos;t outweighed by performance hits.
-&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xD14C;&#xC2A4;&#xD2B8;&#xD558;&#xC5EC; &#xAC80;&#xC99D;&#xC790;&#xC758; &#xC774;&#xC810;&#xC774; &#xC131;&#xB2A5; &#xC800;&#xD558;&#xC5D0; &#xBE44;&#xD574; &#xD06C;&#xAC8C; &#xB2E4;&#xB974;&#xC9C0; &#xC54A;&#xC740;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
-<p>For what it&apos;s worth I&apos;d stand by the code I&apos;ve written here unless someone proved to me this plug-in was running literally all the time and these checks affected performance.
-&#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xB9D0; &#xADF8;&#xB300;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xACE0; &#xC788;&#xACE0; &#xC774; &#xC810;&#xAC80;&#xC774; &#xC131;&#xB2A5;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE5C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xB204;&#xAD70;&#xAC00;&#xAC00; &#xC99D;&#xBA85;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xD55C;, &#xB098;&#xB294; &#xC5EC;&#xAE30;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xACE0;&#xC218;&#xD560; &#xAC00;&#xCE58;&#xAC00; &#xC788;&#xB2E4;.</p>
-<p>Then I might remove them to speed things along.
-&#xADF8;&#xB7FC; &#xB0B4;&#xAC00; &#xADF8;&#xAC83;&#xB4E4;&#xC744; &#xC81C;&#xAC70;&#xD574;&#xC11C; &#xC18D;&#xB3C4;&#xB97C; &#xB192;&#xC77C;&#xC9C0;&#xB3C4; &#xBAB0;&#xB77C;.</p>
-<p>Or I might try to move some of validators to the register callbacks function.
-&#xB610;&#xB294; &#xC77C;&#xBD80; &#xAC80;&#xC99D;&#xC790;&#xB97C; &#xCF5C;&#xBC31; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>That way they&apos;d only run once when the plugin was loaded.
-&#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xB85C;&#xB4DC;&#xB420; &#xB54C; &#xD55C; &#xBC88;&#xB9CC; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>Instead of every time the plugin was triggered by an event can we do that with any of the checks I just wrote.
-&#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC774; &#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xC758;&#xD574; &#xD2B8;&#xB9AC;&#xAC70;&#xB420; &#xB54C;&#xB9C8;&#xB2E4; &#xB300;&#xC2E0; &#xB0B4;&#xAC00; &#xBC29;&#xAE08; &#xC791;&#xC131;&#xD55C; &#xC5B4;&#xB5A4; &#xC218;&#xD45C;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>Aha! Let&apos;s try it with the asset status fueled schema check.
-&#xC544;&#xD558;! &#xC790;&#xC0B0; &#xC0C1;&#xD0DC;&#xC5D0; &#xB530;&#xB77C; &#xC2A4;&#xD0A4;&#xB9C8; &#xC810;&#xAC80;&#xC744; &#xD574;&#xBCF4;&#xC790;.</p>
-<p>A cut and paste it out into its own validation function called is valid and then call it from register callbacks with a dedicated shotgun handle.
-&#xC798;&#xB77C;&#xB0B8; &#xD6C4; &#xC774;&#xB97C; &#xC18C;&#xC704; &#xB9D0;&#xD558;&#xB294; &#xC790;&#xCCB4; &#xAC80;&#xC99D; &#xAE30;&#xB2A5;&#xC5D0; &#xBD99;&#xC5EC;&#xB123;&#xC740; &#xB2E4;&#xC74C; &#xC804;&#xC6A9; &#xC0B0;&#xD0C4;&#xCD1D; &#xC190;&#xC7A1;&#xC774;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31;&#xC5D0;&#xC11C; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>Here&apos;s an additional benefit of putting validators in the register callbacks function.
-&#xB2E4;&#xC74C;&#xC740; &#xAC80;&#xC99D;&#xC790;&#xB97C; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xCF5C;&#xBC31; &#xD568;&#xC218;&#xC5D0; &#xB123;&#xB294; &#xCD94;&#xAC00; &#xC774;&#xC810;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>They run when you load the plug-in.
-&#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC744; &#xB85C;&#xB4DC;&#xD560; &#xB54C; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>So issues with the plug-in crop up right away.
-&#xB530;&#xB77C;&#xC11C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC758; &#xBB38;&#xC81C;&#xAC00; &#xC989;&#xC2DC; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>And we can even decide not to register the callback at all if the validation fails.
-&#xADF8;&#xB9AC;&#xACE0; &#xAC80;&#xC99D;&#xC5D0; &#xC2E4;&#xD328;&#xD574;&#xB3C4; &#xCF5C;&#xBC31;&#xC744; &#xC804;&#xD600; &#xB4F1;&#xB85D;&#xD558;&#xC9C0; &#xC54A;&#xAE30;&#xB85C; &#xACB0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>I&apos;m also going to take the opportunity to refactor a bit here.
-&#xC800;&#xB294; &#xB610;&#xD55C; &#xC5EC;&#xAE30;&#xC11C; &#xC870;&#xAE08; &#xBC18;&#xBC15;&#xD560; &#xAE30;&#xD68C;&#xB97C; &#xAC00;&#xC9C8; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>Don&apos;t worry if you don&apos;t follow all of this.
-&#xC774; &#xBAA8;&#xB4E0; &#xAC83;&#xC744; &#xB530;&#xB974;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;.</p>
-<p>The code in this <code>demo.py</code> plug-in is available for download.
-&#xC774; <code>demo.py</code> &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>So you can take a closer look.
-&#xADF8;&#xB798;&#xC11C; &#xC880; &#xB354; &#xC790;&#xC138;&#xD788; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><code>new_value</code>&#xC640; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD55C; &#xBC29;&#xC2DD;&#xC744; &#xC0B4;&#xD3B4;&#xBCF4;&#xC2ED;&#xC2DC;&#xC624;.</p>
+<p>&#xC911;&#xCCA9;&#xB41C; &#xD0A4;&#xB97C; &#xCC3E;&#xB294; &#xACBD;&#xC6B0; &#xC0C1;&#xC704; &#xD0A4;&#xB97C; &#xBE48; &#xC0AC;&#xC804;&#xC73C;&#xB85C; &#xAE30;&#xBCF8; &#xC124;&#xC815;&#xD560; &#xAC83;&#xC744; &#xAE30;&#xC5B5;&#xD558;&#xAC70;&#xB098; &#xD2B9;&#xC131; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xC774;&#xB7EC;&#xD55C; &#xAC80;&#xC99D;&#xC790;&#xAC00; &#xC131;&#xB2A5;&#xC5D0; &#xBBF8;&#xCE58;&#xB294; &#xC601;&#xD5A5;&#xC774; &#xAD81;&#xAE08;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xD14C;&#xC2A4;&#xD2B8;&#xD558;&#xC5EC; &#xAC80;&#xC99D;&#xC790;&#xC758; &#xC774;&#xC810;&#xC774; &#xC131;&#xB2A5; &#xC800;&#xD558;&#xC5D0; &#xBE44;&#xD574; &#xD06C;&#xAC8C; &#xB2E4;&#xB974;&#xC9C0; &#xC54A;&#xC740;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xB9D0; &#xADF8;&#xB300;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xACE0; &#xC788;&#xACE0; &#xC774; &#xC810;&#xAC80;&#xC774; &#xC131;&#xB2A5;&#xC5D0; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE5C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xB204;&#xAD70;&#xAC00;&#xAC00; &#xC99D;&#xBA85;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xD55C;, &#xB098;&#xB294; &#xC5EC;&#xAE30;&#xC11C; &#xC791;&#xC131;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xACE0;&#xC218;&#xD560; &#xAC00;&#xCE58;&#xAC00; &#xC788;&#xB2E4;.</p>
+<p>&#xB610;&#xB294; &#xC77C;&#xBD80; &#xAC80;&#xC99D;&#xC790;&#xB97C; &#xCF5C;&#xBC31; &#xB808;&#xC9C0;&#xC2A4;&#xD130; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; &#xC774;&#xB3D9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xB85C;&#xB4DC;&#xB420; &#xB54C; &#xD55C; &#xBC88;&#xB9CC; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD50C;&#xB7EC;&#xADF8; &#xC778;&#xC774; &#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xC758;&#xD574; &#xD2B8;&#xB9AC;&#xAC70;&#xB420; &#xB54C;&#xB9C8;&#xB2E4; &#xB300;&#xC2E0; &#xB0B4;&#xAC00; &#xBC29;&#xAE08; &#xC791;&#xC131;&#xD55C; &#xC5B4;&#xB5A4; &#xC218;&#xD45C;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><a href="https://github.com/shotgunsoftware/shotgunEvents/blob/master/src/examplePlugins/entity_status_update_task_status.py" target="_blank">https://github.com/shotgunsoftware/shotgunEvents/blob/master/src/examplePlugins/entity_status_update_task_status.py</a></p>
 
                                 
@@ -1064,7 +995,7 @@ user = event.get(<span class="hljs-string">&quot;user&quot;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"next":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"path":"posts/4_daemon/7_A_real_example.md","ref":"posts/4_daemon/7_A_real_example.md","articles":[]},"previous":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/6_Validation.md","mtime":"2018-11-19T08:58:09.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T21:53:14.074Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"next":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"path":"posts/4_daemon/7_A_real_example.md","ref":"posts/4_daemon/7_A_real_example.md","articles":[]},"previous":{"title":"5. 이벤트 처리","level":"1.5.5","depth":2,"path":"posts/4_daemon/5_Processing_events.md","ref":"posts/4_daemon/5_Processing_events.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/6_Validation.md","mtime":"2018-11-22T22:50:15.576Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T03:46:27.423Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

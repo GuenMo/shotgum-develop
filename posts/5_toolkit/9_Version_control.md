@@ -1,45 +1,16 @@
-# 버전 제어
+# [버전 제어](https://youtu.be/5nRZ5GgcOnk?t=22m53s)
 
-[Version control](https://youtu.be/5nRZ5GgcOnk?t=22m53s)
-
-As responsible citizens of the galaxy we should always encourage each other to version control critical files like a complex code or settings files.
-책임있는 은하계 시민으로서 우리는 항상 서로에게 복잡한 코드나 설정 파일과 같은 중요한 파일들을 제어하도록 격려해야 한다.
-
-This is one of those times.
-지금이 바로 그런 때야.
-
-I'm going to strongly encourage you to version control your config.
 저는 당신이 당신의 구성을 제어할 것을 강력히 권할 것입니다.
-
-It's up to you how you want to do it with perforce or git or CBS or SVN etc.
 당신이 그것을 어떻게 할 것인가는 당신에게 달려있다.
-
-If your studio already uses version control technology you should probably just use that.
 스튜디오에서 이미 버전 제어 기술을 사용하고 있다면, 아마 그냥 사용해야 할 것입니다.
+별개로, 만약 당신이 스튜디오에서 버전 제어 기술이나 서비스를 선택하지 않았다면 나는 Github를 강력히 추천한다.
+Bitbucket은 대기업 스튜디오를 위한 또 다른 우수한 솔루션 입니다.
 
-If you're a games company for example you'll likely want to use perforce.
-예를 들어 게임 회사일 경우 Perforce를 사용할 수 있습니다.
+그래서 내가 만든 `tk-config-basic`의 변경 사항을 계속 추적 하려 합니다. 그렇게 하기 위해 깃헙 저장 장소를 초기화 합니다.
 
-Here at shotgun software we use github to manage and collaborate on code so I'll use github for this demo.
-여기 샷건 소프트웨어에서는 Github를 사용하여 코드를 관리하고 공동작업을 하므로 이 데모에서는 github를 사용할 것입니다.
+![Local Image](/img/5_toolkit/9_Version_control/1.png)
 
-As an aside if you haven't chosen a version control technology or service at your studio yet I highly recommend github.
-별개로, 만약 당신이 당신의 스튜디오에서 버전 제어 기술이나 서비스를 선택하지 않았다면 나는 Github를 강력히 추천한다.
-
-It's got a snappy intuitive interface you can access it from anywhere as apposed for example to a git or perforce server running on a local network it's used and trusted by thousands of companies worldwide and you can easily migrate to a local git server if necessary.
-이 인터페이스에는 간편한 인터페이스를 통해 어디서나 액세스할 수 있습니다. 예를 들어, 전세계 수천 개의 회사에서 사용하고 신뢰하는 Git 또는 Perforce 서버에 액세스할 수 있으며 필요할 경우 쉽게 로컬 서버로 마이그레이션할 수 있습니다.
-
-Bitbucket is another good yet based solution for large corporate style studios.
-Bitbucket은 대기업 스타일 스튜디오를 위한 또 다른 우수하지만 기반 솔루션입니다.
-
-So if I'm going to keep track of changes I make to teacake and vague basic I need to initialize a github repository.
-그래서 만약 내가 찻잔에 대한 변경사항과 모호한 기본사항을 추적하려면, 나는 Github 저장소를 초기화해야 한다.
-
-My shotgun site is called learn so I'll call my repo TK config learn.
-내 샷건 사이트는 `aiw`라고 부르기 때문에 나는 내 `tk-config-aiw`에 전화할 것이다.
-
-Of course you could call it whatever you want.
-물론 너는 그것을 네가 원하는 대로 부를 수 있다.
+내 샷건 사이트는 `aiw`라고 부르기 때문에 `tk-config-aiw`으로 저장장소 이름을 정했습니다.
 
 I'll clone that to my desktop dump in the contents of TK config basic.
 TK 구성 기본 컨텐츠에 있는 데스크톱 덤프에 복제하겠습니다.

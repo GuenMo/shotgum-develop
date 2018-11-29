@@ -513,7 +513,7 @@
                 <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
             
                     
-                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+                    3. Shotgun 데스크톱 설치 및 배포
             
                 </a>
             
@@ -526,7 +526,7 @@
                 <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
             
                     
-                    4. Shotgun 데스크톱 설치 및 배포
+                    4. 어떤 소프트웨어 버전을 잠가야 합니까?
             
                 </a>
             
@@ -767,97 +767,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="best-practices"><a href="https://youtu.be/YPZ1FWvhf7k?t=27m42s" target="_blank">Best practices</a></h1>
-<p>earlier I removed all the
-27:47
-comments from a log argh stop py file so
-27:50
-we could focus on the code of course
-27:52
-it&apos;s imperative that you comment your
-27:53
-code and I&apos;ll review some best practices
-27:55
-for doing that now first it&apos;s a good
-27:58
-idea to leave a bit of information on
-27:59
-the top of the file so other devs can
-28:02
-open it up and quickly croc what the
-28:03
-plug-in does and how to use it next
-28:06
-let&apos;s leave standards Fink style doc
-28:07
-strings for each of our functions along
-28:10
-with info about parameters and return
-28:12
-types
-28:22
-cool done that might seem like a lot of
-28:25
-work but it&apos;ll really pay off in the
-28:27
-long run you&apos;ll get auto-generated
-28:29
-documentation for free if you get a
-28:30
-Sphynx instances spun up other
-28:32
-developers will be able to read and
-28:34
-review your plugins much more easily and
-28:36
-the comments will help you clarify for
-28:38
-yourself what the plug-in should do next
-28:41
-it&apos;s time to give our callback function
-28:43
-and plug in a more appropriate name I&apos;ll
-28:45
-call them both asset status update task
-28:48
-status they don&apos;t have to share a name
-28:50
-but many times do cool okay let&apos;s head
-28:53
-back to the daemon config file once
-28:55
-you&apos;ve got a plug-in you believe is
-28:56
-useful to your production and you plan
-28:58
-to just leave the daemon running it&apos;s a
-29:00
-good idea to enter at least one email
-29:02
-address down here at the bottom that way
-29:04
-if something goes wrong and your plugin
-29:05
-starts throwing errors folks will get
-29:07
-notified by email and can address the
-29:09
-issue
-29:10
-I&apos;ll use my gmail account finally shut
-29:13
-the daemon down and launch it again in
-29:15
-start mode instead of foreground mode
-29:17
-that way you can close the terminal and
-29:19
-know the daemon is still chugging away
-29:20
-behind the scenes if you need to stop
-29:22
-the daemon just pop open the shell and
-29:24
-run the stop command</p>
+<p>Earlier I removed all the comments from a log argh stop py file so we could focus on the code.</p>
+<p>Of course it&apos;s imperative that you comment your code and I&apos;ll review some best practices for doing that now.</p>
+<p>First it&apos;s a good idea to leave a bit of information on the top of the file.</p>
+<p>So other devs can open it up and quickly croc what the plug-in does and how to use it.</p>
+<p>Next et&apos;s leave standards Fink style doc strings for each of our functions along with info about parameters and return types.</p>
+<p>Cool done that.</p>
+<p>Might seem like a lot of work but it&apos;ll really pay off in the long run.</p>
+<p>You&apos;ll get auto-generated documentation for free if you get a Sphynx instances spun up.</p>
+<p>Other developers will be able to read and review your plugins much more easily and the comments will help you clarify for yourself what the plug-in should do.</p>
+<p>Next it&apos;s time to give our callback function and plug in a more appropriate name.</p>
+<p>I&apos;ll call them both asset status update task status.</p>
+<p>They don&apos;t have to share a name but many times do.</p>
+<p>Cool okay let&apos;s head back to the daemon config file.</p>
+<p>Once you&apos;ve got a plug-in you believe is useful to your production and you plan to just leave the daemon running it&apos;s a good idea to enter at least one email address down here at the bottom.</p>
+<p>That way if something goes wrong and your plugin starts throwing errors folks will  get notified by email and can address the issue.</p>
+<p>I&apos;ll use my gmail account.</p>
+<p>Finally shut the daemon down and launch it again in start mode instead of foreground mode.</p>
+<p>That way you can close the terminal and know the daemon is still chugging away  behind the scenes.</p>
+<p>If you need to stop the daemon just pop open the shell and run the stop command.</p>
 
                                 
                                 </section>
@@ -901,7 +829,7 @@ run the stop command</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. 모범 사례","level":"1.5.8","depth":2,"next":{"title":"9. 이벤트 백로그 관리","level":"1.5.9","depth":2,"path":"posts/4_daemon/9_Managing_the_event_backlog.md","ref":"posts/4_daemon/9_Managing_the_event_backlog.md","articles":[]},"previous":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"path":"posts/4_daemon/7_A_real_example.md","ref":"posts/4_daemon/7_A_real_example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/8_Best_practices.md","mtime":"2018-11-19T08:58:21.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T21:53:14.074Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8. 모범 사례","level":"1.5.8","depth":2,"next":{"title":"9. 이벤트 백로그 관리","level":"1.5.9","depth":2,"path":"posts/4_daemon/9_Managing_the_event_backlog.md","ref":"posts/4_daemon/9_Managing_the_event_backlog.md","articles":[]},"previous":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"path":"posts/4_daemon/7_A_real_example.md","ref":"posts/4_daemon/7_A_real_example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/8_Best_practices.md","mtime":"2018-11-23T01:04:37.522Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T03:46:27.423Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

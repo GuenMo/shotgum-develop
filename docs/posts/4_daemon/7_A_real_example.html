@@ -513,7 +513,7 @@
                 <a href="../5_toolkit/3_Which_software_versions_should_I_lock.html">
             
                     
-                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+                    3. Shotgun 데스크톱 설치 및 배포
             
                 </a>
             
@@ -526,7 +526,7 @@
                 <a href="../5_toolkit/4_Installing_and_distributing_Shotgun_Desktop.html">
             
                     
-                    4. Shotgun 데스크톱 설치 및 배포
+                    4. 어떤 소프트웨어 버전을 잠가야 합니까?
             
                 </a>
             
@@ -767,154 +767,69 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="a-real-example-&#xC2E4;&#xC81C;-&#xC608;&#xC2DC;"><a href="https://youtu.be/YPZ1FWvhf7k?t=23m6s" target="_blank">A real example (&#xC2E4;&#xC81C; &#xC608;&#xC2DC;)</a></h1>
-<p>23:09
-okay now let&apos;s create something that
-23:11
-might actually be useful we&apos;ve already
-23:13
-got a plug-in that fills in an assets
-23:15
-description field when that assets
-23:17
-status field is set to you on hold
-23:19
-let&apos;s extend our plug-in let&apos;s get all
-23:22
-the tasks linked to that asset and set
-23:24
-their statuses to on hold - unless
-23:27
-they&apos;re already set to final or n/a I&apos;ll
-23:29
-need to run multiple update commands to
-23:31
-accomplish this so I&apos;m going to
-23:33
-initialize a batch data command list and
-23:35
-change this update call to be part of it
-24:17
-next if we&apos;re going to update tasks
-24:19
-status fields we should make sure the SG
-24:21
-status list field is in the schema again
-24:24
-this is super paranoid especially since
-24:26
-it&apos;s impossible to delete this field
-24:27
-from the GUI but I&apos;ll do it here anyway
-24:29
-as an exercise if it was a custom field
-24:32
-that didn&apos;t exist on all entity types
-24:34
-this check would make more sense after
-24:36
-that we can pull down all the tasks
-24:38
-linked to the entity and log and update
-24:40
-requests with our batch data list
-25:02
-remember we don&apos;t want to change tasks
-25:04
-at the final or n/a so I&apos;ll add another
-25:07
-setting for that maybe I&apos;ll call it skip
-25:09
-statuses and then skip tasks set to
-25:12
-those statuses cool almost done
-25:32
-finally we can pass our batch data list
-25:34
-to an SG batch command and tell the
-25:37
-logger about it
-26:11
-let&apos;s see if it works
-26:16
-great just what we expected let&apos;s check
-26:19
-the output in the terminal coal so now
-26:22
-we&apos;ve got a plugin that filters for
-26:23
-specific event types validates relevant
-26:26
-schema fields and incoming events checks
-26:28
-field data for expected values based on
-26:30
-the event and finally if everything
-26:32
-looks right it performs a little
-26:34
-automation with the shotgun Python API
-26:37
-I&apos;ll leave it up to you to judge whether
-26:39
-what we&apos;ve created here would be helpful
-26:41
-in your production personally I would
-26:43
-only use a plugin like this if I had a
-26:45
-lot of small assets in flux whose many
-26:48
-tasks were distributed across remote
-26:50
-artists and my producers were spread
-26:52
-thin if instead assets at my studio are
-26:55
-infrequently put on hold
-26:56
-I&apos;d prefer to trust my producer to
-26:59
-manage the statuses and message out
-27:01
-changes personally but that&apos;s just me
-27:03
-and of course you&apos;re in complete control
-27:05
-and free to decide what your custom
-27:07
-automation should or shouldn&apos;t do
-27:08
-writing daemon plugins is a bit of an
-27:10
-art and the best way to learn is to
-27:12
-write a few finally I&apos;d like to say that
-27:14
-I believe I&apos;m overly paranoid for a good
-27:16
-reason after writing a large number of
-27:18
-event daemon plugins I&apos;ve seen about
-27:20
-everything go wrong that can go wrong I
-27:22
-wouldn&apos;t necessarily run so many checks
-27:24
-in say toolkit app or standalone script
-27:27
-but the daemon related coding habits I&apos;m
-27:30
-passing on here are hard one of course
-27:33
-maybe you think this plug-in is overly
-27:35
-complex and every developer is free to
-27:37
-walk his or her own path of many lessons
-27:39
-far be it for me to keep those lessons
-27:41
-from you</p>
+<p>Okay. Now let&apos;s create something that might actually be useful.
+&#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7FC; &#xC774;&#xC81C; &#xC2E4;&#xC81C;&#xB85C; &#xC720;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC83;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>We&apos;ve already got a plug-in that fills in an assets description field when that  assets status field is set to you on hold.
+&#xC5B4;&#xC14B; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xAC00; &#xBCF4;&#xB958; &#xC0C1;&#xD0DC;&#xB85C; &#xC124;&#xC815;&#xB418;&#xBA74; &#xC5B4;&#xC14B; &#xC124;&#xBA85; &#xD544;&#xB4DC;&#xB97C; &#xCC44;&#xC6B0;&#xB294; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xC774;&#xBBF8; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Let&apos;s extend our plug-in.
+&#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xD655;&#xC7A5;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>Let&apos;s get all the tasks linked to that asset and set their statuses to on hold - unless they&apos;re already set to final or n/a.
+&#xD574;&#xB2F9; &#xC5B4;&#xC14B;&#xC5D0; &#xC5F0;&#xACB0;&#xB41C; &#xBAA8;&#xB4E0; &#xD0DC;&#xC2A4;&#xD06C;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xC0C1;&#xD0DC;&#xB97C; &#xBCF4;&#xB958; &#xC0C1;&#xD0DC;&#xB85C; &#xC124;&#xC815;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;(&#xCD5C;&#xC885; &#xB610;&#xB294; n/a&#xB85C; &#xC124;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;).</p>
+<p>I&apos;ll need to run multiple update commands to accomplish this.
+&#xC774; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD558;&#xB824;&#xBA74; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>So I&apos;m going to initialize a batch data command list and change this update call to be part of it.
+&#xB530;&#xB77C;&#xC11C; &#xBC30;&#xCE58; &#xB370;&#xC774;&#xD130; &#xBA85;&#xB839; &#xBAA9;&#xB85D;&#xC744; &#xCD08;&#xAE30;&#xD654;&#xD558;&#xACE0; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD638;&#xCD9C;&#xC744; &#xBCC0;&#xACBD;&#xD574; &#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python">batch_data = []
+update_message = []
+</code></pre>
+<p>Next if we&apos;re going to update tasks status fields we should make sure the SG status list field is in the schema.
+&#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xC791;&#xC5C5; &#xC0C1;&#xD0DC; &#xD544;&#xB4DC;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD558;&#xB824;&#xBA74; <code>sg_status_lsts</code> &#xD544;&#xB4DC;&#xAC00; &#xC2A4;&#xD0A4;&#xB9C8;&#xC5D0; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Again this is super paranoid.
+&#xB2E4;&#xC2DC; &#xC774;&#xAC83;&#xC740; &#xADF9;&#xB3C4;&#xB85C; &#xD3B8;&#xC9D1;&#xC99D;&#xC801;&#xC774;&#xB2E4;.</p>
+<p>Especially since it&apos;s impossible to delete this field from the GUI but I&apos;ll do it  here anyway as an exercise.
+&#xD2B9;&#xD788; GUI&#xC5D0;&#xC11C; &#xC774; &#xD544;&#xB4DC;&#xB97C; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xAC83;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC5F0;&#xC2B5; &#xC0BC;&#xC544; &#xC5EC;&#xAE30;&#xC11C; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>If it was a custom field that didn&apos;t exist on all entity types this check would make more sense.
+&#xBAA8;&#xB4E0; &#xC5D4;&#xD2F0;&#xD2F0; &#xC720;&#xD615;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC9C0;&#xC815; &#xD544;&#xB4DC;&#xC600;&#xB2E4;&#xBA74; &#xC774; &#xC810;&#xAC80;&#xC740; &#xB354; &#xC758;&#xBBF8;&#xAC00; &#xC788;&#xC744; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>After that we can pull down all the tasks linked to the entity and log and update requests with our batch data list.
+&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; &#xC5D4;&#xD2F0;&#xD2F0;&#xC5D0; &#xC5F0;&#xACB0;&#xB41C; &#xBAA8;&#xB4E0; &#xC791;&#xC5C5;&#xC744; &#xC885;&#xB8CC;&#xD558;&#xACE0; &#xC77C;&#xAD04; &#xB370;&#xC774;&#xD130; &#xBAA9;&#xB85D;&#xC73C;&#xB85C; &#xC694;&#xCCAD;&#xC744; &#xB85C;&#xAE45; &#xBC0F; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Make sure the Task schema has an args[&quot;target_status&quot;] field.</span>
+task_schema = sg.schema_field_read(
+    <span class="hljs-string">&quot;Task&quot;</span>,
+    field_name=<span class="hljs-string">&quot;sg_status_list&quot;</span>,
+)
+<span class="hljs-keyword">if</span> args[<span class="hljs-string">&quot;target_status&quot;</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> task_schema[<span class="hljs-string">&quot;sg_status_list&quot;</span>][<span class="hljs-string">&quot;properties&quot;</span>][<span class="hljs-string">&quot;valid_values&quot;</span>][<span class="hljs-string">&quot;value&quot;</span>]:
+    logger.warning(<span class="hljs-string">&quot;%s is not in Task schema, plugin will never execute.&quot;</span> % args[<span class="hljs-string">&quot;task_status&quot;</span>])
+    <span class="hljs-keyword">return</span>
+
+<span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+</code></pre>
+<p>Remember we don&apos;t want to change tasks at the final or n/a so I&apos;ll add another setting for that maybe I&apos;ll call it skip statuses and then skip tasks set to those statuses.
+&#xB9C8;&#xC9C0;&#xB9C9;&#xC774;&#xB098; n/a&#xC5D0;&#xC11C; &#xC791;&#xC5C5;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xB2C8; &#xC0C1;&#xD0DC;&#xB97C; &#xAC74;&#xB108;&#xB6F0;&#xACE0; &#xD574;&#xB2F9; &#xC0C1;&#xD0DC;&#xB85C; &#xC124;&#xC815;&#xB41C; &#xC791;&#xC5C5;&#xC744; &#xAC74;&#xB108;&#xB701;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Find all the Tasks linked to our entity.</span>
+tasks = sg.find(
+    <span class="hljs-string">&quot;Task&quot;</span>,
+    [[<span class="hljs-string">&quot;entity&quot;</span>, <span class="hljs-string">&quot;is&quot;</span>, entity]],
+    [<span class="hljs-string">&quot;sg_status_list&quot;</span>],
+)
+</code></pre>
+<p>Cool almost done.</p>
+<p>Finally we can pass our batch data list to an SG batch command and tell the logger about it.</p>
+<p>Let&apos;s see.</p>
+<p>If it works great just what we expected.</p>
+<p>Let&apos;s check the output in the terminal.</p>
+<p>Cool.</p>
+<p>So now we&apos;ve got a plugin that filters for specific event types validates relevant schema fields and incoming events checks field data for expected values based on the event and finally if everything looks right it performs a little automation  with the shotgun Python API.</p>
+<p>I&apos;ll leave it up to you to judge whether what we&apos;ve created here would be helpful in your production.</p>
+<p>Personally I would only use a plugin like this if I had a lot of small assets in flux whose many tasks were distributed across remote artists and my producers were spread thin.</p>
+<p>If instead assets at my studio are infrequently put on hold I&apos;d prefer to trust my  producer to manage the statuses and message out changes personally.</p>
+<p>But that&apos;s just me and of course you&apos;re in complete control and free to decide what your custom automation should or shouldn&apos;t do.</p>
+<p>Writing daemon plugins is a bit of an art and the best way to learn is to write a few.</p>
+<p>Finally I&apos;d like to say that I believe I&apos;m overly paranoid for a good reason.</p>
+<p>After writing a large number of event daemon plugins I&apos;ve seen about everything go wrong that can go wrong.</p>
+<p>I wouldn&apos;t necessarily run so many checks in say.</p>
+<p>Toolkit app or standalone script.</p>
+<p>But the daemon related coding habits I&apos;m passing on here are hard one.</p>
+<p>Of course maybe you think this plug-in is overly complex and every developer is free to walk his or her own path of many lessons far be it for me to keep those  lessons from you.</p>
 
                                 
                                 </section>
@@ -958,7 +873,7 @@ from you</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"next":{"title":"8. 모범 사례","level":"1.5.8","depth":2,"path":"posts/4_daemon/8_Best_practices.md","ref":"posts/4_daemon/8_Best_practices.md","articles":[]},"previous":{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"path":"posts/4_daemon/6_Validation.md","ref":"posts/4_daemon/6_Validation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/7_A_real_example.md","mtime":"2018-11-19T08:58:15.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T21:53:14.074Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7. 실제 예시","level":"1.5.7","depth":2,"next":{"title":"8. 모범 사례","level":"1.5.8","depth":2,"path":"posts/4_daemon/8_Best_practices.md","ref":"posts/4_daemon/8_Best_practices.md","articles":[]},"previous":{"title":"6. 유효성 확인","level":"1.5.6","depth":2,"path":"posts/4_daemon/6_Validation.md","ref":"posts/4_daemon/6_Validation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/4_daemon/7_A_real_example.md","mtime":"2018-11-23T02:28:15.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T03:46:27.423Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

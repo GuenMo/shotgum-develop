@@ -513,7 +513,7 @@
                 <a href="3_Which_software_versions_should_I_lock.html">
             
                     
-                    3. 어떤 소프트웨어 버전을 잠가야 합니까?
+                    3. Shotgun 데스크톱 설치 및 배포
             
                 </a>
             
@@ -526,7 +526,7 @@
                 <a href="4_Installing_and_distributing_Shotgun_Desktop.html">
             
                     
-                    4. Shotgun 데스크톱 설치 및 배포
+                    4. 어떤 소프트웨어 버전을 잠가야 합니까?
             
                 </a>
             
@@ -766,57 +766,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xAE30;&#xCD08;-&#xAD6C;&#xC131;-&#xBC84;&#xC804;-&#xC7A0;&#xADF8;&#xAE30;">&#xAE30;&#xCD08; &#xAD6C;&#xC131; &#xBC84;&#xC804; &#xC7A0;&#xADF8;&#xAE30;</h1>
-<p><a href="https://youtu.be/5nRZ5GgcOnk?t=15m0s" target="_blank">Locking the basic config version</a></p>
-<p>Let&apos;s begin by locking more of these versions down.
-&#xBA3C;&#xC800; &#xC774; &#xBC84;&#xC804;&#xB4E4; &#xC911; &#xB354; &#xB9CE;&#xC740; &#xBC84;&#xC804;&#xC744; &#xC7A0;&#xADF8;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>It makes sense to start at the bottom of the list here.
+                                <h1 id="&#xAE30;&#xCD08;-&#xAD6C;&#xC131;-&#xBC84;&#xC804;-&#xC7A0;&#xADF8;&#xAE30;"><a href="https://youtu.be/5nRZ5GgcOnk?t=15m0s" target="_blank">&#xAE30;&#xCD08; &#xAD6C;&#xC131; &#xBC84;&#xC804; &#xC7A0;&#xADF8;&#xAE30;</a></h1>
+<p>&#xBA3C;&#xC800; &#xC774; &#xBC84;&#xC804;&#xB4E4;&#xC744; &#xC7A0;&#xADF8;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC5EC;&#xAE30; &#xBAA9;&#xB85D;&#xC758; &#xB9E8; &#xC544;&#xB798;&#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/5_toolkit/12.png" alt="Local Image"></p>
-<p>We can see that a specific version of the toolkit basic configuration is being used.
-&#xD234;&#xD0B7; &#xAE30;&#xBCF8; &#xAD6C;&#xC131;&#xC758; &#xD2B9;&#xC815; &#xBC84;&#xC804;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xACE0; &#xC788;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
-<p>And here it is on disk in the App Store&apos;s bundle cache folder.
-App Store&#xC758; &#xBC88;&#xB4E4; &#xCE90;&#xC2DC; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
-<code>C:\Program Files\Shotgun\Resources\Python\bundle_cache\app_store\tk-config-basic\v1.1.12</code></p>
-<p>Incidentally you can see that its github repo name is TK can fakebasic.
-&#xB367;&#xBD99;&#xC5EC; &#xB2F9;&#xC2E0;&#xC740; &#xADF8;&#xAC83;&#xC758; github repo &#xC774;&#xB984;&#xC774; TK&#xC778;&#xC9C0; fakebasic &#xD560; &#xC218; &#xC788;&#xC74C;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>Now if the fine folks here at shotgun software release a new version of TK config basic it will be automatically downloaded to this location.
-&#xC774;&#xC81C; &#xC5EC;&#xAE30; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC5D0; &#xC788;&#xB294; &#xC0AC;&#xB78C;&#xB4E4;&#xC774; &#xC0C8;&#xB85C;&#xC6B4; &#xBC84;&#xC804;&#xC758; TK &#xAD6C;&#xC131;&#xC744; &#xCD9C;&#xC2DC;&#xD558;&#xBA74; &#xC774; &#xACF3;&#xC5D0; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xB420; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>And shotgun desktop will consult it to determine which versions of the engine and core to use next time desktop is launched.
-&#xADF8;&#xB9AC;&#xACE0; &#xC0F7;&#xAC74; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC740; &#xB2E4;&#xC74C; &#xBC88;&#xC5D0; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC744; &#xC2DC;&#xC791;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD560; &#xC5D4;&#xC9C4;&#xACFC; &#xCF54;&#xC5B4;&#xC758; &#xBC84;&#xC804;&#xC744; &#xACB0;&#xC815;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC774; &#xB370;&#xC2A4;&#xD06C;&#xD0D1;&#xACFC; &#xC0C1;&#xC758;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>So it logically follows that if you lock down the basic configuration the core and engine versions will also be locked down.
-&#xB530;&#xB77C;&#xC11C; &#xAE30;&#xBCF8; &#xAD6C;&#xC131;&#xC744; &#xC7A0;&#xADF8;&#xBA74; &#xCF54;&#xC5B4; &#xBC0F; &#xC5D4;&#xC9C4; &#xBC84;&#xC804;&#xB3C4; &#xC7A0;&#xAE41;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD234;&#xD0B7; &#xAE30;&#xBCF8; &#xAD6C;&#xC131;&#xC758; &#xBC84;&#xC804;&#xC774; 1.1.5 &#xC784;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>App Store&#xC758; &#xBC88;&#xB4E4; &#xCE90;&#xC2DC; &#xD3F4;&#xB354;&#xC5D0; &#xC788;&#xB294; &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><code>C:\Users\geunmo_kim\AppData\Roaming\Shotgun\bundle_cache\app_store\tk-config-basic</code></p>
+<p>&#xC774;&#xC81C; &#xC5EC;&#xAE30; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC5D0; &#xC788;&#xB294; &#xC0AC;&#xB78C;&#xB4E4;&#xC774; &#xC0C8;&#xB85C;&#xC6B4; &#xBC84;&#xC804;&#xC758; TK &#xAD6C;&#xC131;&#xC744; &#xCD9C;&#xC2DC;&#xD558;&#xBA74; &#xC774; &#xACF3;&#xC5D0; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xB420; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; &#xC0F7;&#xAC74; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC740; &#xB2E4;&#xC74C; &#xBC88;&#xC5D0; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC744; &#xC2DC;&#xC791;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD560; &#xC5D4;&#xC9C4;&#xACFC; &#xCF54;&#xC5B4;&#xC758; &#xBC84;&#xC804;&#xC744; &#xACB0;&#xC815;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC774; &#xB370;&#xC2A4;&#xD06C;&#xD0D1;&#xACFC; &#xC0C1;&#xC758;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB530;&#xB77C;&#xC11C; &#xAE30;&#xBCF8; &#xAD6C;&#xC131;&#xC744; &#xC7A0;&#xADF8;&#xBA74; &#xCF54;&#xC5B4; &#xBC0F; &#xC5D4;&#xC9C4; &#xBC84;&#xC804;&#xB3C4; &#xC7A0;&#xAE41;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/5_toolkit/13.png" alt="Local Image"></p>
-<p>Three birds with one stone great.
-&#xC77C;&#xC11D;&#xC774;&#xC870; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>So how do we tell a shotgun desktop to lock down to a specific version of TK config basic.
-&#xC0F7;&#xAC74; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC5D0;&#xC11C; &#xD2B9;&#xC815; &#xBC84;&#xC804;&#xC758; TK &#xAD6C;&#xC131; &#xAE30;&#xBCF8; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC7A0;&#xADF8;&#xB3C4;&#xB85D; &#xC9C0;&#xC2DC;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xBB34;&#xC5C7;&#xC785;&#xB2C8;&#xAE4C;?</p>
-<p>Let&apos;s head over to shotgun.
-&#xC0F7;&#xAC74;&#xC73C;&#xB85C; &#xAC11;&#xB2C8;&#xB2E4;.</p>
-<p>If you don&apos;t already have an all pipeline configurations page create one now.
-&#xC544;&#xC9C1; &#xBAA8;&#xB4E0; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778; &#xAD6C;&#xC131; &#xD398;&#xC774;&#xC9C0;&#xAC00; &#xC5C6;&#xC73C;&#xBA74; &#xC9C0;&#xAE08; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC0F7;&#xAC74; &#xB370;&#xC2A4;&#xD06C;&#xD1B1;&#xC5D0;&#xC11C; &#xD2B9;&#xC815; &#xBC84;&#xC804;&#xC758; TK &#xAD6C;&#xC131; &#xAE30;&#xBCF8; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC7A0;&#xADF8;&#xB3C4;&#xB85D; &#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xBB34;&#xC5C7;&#xC785;&#xB2C8;&#xAE4C;?</p>
+<p>&#xC0F7;&#xAC74;&#xC73C;&#xB85C; &#xAC11;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC544;&#xC9C1; &#xBAA8;&#xB4E0; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778; &#xAD6C;&#xC131; &#xD398;&#xC774;&#xC9C0;&#xAC00; &#xC5C6;&#xC73C;&#xBA74; &#xC9C0;&#xAE08; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xB9CC;&#xB4ED;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/5_toolkit/14.png" alt="Local Image"></p>
 <p><img src="../../img/5_toolkit/15.png" alt="Local Image"></p>
-<p>Next create a new pipeline configuration called primary and make sure the project field is empty.
-&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; Primary&#xB77C;&#xACE0; &#xD558;&#xB294; &#xC0C8; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778; &#xAD6C;&#xC131;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD544;&#xB4DC;&#xAC00; &#xBE44;&#xC5B4; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; <code>Primary</code>&#xB77C;&#xACE0; &#xD558;&#xB294; &#xC0C8; &#xD30C;&#xC774;&#xD504;&#xB77C;&#xC778; &#xAD6C;&#xC131;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD544;&#xB4DC;&#xAC00; &#xBE44;&#xC5B4; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/5_toolkit/16.png" alt="Local Image"></p>
-<p>Next set the plug-in IDs field to basic dot star.</p>
-<p>And set the descriptor field to the following string.
-&#xADF8;&#xB7F0; &#xB2E4;&#xC74C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; ID &#xD544;&#xB4DC;&#xB97C; &#xAE30;&#xBCF8; &#xB3C4;&#xD2B8; &#xBCC4;&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>Basic star tells toolkit to use this configuration for all quote basic plugins.
-<code>basic.*</code>&#xB294; &#xD234;&#xD0B7;&#xC5D0; &#xBAA8;&#xB4E0; &#xACAC;&#xC801; &#xAE30;&#xBCF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xB300;&#xD574; &#xC774; &#xAD6C;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC2DC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>basic.*</code>&#xB294; &#xD234;&#xD0B7;&#xC5D0; &#xBAA8;&#xB4E0; &#xAE30;&#xBCF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0; &#xB300;&#xD574; &#xC774; &#xAD6C;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC2DC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xADF8;&#xB9AC;&#xACE0; <code>Descriptor</code> &#xD544;&#xB4DC;&#xC5D0; <code>sgtk:descriptor:app_store?name=tk-config-basic</code> &#xC785;&#xB825; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p><img src="../../img/5_toolkit/19.png" alt="Local Image"></p>
-<p>If you wanted to target the nuke engine plug-in specifically for example you type basic nuke.
-&#xC608;&#xB97C; &#xB4E4;&#xC5B4;, &#xD2B9;&#xC815; &#xB300;&#xC0C1; &#xC5D4;&#xC9C4; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xAE30;&#xBCF8; nuke&#xB97C; &#xC785;&#xB825;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>Everything shotgun software ships as of March 2018 is a basic plug-in but you might write your own engine plugins and choose to namespace them differently.
-2018&#xB144; 3&#xC6D4; &#xD604;&#xC7AC; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xAC00; &#xCD9C;&#xD558;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xAC83;&#xC740; &#xAE30;&#xBCF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774;&#xC9C0;&#xB9CC; &#xC5D4;&#xC9C4; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC758; &#xC774;&#xB984;&#xC744; &#xC9C1;&#xC811; &#xC791;&#xC131;&#xD558;&#xC5EC; &#xC774;&#xB984;&#xC744; &#xB2E4;&#xB974;&#xAC8C; &#xC9C0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>2018&#xB144; 3&#xC6D4; &#xD604;&#xC7AC; &#xC0F7;&#xAC74; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xAC00; &#xCD9C;&#xD558;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xAC83;&#xC740; &#xAE30;&#xBCF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774;&#xC9C0;&#xB9CC; &#xC5D4;&#xC9C4; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC758; &#xC774;&#xB984;&#xC744; &#xC9C1;&#xC811; &#xC791;&#xC131;&#xD558;&#xC5EC; &#xC774;&#xB984;&#xC744; &#xB2E4;&#xB974;&#xAC8C; &#xC9C0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>For example if you wanted to target a custom in-house DCC called the game maker in a studio called cat fire one of your plugin IDs might be cat fire game maker.
 &#xC608;&#xB97C; &#xB4E4;&#xC5B4; cat fire&#xB77C;&#xB294; &#xC2A4;&#xD29C;&#xB514;&#xC624;&#xC5D0;&#xC11C; &#xAC8C;&#xC784; &#xC81C;&#xC870;&#xC5C5;&#xCCB4;&#xB77C;&#xACE0; &#xD558;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC9C0;&#xC815; &#xB0B4;&#xBD80; DCC&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xD574;&#xB2F9; &#xD50C;&#xB7EC;&#xADF8;&#xC778; ID &#xC911; &#xD558;&#xB098;&#xAC00; cat fire &#xAC8C;&#xC784; &#xC81C;&#xC870;&#xC5C5;&#xCCB4;&#xC77C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xD68C;&#xC0AC;&#xC5D0; &#xCF13;&#xD30C;&#xC774;&#xC5B4;&#xB77C;&#xACE0; &#xBD88;&#xB9AC;&#xB294; &#xAC8C;&#xC784; &#xBA54;&#xC774;&#xCEE4;&#xB77C;&#xB294; &#xCEE4;&#xC2A4;&#xD140; &#xC778;&#xD558;&#xC6B0;&#xC2A4;&#xD234;&#xC744; &#xBAA9;&#xD45C;&#xB85C; &#xD55C;&#xB2E4;&#xBA74;</p>
-<p>Here&apos;s a doc if you want more info.
-&#xB354; &#xB9CE;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xC6D0;&#xD558;&#xC2DC;&#xBA74; &#xC5EC;&#xAE30; &#xBB38;&#xC11C;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
+<p>&#xB354; &#xB9CE;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xC6D0;&#xD558;&#xC2DC;&#xBA74; &#xC5EC;&#xAE30; &#xBB38;&#xC11C;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
 <a href="http://developer.shotgunsoftware.com/tk-core/initializing.html#plugins-and-plugin-ids" target="_blank">http://developer.shotgunsoftware.com/tk-core/initializing.html#plugins-and-plugin-ids</a></p>
-<p>Okay. So what have we done absolutely nothing actually or instructing shotgun desktop to do exactly what it&apos;s already doing to always check for.</p>
+<p>&#xC88B;&#xC544;&#xC694;. &#xADF8;&#xB7FC; &#xC6B0;&#xB9AC;&#xAC00; &#xBB58; &#xD55C;&#xAC70;&#xC8E0;?</p>
+<p>&#xC0AC;&#xC2E4; &#xC544;&#xBB34; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Or instructing shotgun desktop to do exactly what it&apos;s already doing to always check for.</p>
 <p>And download the latest version of TK config basic from the App Store to instead lock the config down to a specific version we first need to know what version we want to lock.</p>
 <p>It to to best determine that visit the integrations release notes page.
 &#xD1B5;&#xD569; &#xB9B4;&#xB9AC;&#xC988; &#xB178;&#xD2B8; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xBC29;&#xBB38;&#xD558;&#xB294; &#xAC83;&#xC774; &#xCD5C;&#xC120;&#xC785;&#xB2C8;&#xB2E4;.</p>
@@ -887,7 +866,7 @@ App Store&#xC758; &#xBC88;&#xB4E4; &#xCE90;&#xC2DC; &#xD3F4;&#xB354;&#xC5D0; &#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6. 기초 구성 버전 잠그기","level":"1.6.6","depth":2,"next":{"title":"7. 구성 버전 관리","level":"1.6.7","depth":2,"path":"posts/5_toolkit/7_Managing_config_versions.md","ref":"posts/5_toolkit/7_Managing_config_versions.md","articles":[]},"previous":{"title":"5. 기초 구성을 잠가야 합니까?","level":"1.6.5","depth":2,"path":"posts/5_toolkit/5_Should_I_lock_the_basic_configuration.md","ref":"posts/5_toolkit/5_Should_I_lock_the_basic_configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/5_toolkit/6_Locking_the_basic_config_version.md","mtime":"2018-11-20T14:01:00.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T21:53:14.074Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6. 기초 구성 버전 잠그기","level":"1.6.6","depth":2,"next":{"title":"7. 구성 버전 관리","level":"1.6.7","depth":2,"path":"posts/5_toolkit/7_Managing_config_versions.md","ref":"posts/5_toolkit/7_Managing_config_versions.md","articles":[]},"previous":{"title":"5. 기초 구성을 잠가야 합니까?","level":"1.6.5","depth":2,"path":"posts/5_toolkit/5_Should_I_lock_the_basic_configuration.md","ref":"posts/5_toolkit/5_Should_I_lock_the_basic_configuration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"BASE_URL":"https://github.com/GuenMo/Shoutgun_Dev_Doc"},"plugins":["ga","expandable-chapters"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-123456-1","expandable-chapters":{}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"posts/5_toolkit/6_Locking_the_basic_config_version.md","mtime":"2018-11-27T07:16:08.889Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T03:46:27.423Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

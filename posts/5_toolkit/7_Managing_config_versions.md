@@ -3,31 +3,13 @@
 [Managing config versions](https://youtu.be/5nRZ5GgcOnk?t=18m27s)
 
 Great. So we locked down shotgun desktop to a reasonable degree and if it's not yet obvious we've also locked down the versions of all the shotgun related tools for all new and existing shotgun projects in all our artists DCC's.
-좋습니다. 그래서 우리는 샷건 데스크탑을 고정시켰습니다. 그리고 아직 확실하지 않다면, 모든 DCC에 있는 모든 신, 기존 산탄총 프로젝트에 사용되는 산탄총 관련 도구들의 버전도 차단했습니다.
+좋습니다. 그래서 우리는 샷건 데스크탑 버전을 고정시켰습니다. 그리고 아직 확실하지 않다면, 모든 DCC에 있는 모든 신, 기존 샷건 프로젝트에 사용되는 샷건 관련 도구들의 버전도 차단했습니다.
 
-If I navigate to any project I'll get the same set of tools every time.
 어떤 프로젝트든 탐색하면 매번 동일한 도구 세트를 얻을 수 있습니다.
 
-No surprise Auto updates because the toolset is now controlled by our global versioned site primary config.
 도구 세트가 이제 글로벌 버전 사이트 기본 구성으로 제어되므로 놀라운 자동 업데이트가 없습니다.
 
-Here's the publisher app for example running in an existing project.
-다음은 기존 프로젝트에서 실행되는 게시자 앱입니다.
-
-Let's check its version.
-그것의 버전을 확인해 봅시다.
-
-Now let's make a new project refresh our projects list and open the publish app.
-이제 새 프로젝트를 새로 고치고 게시 응용 프로그램을 열겠습니다.
-
-It'll always be the same version and it won't suddenly change under your artists feet.
-그것은 항상 같은 버전이고 당신의 예술가들의 발 아래에서 갑자기 바뀌지 않을 것이다.
-
-But what if you want to lock down one particular project to a different version of the basic configuration.
 그러나 특정 프로젝트를 다른 버전의 기본 구성으로 잠그려면 어떻게 해야 합니까?
-
-Yeah why would someone want to do that well.
-네, 왜 그렇게 잘하고 싶은 거죠?
 
 If a project is headed into a particularly delicate period of production,
 만약 프로젝트가 특히나 민감한 생산 기간으로 향하고 있다면
