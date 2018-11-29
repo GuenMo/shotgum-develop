@@ -46,3 +46,4 @@
   * [16. tk-config-basic과 tk-config-default2](posts/5_toolkit/16_tk_config_basic_vs_tk_config_default2.md)
   * [17. 설치 전략의 장단점](posts/5_toolkit/17_Install_strategy_pros_and_cons.md)
 * [TODO](posts/TODO.md)
+* [CONCLUSION](posts/CONCLUSION.md)
